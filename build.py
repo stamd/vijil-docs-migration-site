@@ -208,7 +208,10 @@ add_page('index.html', 'Documentation migration', 'A clear path from the proposa
 md_page('meeting.html', 'Start here', 'Understand the proposal before exploring the architecture and individual pages.', (ROOT / 'content' / 'start-here.md').read_text(), 'Getting started')
 md_page('using.html', 'Using this handbook', 'Start broad, then move from decisions to tasks.', '''## Read at the level you need
 
-Begin with Start here and the Diátaxis explanation. Architecture pages describe responsibilities and relationships. The proposed tree shows the target structure. The page plan provides a dedicated page for every existing-page decision and proposed addition.
+- **Start here and Diátaxis explained:** Begin with the proposal and the documentation approach.
+- **Architecture:** Understand content responsibilities and relationships.
+- **Proposed documentation tree:** Explore the target structure.
+- **Page-by-page plan:** Open the dedicated page for each existing-page decision and proposed addition.
 
 ## Find a decision
 
