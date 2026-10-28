@@ -76,8 +76,7 @@ NAV = [
     ('Understand the approach', [('Diátaxis explained', 'guide/diataxis.html'), ('Architecture', 'architecture/index.html'), ('Content relationships', 'architecture/content.html'), ('Writing for agents', 'architecture/agents.html'), ('Proposed documentation tree', 'architecture/toc.html')]),
     ('Plan and delivery', [('Rollout and Diamond pilot', 'plan/roadmap.html'), ('Page-by-page plan', 'plan/pages.html'), ('Progress tracker', 'plan/progress.html')]),
     ('Working standards', [('Page templates and links', 'standards/writing.html'), ('Checks and evaluation', 'standards/validation.html'), ('Ownership and reviews', 'standards/ownership.html')]),
-    ('Audit evidence', [('Findings and monitoring', 'evidence/findings.html'), ('API reference audit', 'evidence/api.html'), ('CLI removal · PR #251', 'evidence/cli.html'), ('Dejan’s proposal and decisions', 'evidence/dejan.html')]),
-    ('Reference library', [('Audit baseline', 'resources/baseline.html'), ('All references and downloads', 'resources/index.html'), ('Sharing progress', 'resources/tracking.html')]),
+    ('Reference library', [('All references and downloads', 'resources/index.html'), ('Sharing progress', 'resources/tracking.html')]),
 ]
 ROUTES = {
     'README.md': 'resources/baseline.html', 'meeting-brief.md': 'meeting.html',
