@@ -1,6 +1,6 @@
 # Vijil Documentation: Hybrid Diátaxis Transition Proposal
 
-Analysis dated October 28, 2026. This proposal and its supporting tables are in English.
+This proposal and its supporting tables are in English.
 
 **Recommendation: retain Concepts, Agent Owner’s Guide, and Agent Developer’s Guide, and use Diátaxis to govern each page’s purpose.** Concepts becomes the canonical home for explanations. AOG covers Console workflows. ADG covers SDK, MCP/plugin, and technical operator tasks; REST remains reference material and a secondary path. Technical Reference stays within ADG, without a fourth tab.
 

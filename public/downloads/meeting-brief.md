@@ -1,6 +1,6 @@
 # Vijil Documentation: Proposed Transition
 
-Meeting brief | October 28, 2026
+Meeting brief
 
 ## Recommendation
 

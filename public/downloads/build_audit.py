@@ -262,11 +262,10 @@ def main():
     removed = set(texts) - set(pr_slugs)
     retired = {x["slug"] for x in migration if x["action"] == "retire-by-251"}
     assert removed == retired, (removed, retired)
-    write_json("source-snapshot.json", {"audit_date": "2026-10-28", "timezone": "Europe/Belgrade",
-               "working_tree_head": git("rev-parse", "HEAD"), "working_tree_status_at_generation": git("status", "--short"),
+    write_json("source-snapshot.json", {"working_tree_head": git("rev-parse", "HEAD"), "working_tree_status_at_generation": git("status", "--short"),
                "docs_json_sha256": hashlib.sha256((DOCS / "docs.json").read_bytes()).hexdigest(),
                "pr251_url": "https://github.com/vijilAI/docs/pull/251", "pr251_head": PR_HEAD,
-               "pr251_state_observed": "open, unmerged (GitHub connector, 2026-10-28)", "post_pr251_mdx": len(pr_slugs),
+               "pr251_state_observed": "open, unmerged (GitHub connector)", "post_pr251_mdx": len(pr_slugs),
                "removed_toc_pages": sorted(removed), "residual_candidate_pages": len(residuals),
                "source_policy": "Working tree is audited as-is; PR head is a separately inspected future delta, not a merged snapshot."})
 

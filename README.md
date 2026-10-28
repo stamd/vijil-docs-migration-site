@@ -20,7 +20,7 @@ Open **http://localhost:8080**. The generated `public/` directory is ready to se
 - All 149 API operations and all 23 original source artifacts, available to search or download.
 - A progress tracker with status, owner, notes, issue/PR links, filters, and import/export.
 
-The target documentation has 118 pages; the tracker has 126 tasks because it also includes retirements. All audit observations refer to **28 October 2026**, rather than live product or PR status.
+The target documentation has 118 pages; the tracker has 126 tasks because it also includes retirements. Audit observations refer to the inspected documentation baseline, rather than live product or PR status.
 
 ## Share progress through GitHub
 
