@@ -218,11 +218,33 @@ Search titles, page IDs such as P024 or N014, method names, and full document te
 
 ## Read the labels
 
-P-IDs identify the 92 audited existing pages. N-IDs identify 34 proposed new pages. D-IDs identify the 12 proposed documentation evaluation scenarios.
+### Page and scenario IDs
 
-E means Explanation; H means How-to; T means Tutorial; R means Reference. P0 identifies accuracy/contract work or an already-decided retirement, P1 the main migration, and P2 later improvements.
+| Label | Meaning |
+| --- | --- |
+| `P001`–`P092` | The 92 audited existing pages. |
+| `N001`–`N034` | The 34 proposed new pages. |
+| `D01`–`D12` | The 12 proposed documentation evaluation scenarios. |
 
-Conditional pages have an explicit publication prerequisite. Retirement through PR #251 is a planned action, not a completed status.
+### Page types
+
+| Label | Page type | Purpose |
+| --- | --- | --- |
+| `E` | Explanation | Understand how and why something works. |
+| `H` | How-to | Complete a specific task. |
+| `T` | Tutorial | Learn through a guided example. |
+| `R` | Reference | Look up exact options, parameters, and behavior. |
+
+### Priorities
+
+| Label | Meaning |
+| --- | --- |
+| `P0` | Accuracy or contract work, or an already-decided retirement. |
+| `P1` | Main migration work. |
+| `P2` | Later improvements. |
+
+- **Conditional:** a publication prerequisite must be confirmed before the page can be published.
+- **Retire via PR #251:** a planned retirement action, not a completed status.
 
 ## Track real implementation
 

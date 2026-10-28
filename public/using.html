@@ -6,9 +6,88 @@
 <h2 id="find-a-decision">Find a decision</h2>
 <p>Search titles, page IDs such as <a class="task-link" href="pages/p024.html" title="Guardrail">P024</a> or <a class="task-link" href="pages/n014.html" title="Dome Results and Telemetry Reference">N014</a>, method names, and full document text. The page plan can be filtered by area, status, action, priority, or existing/new scope. Every page has a permanent URL for sharing in a meeting or issue.</p>
 <h2 id="read-the-labels">Read the labels</h2>
-<p>P-IDs identify the 92 audited existing pages. N-IDs identify 34 proposed new pages. D-IDs identify the 12 proposed documentation evaluation scenarios.</p>
-<p>E means Explanation; H means How-to; T means Tutorial; R means Reference. P0 identifies accuracy/contract work or an already-decided retirement, P1 the main migration, and P2 later improvements.</p>
-<p>Conditional pages have an explicit publication prerequisite. Retirement through PR #251 is a planned action, not a completed status.</p>
+<h3 id="page-and-scenario-ids">Page and scenario IDs</h3>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P001</code>–<code>P092</code></td>
+<td>The 92 audited existing pages.</td>
+</tr>
+<tr>
+<td><code>N001</code>–<code>N034</code></td>
+<td>The 34 proposed new pages.</td>
+</tr>
+<tr>
+<td><code>D01</code>–<code>D12</code></td>
+<td>The 12 proposed documentation evaluation scenarios.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="page-types">Page types</h3>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Page type</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E</code></td>
+<td>Explanation</td>
+<td>Understand how and why something works.</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>How-to</td>
+<td>Complete a specific task.</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Tutorial</td>
+<td>Learn through a guided example.</td>
+</tr>
+<tr>
+<td><code>R</code></td>
+<td>Reference</td>
+<td>Look up exact options, parameters, and behavior.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="priorities">Priorities</h3>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P0</code></td>
+<td>Accuracy or contract work, or an already-decided retirement.</td>
+</tr>
+<tr>
+<td><code>P1</code></td>
+<td>Main migration work.</td>
+</tr>
+<tr>
+<td><code>P2</code></td>
+<td>Later improvements.</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Conditional:</strong> a publication prerequisite must be confirmed before the page can be published.</li>
+<li><strong>Retire via PR #251:</strong> a planned retirement action, not a completed status.</li>
+</ul>
 <h2 id="track-real-implementation">Track real implementation</h2>
 <p>Open a page decision to set its status, owner, notes, and implementation link. The tracker summarizes the same records. Browser edits are drafts. Export the shared progress file and commit it to publish updates for the team. The Sharing progress guide explains the workflow.</p>
 <h2 id="keep-the-evidence-in-view">Keep the evidence in view</h2>
