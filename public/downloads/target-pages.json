@@ -999,15 +999,6 @@
     "gate": ""
   },
   {
-    "id": "N028",
-    "slug": "developer-guide/discover/runtime-events",
-    "title": "Connect Runtime Events to Defend",
-    "type": "H",
-    "group": "Discover Agents",
-    "priority": "P1",
-    "gate": "Confirm a replacement for the remaining CLI-only dlp setup; not immediately ready for publication."
-  },
-  {
     "id": "N029",
     "slug": "developer-guide/red-team/understanding-results",
     "title": "Retrieve and Investigate Red Team Evidence",

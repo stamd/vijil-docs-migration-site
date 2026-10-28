@@ -112,7 +112,6 @@
       "expected_pages": [
         "P049",
         "P027",
-        "N028",
         "P051"
       ],
       "pass": "Distinguishes scan inventory from dlp runtime events and per-Agent metrics; uses confirmed setup or explicitly identifies missing support.",

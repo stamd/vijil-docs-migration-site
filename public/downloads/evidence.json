@@ -11,9 +11,9 @@
     "openapi_paths": 112,
     "openapi_operations": 149,
     "proposed_existing": 84,
-    "proposed_new": 34,
-    "proposed_total": 118,
-    "conditional_new": 3
+    "proposed_new": 33,
+    "proposed_total": 117,
+    "conditional_new": 2
   },
   "mermaid_pages": [
     "concepts/platform/diamond",

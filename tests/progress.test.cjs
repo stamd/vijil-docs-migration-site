@@ -13,10 +13,10 @@ const task = data.tasks[0];
 const record = (values = {}) => ({...baseline.items[task.id], ...values});
 const clone = value => JSON.parse(JSON.stringify(value));
 
-test('published file has exactly 126 valid known tasks, including all 8 retirements', () => {
-  assert.equal(Object.keys(core.validate(baseline, data).items).length, 126);
+test('published file has exactly 125 valid known tasks, including all 8 retirements', () => {
+  assert.equal(Object.keys(core.validate(baseline, data).items).length, 125);
   assert.equal(data.tasks.filter(task => task.action === 'retire-by-251').length, 8);
-  assert.equal(data.tasks.filter(task => task.kind === 'new').length, 34);
+  assert.equal(data.tasks.filter(task => task.kind === 'new').length, 33);
 });
 test('rejects incompatible projects, unknown tasks, missing tasks, and invalid records', () => {
   assert.throws(() => core.validate({...baseline, project: 'other'}, data), /project/);
@@ -29,7 +29,7 @@ test('rejects incompatible projects, unknown tasks, missing tasks, and invalid r
 });
 test('all conditional pages require explicit confirmation before Done', () => {
   const conditional = data.tasks.filter(task => task.gate);
-  assert.equal(conditional.length, 3);
+  assert.equal(conditional.length, 2);
   for (const gate of conditional) {
     assert.throws(() => core.validateRecord({...baseline.items[gate.id], status: 'done', gate_confirmed: false}, gate), /prerequisite/);
     assert.equal(core.validateRecord({...baseline.items[gate.id], status: 'done', gate_confirmed: true}, gate).status, 'done');
@@ -82,4 +82,27 @@ test('local draft envelopes are validated and timestamps do not create false con
   assert.throws(() => core.validateDrafts({...envelope, snapshot: 'old'}, data), /match/);
   const published = clone(baseline); published.items[task.id].updated_at = new Date().toISOString();
   assert.deepEqual(core.reconcile(published, drafts).conflicts, []);
+});
+
+test('older progress imports discard only the deleted proposal and preserve other records', () => {
+  const legacy = clone(baseline);
+  legacy.items.N028 = record({status: 'blocked', notes: 'Obsolete proposal'});
+  legacy.items.P002.owner = 'Existing contributor';
+  const validated = core.validate(legacy, data);
+  assert.equal(Object.keys(validated.items).length, 125);
+  assert.equal(validated.items.N028, undefined);
+  assert.equal(validated.items.P002.owner, 'Existing contributor');
+  const imported = core.importFile(baseline, {}, legacy, data);
+  assert.deepEqual(Object.keys(imported), ['P002']);
+  legacy.items.X001 = record();
+  assert.throws(() => core.validate(legacy, data), /known task/);
+});
+
+test('saved browser drafts survive deletion of an unrelated proposal', () => {
+  const changes = core.stage(baseline, {}, task, record({owner: 'Draft contributor'}));
+  changes.N028 = {base: record(), value: record({notes: 'Obsolete draft'})};
+  const envelope = {version: 1, project: data.project, snapshot: data.snapshot, changes};
+  const restored = core.validateDrafts(envelope, data);
+  assert.deepEqual(Object.keys(restored), [task.id]);
+  assert.equal(restored[task.id].value.owner, 'Draft contributor');
 });

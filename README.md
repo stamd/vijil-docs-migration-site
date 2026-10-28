@@ -15,12 +15,12 @@ Open **http://localhost:8080**. The generated `public/` directory is ready to se
 ## What is included
 
 - Overview and a short Start here guide, followed by Diátaxis, architecture, and the proposed documentation tree.
-- A page-by-page plan and 126 individual decision pages: 92 audited pages and 34 additions. The 8 planned CLI retirements remain tracked.
+- A page-by-page plan and 125 individual decision pages: 92 audited pages and 33 additions. The 8 planned CLI retirements remain tracked.
 - Rollout, authoring standards, ownership, evaluation scenarios, and audit evidence.
 - All 149 API operations and all 23 original source artifacts, available to search or download.
 - A progress tracker with status, owner, notes, issue/PR links, filters, and import/export.
 
-The target documentation has 118 pages; the tracker has 126 tasks because it also includes retirements. Audit observations refer to the inspected documentation baseline, rather than live product or PR status.
+The target documentation has 117 pages; the tracker has 125 tasks because it also includes retirements. Audit observations refer to the inspected documentation baseline, rather than live product or PR status.
 
 ## Share progress through GitHub
 

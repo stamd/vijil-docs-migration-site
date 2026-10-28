@@ -638,7 +638,7 @@
     "goal": "Explain metrics, traces, logs, audit events, Defend, and Dome Metrics.",
     "finding": "Pseudocode uses vijil.dome.DomeClient and scan_input while newer ADG uses vijil_dome and instrument_dome; metric-name lists are unverified.",
     "change": "Keep the signal model and data flow; maintain exact instrumentation steps in P072 and actual metric contracts in reference. Do not merge distinct dashboards.",
-    "extracts": "P072,N014,N028"
+    "extracts": "P072,N014"
   },
   {
     "id": "P028",
@@ -753,7 +753,7 @@
     "goal": "Manage scan scope, scanning, and scheduling in the Console.",
     "finding": "CLI tabs and commands remain in the exact PR251 head; dlp Targets have no Console creation path.",
     "change": "Keep the Console steps; do not move CLI content into a new public reference. The dlp task requires a confirmed replacement or an explicitly identified temporary operator workflow.",
-    "extracts": "N028"
+    "extracts": ""
   },
   {
     "id": "P033",
@@ -1147,7 +1147,7 @@
     "goal": "Investigate tenant/Target DLP events and their attribution.",
     "finding": "Uses a different data source from Dome Metrics; requires a dlp Target created through a CLI command retained in PR251; explains sampled counters.",
     "change": "Keep Defend and its scope; state verified prerequisites and link a supported DLP setup. Do not merge it with per-Agent metrics.",
-    "extracts": "N028"
+    "extracts": ""
   },
   {
     "id": "P050",
@@ -1913,7 +1913,7 @@
     "goal": "Retain an audit record of the retired page.",
     "finding": "PR251 removes the CLI catalog; some Discover tasks still depend on CLI commands elsewhere.",
     "change": "Do not restore the catalog. Confirm a Console/SDK/MCP or supported operator alternative for each remaining task before removing its only working procedure.",
-    "extracts": "N028"
+    "extracts": ""
   },
   {
     "id": "P083",
@@ -2033,7 +2033,7 @@
     "goal": "Retain an audit record of the retired page.",
     "finding": "PR251 removes the telemetry catalog; Defend and Dome Metrics still use different data sources.",
     "change": "Retain telemetry access through confirmed SDK/MCP capabilities; do not invent replacements for unsupported endpoints.",
-    "extracts": "N028"
+    "extracts": ""
   },
   {
     "id": "P088",

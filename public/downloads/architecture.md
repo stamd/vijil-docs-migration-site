@@ -67,7 +67,7 @@ Landing/routing pages are not a fifth Diátaxis type. Welcome remains a short ex
 
 ## 3. Proposed Organization
 
-The complete navigation with all 118 target MDX pages is in [proposed-toc.md](proposed-toc.md). This is an architectural overview, not another alternative TOC.
+The complete navigation with all 117 target MDX pages is in [proposed-toc.md](proposed-toc.md). This is an architectural overview, not another alternative TOC.
 
 ```text
 Concepts
@@ -91,7 +91,7 @@ Agent Owner's Guide
 Agent Developer's Guide
   Get Started: workflow selector, first SDK evaluation [T], SDK/auth/MCP/plugin setup
   Teams and Agents: endpoint and programmatic registration
-  Discover Agents: technical Collector installation; DLP setup requires a confirmed path
+  Discover Agents: technical Collector installation
   Prepare Evaluations: custom Harness through SDK/MCP
   Evaluate Agents: execution, local tunnel, evidence retrieval
   Red Team: execution and investigation

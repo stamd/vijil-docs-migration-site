@@ -17,7 +17,7 @@ This is an incremental migration plan. The number of new pages in the full targe
 
 OpenAPI synchronization and coverage work starts in batch 1 and can run alongside writing. Do not wait until the end to discover that a guide uses a public route missing from reference. The same applies to CI: enable basic checks early for new/changed pages and expand strict enforcement across migrated content batch by batch.
 
-This is not a calendar commitment. The main schedule risks are contract confirmation, test-environment access, and product review rather than writing 34 files. After the pilot, measure the actual cost of one E/H/R/T migration before estimating the remainder. Split batches into small PRs by connected task graph rather than arbitrary file counts.
+This is not a calendar commitment. The main schedule risks are contract confirmation, test-environment access, and product review rather than writing 33 files. After the pilot, measure the actual cost of one E/H/R/T migration before estimating the remainder. Split batches into small PRs by connected task graph rather than arbitrary file counts.
 
 ## 2. Exact Diamond Pilot Scope
 

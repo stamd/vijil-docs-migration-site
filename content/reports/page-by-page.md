@@ -1,6 +1,6 @@
 # Page-by-Page Plan
 
-Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 34 proposed new pages (three conditional).
+Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 33 proposed new pages (two conditional).
 
 E = explanation; H = how-to; T = tutorial; R = reference. Current type is an editorial assessment of the content, not existing frontmatter. P0 identifies a contract/accuracy issue or an already-decided retirement; P1 is the main transition work; P2 is a later improvement.
 
@@ -376,7 +376,7 @@ Source: [concepts/defense/observe](../../docs/concepts/defense/observe.mdx). Cur
 
 **Single page goal:** Explain metrics, traces, logs, audit events, Defend, and Dome Metrics.
 
-**Related content destinations:** P072,N014,N028. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
+**Related content destinations:** P072,N014. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P028 — Glossary
 
@@ -443,8 +443,6 @@ Source: [owner-guide/discover/targets](../../docs/owner-guide/discover/targets.m
 **Destination:** Agent Owner's Guide → Discover Agents → **Create and Manage Targets [H]**; URL `/owner-guide/discover/targets`.
 
 **Single page goal:** Manage scan scope, scanning, and scheduling in the Console.
-
-**Related content destinations:** N028. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P033 — Install a Collector
 
@@ -675,8 +673,6 @@ Source: [owner-guide/protect-in-production/defend](../../docs/owner-guide/protec
 **Destination:** Agent Owner's Guide → Protect and Monitor → **Review Runtime Events in Defend [H]**; URL `/owner-guide/protect-in-production/defend`.
 
 **Single page goal:** Investigate tenant/Target DLP events and their attribution.
-
-**Related content destinations:** N028. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P050 — Deploy Dome
 
@@ -1132,8 +1128,6 @@ Source: [developer-guide/cli/discover](../../docs/developer-guide/cli/discover.m
 
 **Destination:** removed from the public TOC, without a replacement CLI reference. Map legacy entry URLs only to semantically appropriate active tasks or an explicit retirement notice.
 
-**Related content destinations:** N028. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
-
 ## P083 — Manage Agents
 
 Source: [developer-guide/cli/agents](../../docs/developer-guide/cli/agents.mdx). Current type: **R**. Action: **retire-by-251**, **P0**.
@@ -1191,8 +1185,6 @@ Source: [developer-guide/cli/telemetry](../../docs/developer-guide/cli/telemetry
 **Change:** Retain telemetry access through confirmed SDK/MCP capabilities; do not invent replacements for unsupported endpoints.
 
 **Destination:** removed from the public TOC, without a replacement CLI reference. Map legacy entry URLs only to semantically appropriate active tasks or an explicit retirement notice.
-
-**Related content destinations:** N028. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P088 — Manifest CLI
 
@@ -1483,16 +1475,6 @@ The TOC also includes an OpenAPI group, which is not a single MDX page. Each of 
 **Content:** EKS/OIDC/IAM prerequisites, chart configuration, and scan scheduling; the AWS API Collector requires no LLM key.
 
 **Acceptance criteria:** Permissions and the identity model are confirmed for the release; no generic language-model key requirement is copied from other Collectors.
-
-### N028 — Connect Runtime Events to Defend [H]
-
-**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/runtime-events`. Priority **P1**. Sources: P032,P049,P082,P087.
-
-**Content:** A supported way to prepare a dlp Target and connect a Dome proxy; distinguish ingestion, identity attribution, sampled UI data, and exact querying capabilities.
-
-**Acceptance criteria:** A verifiable supported Console/SDK/MCP or approved operator procedure exists. If none exists, explain the limitation and handoff instead of inventing an API.
-
-**Publication condition:** Confirm a replacement for the remaining CLI-only dlp setup; not immediately ready for publication.
 
 ### N029 — Retrieve and Investigate Red Team Evidence [H]
 

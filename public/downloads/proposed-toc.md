@@ -92,7 +92,6 @@ Agent Developer's Guide
     [H] Install a Network Collector (N025)
     [H] Install a Kubernetes Collector (N026)
     [H] Install an AWS Cloud API Collector (N027)
-    [H] Connect Runtime Events to Defend (N028) ⚑
   Prepare Evaluations
     [H] Create a Custom Harness Programmatically (P061)
   Evaluate Agents

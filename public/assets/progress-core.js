@@ -30,7 +30,8 @@
     if (!file || typeof file !== 'object' || file.schema_version !== 1 || file.project !== data.project || file.snapshot !== data.snapshot) throw new Error('This file does not match this migration project and snapshot.');
     if (typeof file.revision !== 'string' || file.revision.length > 120) throw new Error('Invalid progress revision.');
     const ids = data.tasks.map(task => task.id);
-    if (!file.items || Array.isArray(file.items) || Object.keys(file.items).length !== ids.length || !ids.every(id => Object.hasOwn(file.items, id))) throw new Error(`Progress must contain exactly the ${ids.length} known task IDs.`);
+    const removed = new Set(data.removed_task_ids || []);
+    if (!file.items || typeof file.items !== 'object' || Array.isArray(file.items) || Object.keys(file.items).filter(id => !removed.has(id)).length !== ids.length || !ids.every(id => Object.hasOwn(file.items, id))) throw new Error(`Progress must contain exactly the ${ids.length} known task IDs.`);
     const items = {};
     for (const task of data.tasks) items[task.id] = validateRecord(file.items[task.id], task);
     return {schema_version: 1, project: data.project, snapshot: data.snapshot, revision: file.revision, items};
@@ -38,8 +39,10 @@
   function validateDrafts(file, data) {
     if (!file || file.version !== 1 || file.project !== data.project || file.snapshot !== data.snapshot || !file.changes || Array.isArray(file.changes)) throw new Error('Saved drafts do not match this migration.');
     const tasks = Object.fromEntries(data.tasks.map(task => [task.id, task]));
+    const removed = new Set(data.removed_task_ids || []);
     const changes = {};
     for (const [id, draft] of Object.entries(file.changes)) {
+      if (removed.has(id)) continue;
       if (!tasks[id] || !draft) throw new Error('Saved drafts contain an unknown task.');
       changes[id] = {base: validateRecord(draft.base, tasks[id]), value: validateRecord(draft.value, tasks[id])};
     }

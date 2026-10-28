@@ -165,8 +165,7 @@
               "developer-guide/discover/endpoint-collectors",
               "developer-guide/discover/network-collector",
               "developer-guide/discover/cluster-collector",
-              "developer-guide/discover/aws-collector",
-              "developer-guide/discover/runtime-events"
+              "developer-guide/discover/aws-collector"
             ]
           },
           {

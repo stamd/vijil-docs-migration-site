@@ -85,7 +85,7 @@ A simple search of the confirmed PR head finds CLI candidates on seven retained 
 | P032 Targets | CLI tabs and deployment creation, scan, configuration, and deletion commands | Keep the Console task; confirm replacements for uncovered operations |
 | P033 Collectors | Setup address and credential mint/list/revoke commands | Owner credential UI where available; operator setup only through a confirmed path |
 | P038 Register Agents | Authentication/team commands for standalone MCP setup | Extract into MCP setup; supporting commands do not create a new primary CLI workflow |
-| P049 Defend | A `dlp` Target creation command | Do not remove the only prerequisite without a confirmed replacement; N028 remains conditional |
+| P049 Defend | A `dlp` Target creation command | Document confirmed setup prerequisites and any unavailable path within the existing Defend guide |
 | P054 Quickstart | CLI tabs and evaluation path | Replace with one SDK tutorial; PR251 does not already do this |
 | P063 Red Team Overview | Persona/Policy preset shell examples | Replace with confirmed SDK/MCP examples |
 | P089 SDK Setup | Supporting `auth login` and `config set` commands | May remain as documented setup necessities after release verification |
@@ -128,7 +128,7 @@ These do not prevent producing the proposal. They are explicit implementation de
 | Trust Score | Scale per field, default threshold, aggregation, missing values, and result readiness | P007/P041/P045/P060, N003/N012/N022 |
 | Sampling and taxonomy | Probe/group/prompt definitions, sample_size units, Harness aliases, and catalog release snapshot | P008–P020/P059/P090, N006–N012 |
 | Runtime enforcement | Current `Dome`/`VijilDome`/`TrustRuntime` contracts, units/statuses, framework limits | P023–P027/P064–P080, N004/N005/N013–N017 |
-| Discovery and DLP | Supported bootstrap without a public CLI workflow; Target/deployment/scan surface mapping | P012/P032/P033/P049, N024–N028 |
+| Discovery and DLP | Supported bootstrap without a public CLI workflow; Target/deployment/scan surface mapping | P012/P032/P033/P049, N024–N027 |
 | Availability | Releases/tenants supporting Darwin, deploy/evolve, API/SDK preview, White Box, and monitoring reads | N018/N033/N034 and reference |
 | UI names and permissions | Tests/Verify, Adaptive visibility, global SUPER ADMIN versus team roles, activate/register, Save/Apply effects | AOG procedures and N011/N012/N013 |
 

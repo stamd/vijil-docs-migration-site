@@ -17,6 +17,7 @@ CONTENT = ROOT / 'content' / 'reports'
 PUBLIC = ROOT / 'public'
 PROJECT = 'vijil-docs-diataxis'
 SNAPSHOT = '2026-10-28'
+REMOVED_TASK_IDS = ['N028']
 TYPE_NAMES = {'E': 'Explanation', 'H': 'How-to', 'T': 'Tutorial', 'R': 'Reference', '—': 'Retiring'}
 STATUSES = {'not-started': 'Not started', 'in-progress': 'In progress', 'in-review': 'In review', 'blocked': 'Blocked', 'done': 'Done'}
 
@@ -65,7 +66,7 @@ for page in new_pages:
                   'target_title': page['title'], 'goal': page['content'], 'finding': '', 'change': page['content'],
                   'href': 'pages/' + page['id'].lower() + '.html'})
 task_by_id = {page['id']: page for page in tasks}
-assert len(tasks) == 126 and len(task_by_id) == 126
+assert len(tasks) == 125 and len(task_by_id) == 125
 
 architecture = sections('architecture.md')
 migration = sections('migration-and-standard.md')
@@ -170,13 +171,13 @@ def task_table(current, progress=False):
     return f'''<section class="inventory" data-inventory data-default-status="all">
       <div class="filter-grid">
         <label class="filter-search">Find a page<input type="search" data-filter="query" placeholder="Title, page ID, topic, or owner…" aria-label="Filter migration pages"></label>
-        <label>Scope<select data-filter="kind"><option value="all">All 126 tasks</option><option value="existing">Existing pages · 92</option><option value="new">New pages · 34</option></select></label>
+        <label>Scope<select data-filter="kind"><option value="all">All 125 tasks</option><option value="existing">Existing pages · 92</option><option value="new">New pages · 33</option></select></label>
         <label>Area<select data-filter="tab"><option value="all">All three tabs</option><option>Concepts</option><option>Agent Owner's Guide</option><option>Agent Developer's Guide</option></select></label>
         <label>Status<select data-filter="status"><option value="all">All statuses</option>{''.join(f'<option value="{k}">{v}</option>' for k,v in STATUSES.items())}</select></label>
         <label>Action<select data-filter="action"><option value="all">All actions</option><option value="keep">Keep</option><option value="refactor">Refactor</option><option value="split">Split</option><option value="rewrite">Rewrite</option><option value="move">Move</option><option value="move+split">Move and split</option><option value="add">Add</option><option value="retire-by-251">Retire via PR #251</option></select></label>
         <label>Priority<select data-filter="priority"><option value="all">All priorities</option><option>P0</option><option>P1</option><option>P2</option></select></label>
       </div>
-      <div class="result-line"><p data-result-count aria-live="polite">126 tasks</p><button class="text-button" type="button" data-clear-filters>Clear filters</button></div>
+      <div class="result-line"><p data-result-count aria-live="polite">125 tasks</p><button class="text-button" type="button" data-clear-filters>Clear filters</button></div>
       <div class="table-scroll"><table class="task-table"><thead><tr><th>Page</th><th>Decision / type</th><th>Priority</th><th>Status</th>{'<th>Owner</th>' if progress else ''}</tr></thead><tbody>{''.join(rows)}</tbody></table></div>
       <p class="empty-state" data-empty-state hidden>No pages match these filters. Try a broader search or clear the filters.</p>
       <div class="pagination" data-pagination hidden><button type="button" data-page-prev>Previous</button><span data-page-label></span><button type="button" data-page-next>Next</button></div>
@@ -184,7 +185,7 @@ def task_table(current, progress=False):
 
 
 def progress_summary():
-    return '''<section class="progress-summary" aria-label="Migration progress"><div class="progress-overview"><strong data-completion>0 of 126 tasks complete</strong><span data-completion-percent>0%</span></div><progress max="126" value="0" data-progress-bar aria-label="Completed migration tasks"></progress><div class="status-counts" data-status-counts></div></section>'''
+    return '''<section class="progress-summary" aria-label="Migration progress"><div class="progress-overview"><strong data-completion>0 of 125 tasks complete</strong><span data-completion-percent>0%</span></div><progress max="125" value="0" data-progress-bar aria-label="Completed migration tasks"></progress><div class="status-counts" data-status-counts></div></section>'''
 
 
 home = '''<p class="lead">Keep the three existing documentation tabs. Give every page one clear job, connect related content, and migrate in small, verifiable batches.</p>
@@ -201,7 +202,7 @@ for title, href, desc in [
     home += panel_link('index.html', title, href, desc)
 home += '''</div><h2 id="proposal-at-a-glance">The proposal at a glance</h2><div class="table-scroll"><table><thead><tr><th>Area</th><th>Primary responsibility</th></tr></thead><tbody><tr><td>Concepts</td><td>Shared explanations and terminology.</td></tr><tr><td>Agent Owner’s Guide</td><td>A first tutorial and focused Console workflows.</td></tr><tr><td>Agent Developer’s Guide</td><td>SDK/MCP/plugin workflows, integrations, self-hosting, and technical reference.</td></tr></tbody></table></div>
 <p>Align with the planned CLI removal in PR #251. REST remains reference material and a secondary path. Begin with a Diamond evaluation pilot before expanding.</p>
-<h2 id="scope-and-progress">Scope</h2><p>The audit covers 92 existing pages, including 8 planned CLI retirements, plus 34 proposed new pages. The target documentation contains 118 pages. Together, these changes form <strong>126 migration tasks</strong>, including retirements.</p>'''
+<h2 id="scope-and-progress">Scope</h2><p>The audit covers 92 existing pages, including 8 planned CLI retirements, plus 33 proposed new pages. The target documentation contains 117 pages. Together, these changes form <strong>125 migration tasks</strong>, including retirements.</p>'''
 home += '<p>Need a specific source? Open the <a href="resources/index.html">reference library</a> or use search. Audit figures and PR observations reflect the inspected documentation baseline.</p>'
 add_page('index.html', 'Documentation migration', 'A clear path from the proposal to the work.', home, section='Getting started')
 # Preserve the existing URL while presenting an introduction written for the site.
@@ -224,7 +225,7 @@ Search titles, page IDs such as P024 or N014, method names, and full document te
 | Label | Meaning |
 | --- | --- |
 | `P001`–`P092` | The 92 audited existing pages. |
-| `N001`–`N034` | The 34 proposed new pages. |
+| `N`-prefixed IDs | The 33 proposed new pages. |
 | `D01`–`D12` | The 12 proposed documentation evaluation scenarios. |
 
 ### Page types
@@ -278,7 +279,7 @@ for case in read_json('agent-evaluation-tasks.json')['tasks']:
     evaluation_html += render_markdown(text, 'standards/validation.html')
 next(p for p in DOCS if p['path'] == 'standards/validation.html')['body'] += evaluation_html
 
-tree_html = '<p>The target contains 118 documentation pages, plus generated REST reference. Open any entry for its migration decision. Conditional entries need their stated prerequisite confirmed before publication.</p>'
+tree_html = '<p>The target contains 117 documentation pages, plus generated REST reference. Open any entry for its migration decision. Conditional entries need their stated prerequisite confirmed before publication.</p>'
 navigation = read_json('proposed-navigation.json')['navigation']
 by_target_slug = {p['slug']: p for p in targets}
 def render_tree(items):
@@ -298,7 +299,7 @@ tree_html += '<p><a href="../downloads/proposed-toc.md">Download the complete TO
 add_page('architecture/toc.html', 'Proposed documentation tree', 'The complete target structure, with a decision behind every page.', tree_html, section='Understand the approach')
 
 intro = '<p>Every audited page and proposed addition has a dedicated decision page. Open a row for the finding, recommended change, destination, related pages, and tracking fields.</p><p class="muted">Keep includes specified corrections and links. Split means content moves into named destinations. CLI retirements remain visible as tasks until confirmed complete.</p>'
-add_page('plan/pages.html', 'Page-by-page plan', '92 existing pages, 34 proposed additions, and their exact next steps.', intro + task_table('plan/pages.html'), section='Plan and delivery', wide=True)
+add_page('plan/pages.html', 'Page-by-page plan', '92 existing pages, 33 proposed additions, and their exact next steps.', intro + task_table('plan/pages.html'), section='Plan and delivery', wide=True)
 progress_tools = '''<section class="tracking-tools" aria-label="Shared progress controls"><div><strong>Shared file, local drafts</strong><p class="muted">Publish team updates by committing the exported <code>progress.json</code> to <code>public/</code>.</p></div><div class="button-row"><button type="button" data-export-progress>Export progress.json</button><button type="button" data-import-progress>Import progress</button><button type="button" class="text-button" data-refresh-progress>Refresh published</button></div><p class="draft-summary" data-draft-summary aria-live="polite"></p><p data-conflict-summary class="notice" hidden></p><p><a href="../resources/tracking.html">How sharing works</a> · <button class="text-button danger" type="button" data-discard-drafts>Discard local drafts</button></p></section>'''
 add_page('plan/progress.html', 'Progress tracker', 'Track implementation, ownership, and review across the migration.', progress_summary() + progress_tools + task_table('plan/progress.html', True), section='Plan and delivery', wide=True)
 
@@ -366,10 +367,10 @@ RESOURCE_INFO = {
  'evidence-and-dejan.md': ('Evidence and Dejan comparison', 'Findings, API issues, PR #251, and unresolved contracts.', 'evidence/findings.html'),
  'migration-map.csv': ('Migration decision table · CSV', 'All 92 existing-page decisions for spreadsheet planning.', ''),
  'migration-map.json': ('Migration decision data · JSON', 'The structured existing-page decision records.', ''),
- 'new-pages.csv': ('New-page specifications · CSV', '34 additions with origins, acceptance criteria, and publication conditions.', ''),
+ 'new-pages.csv': ('New-page specifications · CSV', '33 additions with origins, acceptance criteria, and publication conditions.', ''),
  'new-pages.tsv': ('New-page editorial source · TSV', 'Editable input to the original audit generator.', ''),
  'page-decisions.tsv': ('Existing-page editorial source · TSV', 'Editable source decisions for the original audit generator.', ''),
- 'target-pages.json': ('Target-page registry', '118 proposed documentation destinations and types.', ''),
+ 'target-pages.json': ('Target-page registry', '117 proposed documentation destinations and types.', ''),
  'proposed-navigation.json': ('Mintlify navigation design', 'Proposed navigation; new page bodies are not included.', 'architecture/toc.html'),
  'api-operation-inventory.csv': ('API operation inventory', 'All 149 operations, aliases, and recommended handling.', 'evidence/api.html'),
  'agent-evaluation-tasks.json': ('Documentation evaluation scenarios', '12 proposed tasks and pass/fail criteria; not executed results.', 'standards/validation.html#evaluation-scenarios'),
@@ -418,7 +419,7 @@ If someone publishes a change to the same task while you have a different draft,
 | Blocked | A prerequisite or decision prevents progress. Record it in notes. |
 | Done | The task’s implementation and review criteria are satisfied. |
 
-All 126 tasks begin Not started; the site does not infer completion from a proposal or open PR. Conditional new pages require their publication prerequisite to be confirmed before they can be marked Done.
+All 125 tasks begin Not started; the site does not infer completion from a proposal or open PR. Conditional new pages require their publication prerequisite to be confirmed before they can be marked Done.
 
 ## Keep data portable
 
@@ -472,10 +473,15 @@ def build():
     if progress_path.exists():
         progress = json.loads(progress_path.read_text())
         assert progress['schema_version'] == 1 and progress['project'] == PROJECT and progress['snapshot'] == SNAPSHOT
-        assert set(progress['items']) == set(task_by_id), 'Review progress migration before changing task IDs.'
+        assert set(progress['items']) - set(REMOVED_TASK_IDS) == set(task_by_id), 'Review progress migration before changing task IDs.'
+        if any(task_id in progress['items'] for task_id in REMOVED_TASK_IDS):
+            progress['items'] = {task_id: record for task_id, record in progress['items'].items() if task_id not in REMOVED_TASK_IDS}
+            progress_path.write_text(json.dumps(progress, indent=2) + '\n')
     else:
         progress = {'schema_version': 1, 'project': PROJECT, 'snapshot': SNAPSHOT, 'revision': 'initial', 'items': {page['id']: {'status': 'not-started', 'owner': '', 'notes': '', 'link': '', 'gate_confirmed': False, 'updated_at': None} for page in tasks}}
         progress_path.write_text(json.dumps(progress, indent=2) + '\n')
+    for task_id in REMOVED_TASK_IDS:
+        (PUBLIC / 'pages' / (task_id.lower() + '.html')).unlink(missing_ok=True)
     for position, page in enumerate(DOCS):
         destination = PUBLIC / page['path']
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -484,7 +490,7 @@ def build():
         for hidden in soup.select('.task-editor, .inventory, .api-table'):
             hidden.decompose()
         SEARCH.append({'title': page['title'], 'section': page['section'], 'href': page['path'], 'text': page['description'] + ' ' + soup.get_text(' ', strip=True), 'kind': 'Page decision' if page['path'].startswith('pages/') else 'Handbook'})
-    payload = {'project': PROJECT, 'snapshot': SNAPSHOT, 'tasks': tasks, 'search': SEARCH, 'baseline': progress, 'statuses': STATUSES}
+    payload = {'project': PROJECT, 'snapshot': SNAPSHOT, 'tasks': tasks, 'removed_task_ids': REMOVED_TASK_IDS, 'search': SEARCH, 'baseline': progress, 'statuses': STATUSES}
     (PUBLIC / 'assets' / 'data.js').write_text('window.MIGRATION_DATA = ' + json.dumps(payload, ensure_ascii=False).replace('</', '<\\/') + ';\n')
     manifest = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in CONTENT.iterdir() if p.is_file()}
     (PUBLIC / 'assets' / 'content-manifest.json').write_text(json.dumps({'snapshot': SNAPSHOT, 'source_artifacts': manifest, 'handbook_pages': len(DOCS) - len(tasks), 'decision_pages': len(tasks), 'api_operations': len(api_operations)}, indent=2) + '\n')
