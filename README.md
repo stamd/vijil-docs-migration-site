@@ -14,7 +14,7 @@ Open **http://localhost:8080**. The generated `public/` directory is ready to se
 
 ## What is included
 
-- Overview and meeting brief, followed by Diátaxis, architecture, and the proposed documentation tree.
+- Overview and a short Start here guide, followed by Diátaxis, architecture, and the proposed documentation tree.
 - A page-by-page plan and 126 individual decision pages: 92 audited pages and 34 additions. The 8 planned CLI retirements remain tracked.
 - Rollout, authoring standards, ownership, evaluation scenarios, and audit evidence.
 - All 149 API operations and all 23 original source artifacts, available to search or download.
@@ -44,7 +44,7 @@ If you keep this folder inside a larger repository, set Netlify’s base directo
 
 ## Update the handbook
 
-The prebuilt website is checked in. `build.py` generates its pages from the included English reports and structured audit files in `content/reports/`. The CSS and JavaScript in `public/assets/` are authored source files and remain in place during a rebuild.
+The prebuilt website is checked in. `build.py` generates its pages from the included English reports and structured audit files in `content/reports/`. The website introduction is maintained separately in `content/start-here.md`; its existing `meeting.html` URL is retained for shared links. The CSS and JavaScript in `public/assets/` are authored source files and remain in place during a rebuild.
 
 ```sh
 python3 -m venv .venv
@@ -73,6 +73,7 @@ public/                  Ready-to-serve website
   pages/                 Individual migration decisions
   downloads/             Exact copies of all original artifacts
 content/reports/         Self-contained audit source package
+content/start-here.md     Website introduction
 build.py                 Optional website generator
 tests/                   Progress and site-integrity checks
 netlify.toml             Static hosting configuration

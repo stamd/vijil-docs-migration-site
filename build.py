@@ -72,7 +72,7 @@ migration = sections('migration-and-standard.md')
 evidence = sections('evidence-and-dejan.md')
 
 NAV = [
-    ('Start here', [('Overview', 'index.html'), ('Meeting brief', 'meeting.html'), ('Using this handbook', 'using.html')]),
+    ('Getting started', [('Overview', 'index.html'), ('Start here', 'meeting.html'), ('Using this handbook', 'using.html')]),
     ('Understand the approach', [('Diátaxis explained', 'guide/diataxis.html'), ('Architecture', 'architecture/index.html'), ('Content relationships', 'architecture/content.html'), ('Writing for agents', 'architecture/agents.html'), ('Proposed documentation tree', 'architecture/toc.html')]),
     ('Plan and delivery', [('Rollout and Diamond pilot', 'plan/roadmap.html'), ('Page-by-page plan', 'plan/pages.html'), ('Progress tracker', 'plan/progress.html')]),
     ('Working standards', [('Page templates and links', 'standards/writing.html'), ('Checks and evaluation', 'standards/validation.html'), ('Ownership and reviews', 'standards/ownership.html')]),
@@ -192,7 +192,7 @@ home = '''<p class="lead">Keep the three existing documentation tabs. Give every
 <p>This handbook brings together the proposal, architecture, evidence, page decisions, and delivery progress. Start with the approach, then explore the implementation detail when you need it.</p>
 <h2 id="recommended-reading-order">Recommended reading order</h2><div class="route-grid">'''
 for title, href, desc in [
-    ('1. The meeting brief', 'meeting.html', 'The recommendation, what changes, and the decisions to make.'),
+    ('1. Start here', 'meeting.html', 'Why the documentation needs to change, the approach, and how to begin.'),
     ('2. Understand Diátaxis', 'guide/diataxis.html', 'Tutorials, how-to guides, reference, and explanations.'),
     ('3. Review the architecture', 'architecture/index.html', 'How the three tabs work together and where information belongs.'),
     ('4. Explore individual pages', 'plan/pages.html', 'Every existing-page decision and every proposed new page.'),
@@ -205,14 +205,12 @@ home += '''</div><h2 id="proposal-at-a-glance">The proposal at a glance</h2><div
 <h2 id="scope-and-progress">Scope and progress</h2><p>The audit covers 92 existing pages, including 8 planned CLI retirements, plus 34 proposed new pages. The target documentation contains 118 pages. The tracker includes all <strong>126 migration tasks</strong>, so retirement work remains visible.</p>'''
 home += progress_summary()
 home += '<p class="muted">Progress starts at “Not started.” A proposed change is not evidence that implementation is complete.</p><p>Need a specific source? Open the <a href="resources/index.html">reference library</a> or use search. All audit figures and PR observations describe the <strong>28 October 2026 snapshot</strong>.</p>'
-add_page('index.html', 'Documentation migration', 'A clear path from the proposal to the work.', home, section='Start here')
-meeting = (CONTENT / 'meeting-brief.md').read_text()
-meeting = re.sub(r'^# .+\n', '', meeting, count=1)
-md_page('meeting.html', 'Meeting brief', 'The short version to present and discuss.', meeting, 'Start here')
-DOCS[-1]['extra'] = '<a class="button" href="downloads/meeting-brief.pdf">Download the two-page PDF</a>'
+add_page('index.html', 'Documentation migration', 'A clear path from the proposal to the work.', home, section='Getting started')
+# Preserve the existing URL while presenting an introduction written for the site.
+md_page('meeting.html', 'Start here', 'Understand the proposal before exploring the architecture and individual pages.', (ROOT / 'content' / 'start-here.md').read_text(), 'Getting started')
 md_page('using.html', 'Using this handbook', 'Start broad, then move from decisions to tasks.', '''## Read at the level you need
 
-Start with the meeting brief and Diátaxis explanation. Architecture pages describe responsibilities and relationships. The proposed tree shows the target structure. The page plan provides a dedicated page for every existing-page decision and proposed addition.
+Begin with Start here and the Diátaxis explanation. Architecture pages describe responsibilities and relationships. The proposed tree shows the target structure. The page plan provides a dedicated page for every existing-page decision and proposed addition.
 
 ## Find a decision
 
@@ -233,7 +231,7 @@ Open a page decision to set its status, owner, notes, and implementation link. T
 ## Keep the evidence in view
 
 The audit reflects the recorded snapshot, not a live check of product releases or GitHub PR state. All supporting files remain available in the reference library. The proposed navigation is a design; new documentation content has not been authored by this site.
-''', 'Start here')
+''', 'Getting started')
 
 for path, title, desc, chunks, group in [
     ('guide/diataxis.html', 'Diátaxis explained', 'Four reader needs. One primary purpose per page.', [architecture[1]], 'Understand the approach'),
@@ -335,8 +333,8 @@ baseline_md = re.sub(r'^# .+\n', '', baseline_md, count=1)
 md_page('resources/baseline.html', 'Audit baseline', 'The complete source overview, scope, decisions, and verification limits.', baseline_md, 'Reference library')
 
 RESOURCE_INFO = {
- 'meeting-brief.md': ('Meeting brief', 'The concise recommendation and meeting decisions.', 'meeting.html'),
- 'meeting-brief.pdf': ('Meeting brief · PDF', 'Two-page document for presenting or sharing.', ''),
+ 'meeting-brief.md': ('Original meeting brief · source', 'The original presentation artifact, retained for reference.', ''),
+ 'meeting-brief.pdf': ('Original meeting brief · PDF', 'The original two-page presentation artifact.', ''),
  'README.md': ('Full proposal overview', 'Audit scope, constraints, counts, and reading order.', 'resources/baseline.html'),
  'architecture.md': ('Architecture source', 'Complete Diátaxis and architecture rationale.', 'architecture/index.html'),
  'proposed-toc.md': ('Proposed TOC', 'Every target page and its primary purpose.', 'architecture/toc.html'),
