@@ -189,22 +189,21 @@ def progress_summary():
 
 
 home = '''<p class="lead">Keep the three existing documentation tabs. Give every page one clear job, connect related content, and migrate in small, verifiable batches.</p>
-<p>This handbook brings together the proposal, architecture, evidence, page decisions, and delivery progress. Start with the approach, then explore the implementation detail when you need it.</p>
+<p>This handbook brings together the proposal, architecture, evidence, page decisions, and writing standards. Start with the approach, then explore the implementation detail when you need it.</p>
 <h2 id="recommended-reading-order">Recommended reading order</h2><div class="route-grid">'''
 for title, href, desc in [
     ('1. Start here', 'meeting.html', 'Why the documentation needs to change, the approach, and how to begin.'),
     ('2. Understand Diátaxis', 'guide/diataxis.html', 'Tutorials, how-to guides, reference, and explanations.'),
     ('3. Review the architecture', 'architecture/index.html', 'How the three tabs work together and where information belongs.'),
-    ('4. Explore individual pages', 'plan/pages.html', 'Every existing-page decision and every proposed new page.'),
-    ('5. Plan the rollout', 'plan/roadmap.html', 'The Diamond pilot, migration batches, and prerequisites.'),
-    ('6. Track delivery', 'plan/progress.html', 'Status, ownership, notes, and implementation links in one place.'),
+    ('4. Proposed documentation tree', 'architecture/toc.html', 'The complete target structure and the purpose of every page.'),
+    ('5. Explore individual pages', 'plan/pages.html', 'Every existing-page decision and every proposed new page.'),
+    ('6. Page templates and links', 'standards/writing.html', 'Templates, required sections, and links between related pages.'),
 ]:
     home += panel_link('index.html', title, href, desc)
 home += '''</div><h2 id="proposal-at-a-glance">The proposal at a glance</h2><div class="table-scroll"><table><thead><tr><th>Area</th><th>Primary responsibility</th></tr></thead><tbody><tr><td>Concepts</td><td>Shared explanations and terminology.</td></tr><tr><td>Agent Owner’s Guide</td><td>A first tutorial and focused Console workflows.</td></tr><tr><td>Agent Developer’s Guide</td><td>SDK/MCP/plugin workflows, integrations, self-hosting, and technical reference.</td></tr></tbody></table></div>
 <p>Align with the planned CLI removal in PR #251. REST remains reference material and a secondary path. Begin with a Diamond evaluation pilot before expanding.</p>
-<h2 id="scope-and-progress">Scope and progress</h2><p>The audit covers 92 existing pages, including 8 planned CLI retirements, plus 34 proposed new pages. The target documentation contains 118 pages. The tracker includes all <strong>126 migration tasks</strong>, so retirement work remains visible.</p>'''
-home += progress_summary()
-home += '<p class="muted">Progress starts at “Not started.” A proposed change is not evidence that implementation is complete.</p><p>Need a specific source? Open the <a href="resources/index.html">reference library</a> or use search. Audit figures and PR observations reflect the inspected documentation baseline.</p>'
+<h2 id="scope-and-progress">Scope</h2><p>The audit covers 92 existing pages, including 8 planned CLI retirements, plus 34 proposed new pages. The target documentation contains 118 pages. Together, these changes form <strong>126 migration tasks</strong>, including retirements.</p>'''
+home += '<p>Need a specific source? Open the <a href="resources/index.html">reference library</a> or use search. Audit figures and PR observations reflect the inspected documentation baseline.</p>'
 add_page('index.html', 'Documentation migration', 'A clear path from the proposal to the work.', home, section='Getting started')
 # Preserve the existing URL while presenting an introduction written for the site.
 md_page('meeting.html', 'Start here', 'Understand the proposal before exploring the architecture and individual pages.', (ROOT / 'content' / 'start-here.md').read_text(), 'Getting started')
