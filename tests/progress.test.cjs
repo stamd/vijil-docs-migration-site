@@ -13,10 +13,10 @@ const task = data.tasks[0];
 const record = (values = {}) => ({...baseline.items[task.id], ...values});
 const clone = value => JSON.parse(JSON.stringify(value));
 
-test('published file has exactly 125 valid known tasks, including all 8 retirements', () => {
-  assert.equal(Object.keys(core.validate(baseline, data).items).length, 125);
+test('published file has exactly 122 valid known tasks, including all 8 retirements', () => {
+  assert.equal(Object.keys(core.validate(baseline, data).items).length, 122);
   assert.equal(data.tasks.filter(task => task.action === 'retire-by-251').length, 8);
-  assert.equal(data.tasks.filter(task => task.kind === 'new').length, 33);
+  assert.equal(data.tasks.filter(task => task.kind === 'new').length, 30);
 });
 test('rejects incompatible projects, unknown tasks, missing tasks, and invalid records', () => {
   assert.throws(() => core.validate({...baseline, project: 'other'}, data), /project/);
@@ -84,13 +84,13 @@ test('local draft envelopes are validated and timestamps do not create false con
   assert.deepEqual(core.reconcile(published, drafts).conflicts, []);
 });
 
-test('older progress imports discard only the deleted proposal and preserve other records', () => {
+test('older progress imports discard removed proposals and preserve other records', () => {
   const legacy = clone(baseline);
-  legacy.items.N028 = record({status: 'blocked', notes: 'Obsolete proposal'});
+  for (const id of data.removed_task_ids) legacy.items[id] = record({status: 'blocked', notes: 'Obsolete proposal'});
   legacy.items.P002.owner = 'Existing contributor';
   const validated = core.validate(legacy, data);
-  assert.equal(Object.keys(validated.items).length, 125);
-  assert.equal(validated.items.N028, undefined);
+  assert.equal(Object.keys(validated.items).length, 122);
+  for (const id of data.removed_task_ids) assert.equal(validated.items[id], undefined);
   assert.equal(validated.items.P002.owner, 'Existing contributor');
   const imported = core.importFile(baseline, {}, legacy, data);
   assert.deepEqual(Object.keys(imported), ['P002']);
@@ -100,7 +100,7 @@ test('older progress imports discard only the deleted proposal and preserve othe
 
 test('saved browser drafts survive deletion of an unrelated proposal', () => {
   const changes = core.stage(baseline, {}, task, record({owner: 'Draft contributor'}));
-  changes.N028 = {base: record(), value: record({notes: 'Obsolete draft'})};
+  for (const id of data.removed_task_ids) changes[id] = {base: record(), value: record({notes: 'Obsolete draft'})};
   const envelope = {version: 1, project: data.project, snapshot: data.snapshot, changes};
   const restored = core.validateDrafts(envelope, data);
   assert.deepEqual(Object.keys(restored), [task.id]);

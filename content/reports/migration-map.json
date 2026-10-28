@@ -306,7 +306,7 @@
     "goal": "Explain how to choose a Collector family and understand coverage limits.",
     "finding": "Mixes the mental model, technical requirements, and credential selection; browser and one-shot variants are absent from the main table.",
     "change": "Keep the family comparison and coverage implications; link concrete versions, installation, and credential steps to ADG and AOG.",
-    "extracts": "N024,N025,N026,N027"
+    "extracts": "N024"
   },
   {
     "id": "P014",
@@ -730,7 +730,7 @@
     "goal": "Move from a prepared Target to a reviewed first inventory.",
     "finding": "Broad installation and interface choices prevent a controlled tutorial; PR251 removes part of the CLI path.",
     "change": "Use Console-only orchestration with an explicit installation handoff, one success check per phase, and links to focused tasks.",
-    "extracts": "N024,N025,N026,N027"
+    "extracts": "N024"
   },
   {
     "id": "P032",
@@ -776,7 +776,7 @@
     "goal": "Prepare the scope and credentials and hand installation to an administrator.",
     "finding": "417 lines cover root installation on three operating systems, Docker, Helm, AWS IAM, browser, and one-shot workflows; some CLI remains in PR251.",
     "change": "AOG keeps selection and Console credential steps; four supported installation families move to ADG. Do not present browser/one-shot content as complete how-to guides while concrete steps are missing.",
-    "extracts": "N024,N025,N026,N027"
+    "extracts": "N024"
   },
   {
     "id": "P034",

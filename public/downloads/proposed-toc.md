@@ -88,10 +88,7 @@ Agent Developer's Guide
     [H] Connect an Agent Endpoint (P062)
     [H] Register an Agent Programmatically (N023)
   Discover Agents
-    [H] Install an Endpoint Collector (N024)
-    [H] Install a Network Collector (N025)
-    [H] Install a Kubernetes Collector (N026)
-    [H] Install an AWS Cloud API Collector (N027)
+    [H] Install a Collector (N024)
   Prepare Evaluations
     [H] Create a Custom Harness Programmatically (P061)
   Evaluate Agents

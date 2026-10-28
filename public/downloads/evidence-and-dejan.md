@@ -38,7 +38,7 @@ Evidence is distinguished as follows:
 | SDK existence does not establish availability | P006: Darwin in development/not GA; P090 includes adapt/evolve/deploy; P053 says the platform does not deploy applications; P091 has unimplemented monitoring reads | N018 release/deployment matrix; conditional Darwin guides. Distinguish corrective adaptation, generative evolution, and application deployment |
 | Python requirements differ | P089: 3.12+; P054: 3.11–3.13; local `vijil-sdk/pyproject.toml`: >=3.11,<3.14 | The local manifest supports the inconsistency finding but does not establish the published package version. Confirm the public release and pin the example |
 | Base Dome verification omits required dependencies | P065 distinguishes thin/base, local, and pii extras, but the opening scan uses default models | Select a verified minimal scan or explicitly install all extras required by the defaults |
-| Owner deployment includes developer work | P050 contains Python integration; P033 contains root/PowerShell/Helm/AWS IAM procedures | P050 becomes a handoff; four Collector installation paths move into ADG |
+| Owner deployment includes developer work | P050 contains Python integration; P033 contains root/PowerShell/Helm/AWS IAM procedures | P050 becomes a handoff; one Collector installation guide in ADG covers the four deployment variants |
 | A large self-hosting runbook sits in Get Started | P056 has 1,084 lines covering AWS/application infrastructure, internal staging examples, and optional Darwin | ADG Self-Hosting group; separate infrastructure how-to, application runbook, and configuration reference |
 | Glossary entries conflict or repeat | Two Judgment entries, two Policy meanings, and an overly broad Detector definition | Domain-scoped terms and aliases, stable anchors, and a glossary derived from the confirmed registry |
 | SDK reference repeats a model | P092 contains two `### EvaluationResponse` sections | One canonical definition with working anchors; align P091’s method index with its body |
@@ -128,7 +128,7 @@ These do not prevent producing the proposal. They are explicit implementation de
 | Trust Score | Scale per field, default threshold, aggregation, missing values, and result readiness | P007/P041/P045/P060, N003/N012/N022 |
 | Sampling and taxonomy | Probe/group/prompt definitions, sample_size units, Harness aliases, and catalog release snapshot | P008–P020/P059/P090, N006–N012 |
 | Runtime enforcement | Current `Dome`/`VijilDome`/`TrustRuntime` contracts, units/statuses, framework limits | P023–P027/P064–P080, N004/N005/N013–N017 |
-| Discovery and DLP | Supported bootstrap without a public CLI workflow; Target/deployment/scan surface mapping | P012/P032/P033/P049, N024–N027 |
+| Discovery and DLP | Supported bootstrap without a public CLI workflow; Target/deployment/scan surface mapping | P012/P032/P033/P049, N024 |
 | Availability | Releases/tenants supporting Darwin, deploy/evolve, API/SDK preview, White Box, and monitoring reads | N018/N033/N034 and reference |
 | UI names and permissions | Tests/Verify, Adaptive visibility, global SUPER ADMIN versus team roles, activate/register, Save/Apply effects | AOG procedures and N011/N012/N013 |
 

@@ -964,35 +964,8 @@
   },
   {
     "id": "N024",
-    "slug": "developer-guide/discover/endpoint-collectors",
-    "title": "Install an Endpoint Collector",
-    "type": "H",
-    "group": "Discover Agents",
-    "priority": "P1",
-    "gate": ""
-  },
-  {
-    "id": "N025",
-    "slug": "developer-guide/discover/network-collector",
-    "title": "Install a Network Collector",
-    "type": "H",
-    "group": "Discover Agents",
-    "priority": "P1",
-    "gate": ""
-  },
-  {
-    "id": "N026",
-    "slug": "developer-guide/discover/cluster-collector",
-    "title": "Install a Kubernetes Collector",
-    "type": "H",
-    "group": "Discover Agents",
-    "priority": "P1",
-    "gate": ""
-  },
-  {
-    "id": "N027",
-    "slug": "developer-guide/discover/aws-collector",
-    "title": "Install an AWS Cloud API Collector",
+    "slug": "developer-guide/discover/collectors",
+    "title": "Install a Collector",
     "type": "H",
     "group": "Discover Agents",
     "priority": "P1",

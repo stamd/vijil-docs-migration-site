@@ -1,6 +1,6 @@
 # Page-by-Page Plan
 
-Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 33 proposed new pages (two conditional).
+Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 30 proposed new pages (two conditional).
 
 E = explanation; H = how-to; T = tutorial; R = reference. Current type is an editorial assessment of the content, not existing frontmatter. P0 identifies a contract/accuracy issue or an already-decided retirement; P1 is the main transition work; P2 is a later improvement.
 
@@ -184,7 +184,7 @@ Source: [concepts/discovery/collector](../../docs/concepts/discovery/collector.m
 
 **Single page goal:** Explain how to choose a Collector family and understand coverage limits.
 
-**Related content destinations:** N024,N025,N026,N027. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
+**Related content destinations:** N024. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P014 — Resource
 
@@ -430,7 +430,7 @@ Source: [owner-guide/discover/introduction](../../docs/owner-guide/discover/intr
 
 **Single page goal:** Move from a prepared Target to a reviewed first inventory.
 
-**Related content destinations:** N024,N025,N026,N027. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
+**Related content destinations:** N024. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P032 — Create and Manage Targets
 
@@ -456,7 +456,7 @@ Source: [owner-guide/discover/collectors](../../docs/owner-guide/discover/collec
 
 **Single page goal:** Prepare the scope and credentials and hand installation to an administrator.
 
-**Related content destinations:** N024,N025,N026,N027. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
+**Related content destinations:** N024. N-IDs are specified in the registry below; P-IDs identify existing pages in this document.
 
 ## P034 — Review Discovered Resources
 
@@ -1444,37 +1444,13 @@ The TOC also includes an OpenAPI group, which is not a single MDX page. Each of 
 
 **Acceptance criteria:** The example does not treat client.register(path) as an alias for endpoint creation; the saved ID leads into evaluation.
 
-### N024 — Install an Endpoint Collector [H]
+### N024 — Install a Collector [H]
 
-**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/endpoint-collectors`. Priority **P1**. Sources: P033.
+**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/collectors`. Priority **P1**. Sources: P033.
 
-**Content:** macOS/Linux/Windows installation variants of the same task; artifacts, privileges, credentials, enrollment verification, logs, upgrades, and revocation.
+**Content:** One complete Collector installation how-to with shared artifact access, network requirements, Target/credential prerequisites, verification, troubleshooting, upgrades, and revocation. Start with a short variant selector and stable heading anchors. Keep Endpoint (macOS/Linux/Windows), Network scanner, Kubernetes, and AWS Cloud API instructions as sections of this page. Retain browser and one-shot coverage with explicit support limitations. Link back to the existing owner discovery workflow rather than duplicating Console Target creation and inventory review.
 
-**Acceptance criteria:** Each OS has enrollment evidence, not merely a Running service; WSL limitations and paths remain explicit. Replace bootstrap CLI only with a confirmed supported workflow.
-
-### N025 — Install a Network Collector [H]
-
-**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/network-collector`. Priority **P1**. Sources: P033.
-
-**Content:** VM/container, routability, daemon mode, credential handoff, required capabilities, blind spots, and verification.
-
-**Acceptance criteria:** The Collector remains active for Scan now; routing and credential failures lead to precise diagnostics.
-
-### N026 — Install a Kubernetes Collector [H]
-
-**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/cluster-collector`. Priority **P1**. Sources: P033.
-
-**Content:** Chart/image access, cluster prerequisites, service account/RBAC, secret references, Helm installation, and enrollment confirmation.
-
-**Acceptance criteria:** Secrets need not appear in inline commands/release values; supported chart/cluster versions and team/Target attribution are specified.
-
-### N027 — Install an AWS Cloud API Collector [H]
-
-**Placement:** Agent Developer's Guide → Discover Agents. URL `/developer-guide/discover/aws-collector`. Priority **P1**. Sources: P033.
-
-**Content:** EKS/OIDC/IAM prerequisites, chart configuration, and scan scheduling; the AWS API Collector requires no LLM key.
-
-**Acceptance criteria:** Permissions and the identity model are confirmed for the release; no generic language-model key requirement is copied from other Collectors.
+**Acceptance criteria:** Each variant names its required artifacts, privileges, credentials, supported environment, enrollment evidence, logs, and failure checks. Endpoint coverage includes WSL limitations and re-enrollment. Network scanning covers routing, daemon mode, and container capabilities. Kubernetes covers RBAC and secret references. AWS covers its confirmed IAM/OIDC setup and whether an LLM key is required. Maintain common setup once; distinguish a running service from successful enrollment. Resolve remaining CLI dependencies only through confirmed supported paths. Split a variant later only when an independent workflow becomes difficult to use or maintain here.
 
 ### N029 — Retrieve and Investigate Red Team Evidence [H]
 

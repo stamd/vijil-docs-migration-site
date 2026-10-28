@@ -91,7 +91,7 @@ def main():
     additions = read_tsv("new-pages.tsv")
     assert len(inventory) == len(decisions) == 92
     assert [x["id"] for x in inventory] == [x["id"] for x in decisions]
-    assert len(additions) == 33 and len({x["id"] for x in additions}) == 33
+    assert len(additions) == 30 and len({x["id"] for x in additions}) == 30
     ids = {x["id"] for x in decisions + additions}
     migration, targets = [], []
     for source, decision in zip(inventory, decisions):
@@ -108,7 +108,7 @@ def main():
         assert len(page) == 10 and None not in page, page
         assert all(origin in ids for origin in page["origin"].split(",")), page
         targets.append({k: page[k] for k in ("id", "slug", "title", "type", "group", "priority", "gate")})
-    assert len(targets) == len({x["slug"] for x in targets}) == 117
+    assert len(targets) == len({x["slug"] for x in targets}) == 114
     assert all(x["type"] in {"E", "H", "T", "R"} for x in targets)
     assert not any("/cli/" in x["slug"] for x in targets)
     write_json("source-inventory.json", inventory)
@@ -172,7 +172,7 @@ def main():
     tree += ["```", "", "Exact URLs, content origins, and publication conditions are recorded in target-pages.json and new-pages.csv. A page's type does not depend on its folder; existing meaningful URLs are preserved."]
     (HERE / "proposed-toc.md").write_text("\n".join(tree) + "\n")
     nav = {"tabs": tabs, "global": config["navigation"].get("global", {})}
-    assert len(list(walk(nav))) == 117
+    assert len(list(walk(nav))) == 114
     write_json("proposed-navigation.json", {"navigation": nav})
 
     # Structural evidence, with conservative link findings (not a replacement for Mintlify).
@@ -269,7 +269,7 @@ def main():
                "removed_toc_pages": sorted(removed), "residual_candidate_pages": len(residuals),
                "source_policy": "Working tree is audited as-is; PR head is a separately inspected future delta, not a merged snapshot."})
 
-    lines = ["# Page-by-Page Plan", "", "Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 33 proposed new pages (two conditional).", "",
+    lines = ["# Page-by-Page Plan", "", "Scope: all 92 MDX pages in the local TOC. Eight CLI pages are recorded as retired through PR #251. The target consists of 84 existing pages, each with one primary purpose, plus 30 proposed new pages (two conditional).", "",
              "E = explanation; H = how-to; T = tutorial; R = reference. Current type is an editorial assessment of the content, not existing frontmatter. P0 identifies a contract/accuracy issue or an already-decided retirement; P1 is the main transition work; P2 is a later improvement.", "",
              "Keep preserves the page, URL, and main structure with the specified corrections and standard links. Refactor changes focus without extracting separate pages; split specifies explicit destinations; retire-by-251 does not restore retired content.", ""]
     for row in migration:
