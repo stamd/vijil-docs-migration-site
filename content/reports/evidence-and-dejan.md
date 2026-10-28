@@ -96,8 +96,6 @@ Apply the migration plan after comparing the merged PR #251 state with other act
 
 ## 6. Comparison with Dejan’s Document
 
-Direct Google Drive access returned 404/403. This analysis uses the complete document text supplied by the user in the conversation. It does not claim to have checked comments, revision history, or the separate cheat sheet/checklist mentioned in that document.
-
 | Dejan’s recommendation or claim | Assessment after the audit | Concrete decision |
 | --- | --- | --- |
 | Retain AOG/ADG/Concepts | Supported and consistent with the user’s constraint | Keep the three tabs; change groups and page purposes |
