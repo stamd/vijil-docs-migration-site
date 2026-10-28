@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Checks and evaluation · Vijil migration</title><meta name="description" content="Build checks, task success, and meaningful evidence of improvement."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="standards/validation.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="writing.html">Page templates and links</a></li><li><a href="validation.html" aria-current="page">Checks and evaluation</a></li><li><a href="ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Working standards</div><h1>Checks and evaluation</h1><p class="page-description">Build checks, task success, and meaningful evidence of improvement.</p><h2 id="7-ci-and-validation">7. CI and Validation</h2>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>What it catches</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TOC/source inventory</td>
+<td>Every navigated MDX exists; no duplicate URLs; each has an E/H/R/T type and goal</td>
+<td>Every documentation PR</td>
+</tr>
+<tr>
+<td>Frontmatter and descriptions</td>
+<td>Missing title/description, generic or duplicate candidates, registry scope/version</td>
+<td>New/changed content; warnings for the unmigrated remainder</td>
+</tr>
+<tr>
+<td>Content/link graph</td>
+<td>Related exists and reaches valid, relevant destinations; type-specific links and exceptions</td>
+<td>Migrated pages</td>
+</tr>
+<tr>
+<td>Terminology lint</td>
+<td>Confirmed names and prohibited obsolete prose aliases; explicit exceptions for code literals</td>
+<td>Every documentation PR</td>
+</tr>
+<tr>
+<td>Mintlify build and broken links</td>
+<td>MDX/render/build failures and dead links; pin the appropriate CLI version in CI</td>
+<td>Every documentation PR</td>
+</tr>
+<tr>
+<td>Redirects and anchors</td>
+<td>No chains/cycles/dead targets; expected legacy anchors and generated routes remain useful</td>
+<td>Path and TOC changes</td>
+</tr>
+<tr>
+<td>OpenAPI schema/coverage</td>
+<td>Schema validation, unique IDs, public routes, alias decisions, examples, and stable documentation routes</td>
+<td>Specification synchronization PRs and relevant service releases</td>
+</tr>
+<tr>
+<td>Executable examples</td>
+<td>Imports, complete minimal examples, retained supporting CLI steps, response shapes, statuses, and failure branches</td>
+<td>Examples changed by the batch; relevant package releases</td>
+</tr>
+<tr>
+<td>Rendered Markdown</td>
+<td>IDs, prerequisites, necessary tab/accordion content, Mermaid, and Related appear in the agent view</td>
+<td>Pilot, new components, and a representative regression set</td>
+</tr>
+<tr>
+<td>Documentation task evaluation</td>
+<td>Correct interface selection, task completion, valid API/tool calls, and respect for limits</td>
+<td>Before/after the pilot and significant architectural changes</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>mint broken-links</code> does not verify semantic destination relevance, score units, or the existence of every SDK method. Vale cannot determine whether a page is a useful how-to. Automation and domain review therefore have different jobs.</p>
+<p>Tie executable checks to releases and fixtures. Do not run live production write/deploy workflows for every prose edit. For consequential tasks such as CI gating or tool enforcement, verify failure, timeout, missing results, and shadow/enforce distinctions. For moving already-verified text without changing meaning, build/link/render checks and domain review are sufficient.</p>
+<h2 id="8-measuring-whether-migration-works">8. Measuring Whether Migration Works</h2>
+<p>Before changing content, save results for the same tasks, queries, and model/tool environment. Repeat them afterward. Traffic is not task success: a crawler fetching ten pages and an agent successfully running an evaluation are different session types.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Proposed assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Finding the right destination</td>
+<td>Short tree test with Console users and developers: first tab/group choice, retrieval success, time, and wrong turns</td>
+</tr>
+<tr>
+<td>Agent retrieval</td>
+<td>Whether relevant H/R destinations are found early; correct product/interface/version selection</td>
+</tr>
+<tr>
+<td>Agent task success</td>
+<td>Completed task with verifiable results, valid IDs, and bounded polling, without invented methods</td>
+</tr>
+<tr>
+<td>Contract correctness</td>
+<td>Correct scale/unit/status; no unverified interchange of evaluation and engagement IDs</td>
+</tr>
+<tr>
+<td>Context cost</td>
+<td>Pages read, tokens required, backtracking, and irrelevant interface content</td>
+</tr>
+<tr>
+<td>Maintenance</td>
+<td>Locations changed for one definition, drift findings per release, and ownership completeness</td>
+</tr>
+<tr>
+<td>Human comprehension</td>
+<td>Whether an owner can explain a finding and next action without reading the SDK catalog</td>
+</tr>
+</tbody>
+</table></div>
+<p>Proposed pilot exit criteria: all critical contract tasks pass without wrong interfaces, statuses, or units; most remaining tasks show shorter or equally short paths with better success. Agree numerical task-success and token-budget thresholds after measuring the baseline, rather than inventing them as evidence of improvement.</p>
+<p><a href="../downloads/agent-evaluation-tasks.json">agent-evaluation-tasks.json</a> defines 12 initial tasks with expected destinations in the target plan and disallowed incorrect conclusions. It is a documentation evaluation specification, not an executed benchmark or product-functionality test.</p>
+<h2 id="evaluation-scenarios">The 12 proposed evaluation scenarios</h2><p>These are evaluation specifications, not executed tests or evidence of product availability.</p><h3 id="d01">D01</h3>
+<p>I have Console access and want to run my first behavioral evaluation of a test Agent.</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/p029.html" title="Get Started with Console">P029</a>, <a class="task-link" href="../pages/p044.html" title="Run Evaluations">P044</a>, <a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a></p>
+<p><strong>Pass:</strong> Finds the Console tutorial and its result-verification steps.</p>
+<p><strong>Fail:</strong> Requires Python installation or self-hosting as a mandatory beginner prerequisite.</p>
+<h3 id="d02">D02</h3>
+<p>I want my first complete evaluation from Python. What prerequisites and outputs should I expect?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a>, <a class="task-link" href="../pages/n021.html" title="Install and Configure the Python SDK">N021</a>, <a class="task-link" href="../pages/n019.html" title="Authenticate to Vijil">N019</a>, <a class="task-link" href="../pages/p089.html" title="Setup">P089</a></p>
+<p><strong>Pass:</strong> One verifiable SDK path with version, credentials/team, and retained Agent/evaluation IDs.</p>
+<p><strong>Fail:</strong> Mixes the MCP server package, CLI evaluation commands, and SDK configuration formats.</p>
+<h3 id="d03">D03</h3>
+<p>Does a score of 0.72 mean 72, or 0.72 out of 100, and where do I check the threshold?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a>, <a class="task-link" href="../pages/n003.html" title="Interpret Evaluation Evidence">N003</a>, <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a></p>
+<p><strong>Pass:</strong> Identifies the exact field/interface/scale and separates product verdict from approved release criteria.</p>
+<p><strong>Fail:</strong> Applies 70 to an SDK field without conversion or promises universal deployment readiness.</p>
+<h3 id="d04">D04</h3>
+<p>Build a CI gate that waits for this particular evaluation and rejects release if the run fails or has no score.</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n022.html" title="Gate a Release on Evaluation Evidence">N022</a>, <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>, <a class="task-link" href="../pages/p090.html" title="Lifecycle Methods">P090</a>, <a class="task-link" href="../pages/p092.html" title="Models and Errors">P092</a></p>
+<p><strong>Pass:</strong> Uses the SDK, bounded polling, the specific evaluation ID, failure/missing-result handling, and the approved threshold scale.</p>
+<p><strong>Fail:</strong> Passes because an older Agent score passed or treats every terminal status as success.</p>
+<h3 id="d05">D05</h3>
+<p>A Red Team run is degraded. How do I find the transcript and assess how much to trust its report?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n029.html" title="Retrieve and Investigate Red Team Evidence">N029</a>, <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>, <a class="task-link" href="../pages/p022.html" title="Engagements">P022</a>, <a class="task-link" href="../pages/p047.html" title="Understand Red Team Results">P047</a></p>
+<p><strong>Pass:</strong> Preserves the confirmed ID flow, retrieves relevant artifacts, and recognizes partial evidence.</p>
+<p><strong>Fail:</strong> Equates degraded with complete success or substitutes engagement_id for evaluation_id without a contract.</p>
+<h3 id="d06">D06</h3>
+<p>My local Agent is not publicly deployed. Can I run Red Team testing?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/p059.html" title="Local Agent Evaluation">P059</a>, <a class="task-link" href="../pages/p057.html" title="Evaluation Overview">P057</a>, <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a></p>
+<p><strong>Pass:</strong> Distinguishes an authenticated public tunnel from no-tunnel local mode and states their conditions.</p>
+<p><strong>Fail:</strong> Makes a blanket claim that every local mode does or does not support Red Team.</p>
+<h3 id="d07">D07</h3>
+<p>I need a list of Security Probes and their actual identifiers.</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n010.html" title="Evaluation Coverage by Dimension">N010</a>, <a class="task-link" href="../pages/n008.html" title="Evaluation Probe Reference">N008</a>, <a class="task-link" href="../pages/p010.html" title="Security">P010</a></p>
+<p><strong>Pass:</strong> Uses a visible versioned catalog and IDs; Concepts explains the dimension's meaning.</p>
+<p><strong>Fail:</strong> Must simulate hover or invent an ID from a display name.</p>
+<h3 id="d08">D08</h3>
+<p>I want to block an unauthorized tool call and prove workload identity. Is a Dome scan sufficient?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n004.html" title="How the Controls Engine Works">N004</a>, <a class="task-link" href="../pages/n005.html" title="How Trust Runtime Works">N005</a>, <a class="task-link" href="../pages/p066.html" title="Controls Engine">P066</a>, <a class="task-link" href="../pages/p067.html" title="Trust Runtime">P067</a>, <a class="task-link" href="../pages/n015.html" title="Trust Runtime API Reference">N015</a></p>
+<p><strong>Pass:</strong> Distinguishes content scans, declarative Controls, and identity-aware Trust Runtime; states framework boundaries.</p>
+<p><strong>Fail:</strong> Presents an Agent ID or telemetry label as cryptographic identity proof.</p>
+<h3 id="d09">D09</h3>
+<p>ScanResult is flagged but not enforced. How should I interpret the result, redaction, and exec_time?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n014.html" title="Dome Results and Telemetry Reference">N014</a>, <a class="task-link" href="../pages/p069.html" title="Use Guardrails">P069</a>, <a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a></p>
+<p><strong>Pass:</strong> Uses the confirmed canonical unit and distinguishes detection, enforcement, sanitized content, and error policy.</p>
+<p><strong>Fail:</strong> Mixes milliseconds/seconds or claims flagged automatically means the actual request was blocked.</p>
+<h3 id="d10">D10</h3>
+<p>Defend is empty even though Discover scans completed. What should I check?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/p049.html" title="Monitor Protection with Defend">P049</a>, <a class="task-link" href="../pages/p027.html" title="Observe">P027</a>, <a class="task-link" href="../pages/n028.html" title="Connect Runtime Events to Defend">N028</a>, <a class="task-link" href="../pages/p051.html" title="Monitor Dome Metrics">P051</a></p>
+<p><strong>Pass:</strong> Distinguishes scan inventory from dlp runtime events and per-Agent metrics; uses confirmed setup or explicitly identifies missing support.</p>
+<p><strong>Fail:</strong> Invents an SDK/MCP replacement for CLI-only bootstrap or concludes there are no threats because there are no events.</p>
+<h3 id="d11">D11</h3>
+<p>I want MCP: should I connect Vijil tools to Claude Code, or protect my own MCP server?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n020.html" title="Connect the Vijil MCP Server">N020</a>, <a class="task-link" href="../pages/p055.html" title="Claude Code">P055</a>, <a class="task-link" href="../pages/p079.html" title="Use MCP Tools">P079</a>, <a class="task-link" href="../pages/p077.html" title="MCP Servers">P077</a></p>
+<p><strong>Pass:</strong> Distinguishes the management server/plugin from the Dome protection proxy and reaches the correct task.</p>
+<p><strong>Fail:</strong> Confuses servers, credentials, packages, or input/output protection directions.</p>
+<h3 id="d12">D12</h3>
+<p>The SDK has adapt and deploy methods. Can I immediately use Darwin and automatically deploy my application?</p>
+<p><strong>Expected pages:</strong> <a class="task-link" href="../pages/n018.html" title="Platform Versions and Capability Availability">N018</a>, <a class="task-link" href="../pages/p006.html" title="Darwin">P006</a>, <a class="task-link" href="../pages/p090.html" title="Lifecycle Methods">P090</a>, <a class="task-link" href="../pages/p053.html" title="Agent Lifecycle Workflow">P053</a>, <a class="task-link" href="../pages/n033.html" title="Review and Apply an Adaptation Proposal">N033</a>, <a class="task-link" href="../pages/n034.html" title="Adapt an Agent and Validate the Proposal">N034</a></p>
+<p><strong>Pass:</strong> Checks release/deployment availability, distinguishes existing methods from supported workflows, and does not treat conditional pages as availability evidence.</p>
+<p><strong>Fail:</strong> Infers GA status or supported deployment merely because a method/model exists in reference.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="writing.html"><span>Previous</span><strong>Page templates and links</strong></a><a href="ownership.html"><span>Next</span><strong>Ownership and reviews</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#7-ci-and-validation">7. CI and Validation</a></li><li><a href="#8-measuring-whether-migration-works">8. Measuring Whether Migration Works</a></li><li><a href="#evaluation-scenarios">The 12 proposed evaluation scenarios</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

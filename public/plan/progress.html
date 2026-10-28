@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Progress tracker · Vijil migration</title><meta name="description" content="Track implementation, ownership, and review across the migration."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="plan/progress.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="roadmap.html">Rollout and Diamond pilot</a></li><li><a href="pages.html">Page-by-page plan</a></li><li><a href="progress.html" aria-current="page">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main wide" tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Plan and delivery</div><h1>Progress tracker</h1><p class="page-description">Track implementation, ownership, and review across the migration.</p><section class="progress-summary" aria-label="Migration progress"><div class="progress-overview"><strong data-completion>0 of 126 tasks complete</strong><span data-completion-percent>0%</span></div><progress max="126" value="0" data-progress-bar aria-label="Completed migration tasks"></progress><div class="status-counts" data-status-counts></div></section><section class="tracking-tools" aria-label="Shared progress controls"><div><strong>Shared file, local drafts</strong><p class="muted">Publish team updates by committing the exported <code>progress.json</code> to <code>public/</code>.</p></div><div class="button-row"><button type="button" data-export-progress>Export progress.json</button><button type="button" data-import-progress>Import progress</button><button type="button" class="text-button" data-refresh-progress>Refresh published</button></div><p class="draft-summary" data-draft-summary aria-live="polite"></p><p data-conflict-summary class="notice" hidden></p><p><a href="../resources/tracking.html">How sharing works</a> · <button class="text-button danger" type="button" data-discard-drafts>Discard local drafts</button></p></section><section class="inventory" data-inventory data-default-status="all">
+      <div class="filter-grid">
+        <label class="filter-search">Find a page<input type="search" data-filter="query" placeholder="Title, page ID, topic, or owner…" aria-label="Filter migration pages"></label>
+        <label>Scope<select data-filter="kind"><option value="all">All 126 tasks</option><option value="existing">Existing pages · 92</option><option value="new">New pages · 34</option></select></label>
+        <label>Area<select data-filter="tab"><option value="all">All three tabs</option><option>Concepts</option><option>Agent Owner's Guide</option><option>Agent Developer's Guide</option></select></label>
+        <label>Status<select data-filter="status"><option value="all">All statuses</option><option value="not-started">Not started</option><option value="in-progress">In progress</option><option value="in-review">In review</option><option value="blocked">Blocked</option><option value="done">Done</option></select></label>
+        <label>Action<select data-filter="action"><option value="all">All actions</option><option value="keep">Keep</option><option value="refactor">Refactor</option><option value="split">Split</option><option value="rewrite">Rewrite</option><option value="move">Move</option><option value="move+split">Move and split</option><option value="add">Add</option><option value="retire-by-251">Retire via PR #251</option></select></label>
+        <label>Priority<select data-filter="priority"><option value="all">All priorities</option><option>P0</option><option>P1</option><option>P2</option></select></label>
+      </div>
+      <div class="result-line"><p data-result-count aria-live="polite">126 tasks</p><button class="text-button" type="button" data-clear-filters>Clear filters</button></div>
+      <div class="table-scroll"><table class="task-table"><thead><tr><th>Page</th><th>Decision / type</th><th>Priority</th><th>Status</th><th>Owner</th></tr></thead><tbody><tr data-task-row data-task-id="P001">
+          <td><a href="../pages/p001.html"><span class="row-id">P001</span><strong>Welcome to Vijil</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P002">
+          <td><a href="../pages/p002.html"><span class="row-id">P002</span><strong>Console</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P003">
+          <td><a href="../pages/p003.html"><span class="row-id">P003</span><strong>Discover</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P004">
+          <td><a href="../pages/p004.html"><span class="row-id">P004</span><strong>Diamond</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P005">
+          <td><a href="../pages/p005.html"><span class="row-id">P005</span><strong>Dome</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P006">
+          <td><a href="../pages/p006.html"><span class="row-id">P006</span><strong>Darwin</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P007">
+          <td><a href="../pages/p007.html"><span class="row-id">P007</span><strong>The Trust Score</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P008">
+          <td><a href="../pages/p008.html"><span class="row-id">P008</span><strong>Reliability</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P009">
+          <td><a href="../pages/p009.html"><span class="row-id">P009</span><strong>Safety</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P010">
+          <td><a href="../pages/p010.html"><span class="row-id">P010</span><strong>Security</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P011">
+          <td><a href="../pages/p011.html"><span class="row-id">P011</span><strong>Discovery Components</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P012">
+          <td><a href="../pages/p012.html"><span class="row-id">P012</span><strong>Target</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P013">
+          <td><a href="../pages/p013.html"><span class="row-id">P013</span><strong>Collector</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P014">
+          <td><a href="../pages/p014.html"><span class="row-id">P014</span><strong>Resource</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P015">
+          <td><a href="../pages/p015.html"><span class="row-id">P015</span><strong>Classification</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P016">
+          <td><a href="../pages/p016.html"><span class="row-id">P016</span><strong>How Evaluation Works</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P017">
+          <td><a href="../pages/p017.html"><span class="row-id">P017</span><strong>Harnesses</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P018">
+          <td><a href="../pages/p018.html"><span class="row-id">P018</span><strong>Scenarios</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P019">
+          <td><a href="../pages/p019.html"><span class="row-id">P019</span><strong>Probes</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P020">
+          <td><a href="../pages/p020.html"><span class="row-id">P020</span><strong>Detectors</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P021">
+          <td><a href="../pages/p021.html"><span class="row-id">P021</span><strong>Red Team</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P022">
+          <td><a href="../pages/p022.html"><span class="row-id">P022</span><strong>Engagements</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P023">
+          <td><a href="../pages/p023.html"><span class="row-id">P023</span><strong>How Defense Works</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P024">
+          <td><a href="../pages/p024.html"><span class="row-id">P024</span><strong>Guardrail</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P025">
+          <td><a href="../pages/p025.html"><span class="row-id">P025</span><strong>Guard</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>keep<span class="row-subtitle">Explanation</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P026">
+          <td><a href="../pages/p026.html"><span class="row-id">P026</span><strong>Detector</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P027">
+          <td><a href="../pages/p027.html"><span class="row-id">P027</span><strong>Observe</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>split<span class="row-subtitle">Explanation</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P028">
+          <td><a href="../pages/p028.html"><span class="row-id">P028</span><strong>Glossary</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P029">
+          <td><a href="../pages/p029.html"><span class="row-id">P029</span><strong>Get Started with Console</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>rewrite<span class="row-subtitle">Tutorial</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P030">
+          <td><a href="../pages/p030.html"><span class="row-id">P030</span><strong>Manage Teams</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P031">
+          <td><a href="../pages/p031.html"><span class="row-id">P031</span><strong>Get Started with Discover</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P032">
+          <td><a href="../pages/p032.html"><span class="row-id">P032</span><strong>Create and Manage Targets</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P033">
+          <td><a href="../pages/p033.html"><span class="row-id">P033</span><strong>Install a Collector</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P034">
+          <td><a href="../pages/p034.html"><span class="row-id">P034</span><strong>Review Discovered Resources</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P035">
+          <td><a href="../pages/p035.html"><span class="row-id">P035</span><strong>Register a Discovered Agent</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P036">
+          <td><a href="../pages/p036.html"><span class="row-id">P036</span><strong>Scan Code Repositories</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P037">
+          <td><a href="../pages/p037.html"><span class="row-id">P037</span><strong>What is an Agent</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>move<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P038">
+          <td><a href="../pages/p038.html"><span class="row-id">P038</span><strong>Manage Agents</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P039">
+          <td><a href="../pages/p039.html"><span class="row-id">P039</span><strong>Define Personas</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P040">
+          <td><a href="../pages/p040.html"><span class="row-id">P040</span><strong>Define Policies</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P041">
+          <td><a href="../pages/p041.html"><span class="row-id">P041</span><strong>Trust Score Harness</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P042">
+          <td><a href="../pages/p042.html"><span class="row-id">P042</span><strong>Compliance Harnesses</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P043">
+          <td><a href="../pages/p043.html"><span class="row-id">P043</span><strong>Custom Harnesses</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P044">
+          <td><a href="../pages/p044.html"><span class="row-id">P044</span><strong>Run Evaluations</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P045">
+          <td><a href="../pages/p045.html"><span class="row-id">P045</span><strong>Understand Results</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P046">
+          <td><a href="../pages/p046.html"><span class="row-id">P046</span><strong>Run a Red Team Campaign</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P047">
+          <td><a href="../pages/p047.html"><span class="row-id">P047</span><strong>Understand Red Team Results</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P048">
+          <td><a href="../pages/p048.html"><span class="row-id">P048</span><strong>Configure Guardrails</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P049">
+          <td><a href="../pages/p049.html"><span class="row-id">P049</span><strong>Monitor Protection with Defend</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P050">
+          <td><a href="../pages/p050.html"><span class="row-id">P050</span><strong>Deploy Dome</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>rewrite<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P051">
+          <td><a href="../pages/p051.html"><span class="row-id">P051</span><strong>Monitor Dome Metrics</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P052">
+          <td><a href="../pages/p052.html"><span class="row-id">P052</span><strong>Building Trusted Agents</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P053">
+          <td><a href="../pages/p053.html"><span class="row-id">P053</span><strong>Agent Lifecycle Workflow</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P054">
+          <td><a href="../pages/p054.html"><span class="row-id">P054</span><strong>Quickstart</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">Tutorial</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P055">
+          <td><a href="../pages/p055.html"><span class="row-id">P055</span><strong>Claude Code</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P056">
+          <td><a href="../pages/p056.html"><span class="row-id">P056</span><strong>Deploy Vijil</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P057">
+          <td><a href="../pages/p057.html"><span class="row-id">P057</span><strong>Evaluation Overview</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P058">
+          <td><a href="../pages/p058.html"><span class="row-id">P058</span><strong>Run Evaluations</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P059">
+          <td><a href="../pages/p059.html"><span class="row-id">P059</span><strong>Local Agent Evaluation</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P060">
+          <td><a href="../pages/p060.html"><span class="row-id">P060</span><strong>Understand Results</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P061">
+          <td><a href="../pages/p061.html"><span class="row-id">P061</span><strong>Custom Harnesses</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P062">
+          <td><a href="../pages/p062.html"><span class="row-id">P062</span><strong>Cloud Provider Integrations</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P063">
+          <td><a href="../pages/p063.html"><span class="row-id">P063</span><strong>Red Team Overview</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P064">
+          <td><a href="../pages/p064.html"><span class="row-id">P064</span><strong>Protection Overview</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P065">
+          <td><a href="../pages/p065.html"><span class="row-id">P065</span><strong>Install Dome</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P066">
+          <td><a href="../pages/p066.html"><span class="row-id">P066</span><strong>Controls Engine</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P067">
+          <td><a href="../pages/p067.html"><span class="row-id">P067</span><strong>Trust Runtime</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P068">
+          <td><a href="../pages/p068.html"><span class="row-id">P068</span><strong>Configure Guardrails</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P069">
+          <td><a href="../pages/p069.html"><span class="row-id">P069</span><strong>Use Guardrails</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P070">
+          <td><a href="../pages/p070.html"><span class="row-id">P070</span><strong>Custom Detectors</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P071">
+          <td><a href="../pages/p071.html"><span class="row-id">P071</span><strong>Detection Methods</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P072">
+          <td><a href="../pages/p072.html"><span class="row-id">P072</span><strong>Observability</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P073">
+          <td><a href="../pages/p073.html"><span class="row-id">P073</span><strong>Google ADK</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P074">
+          <td><a href="../pages/p074.html"><span class="row-id">P074</span><strong>LangGraph</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P075">
+          <td><a href="../pages/p075.html"><span class="row-id">P075</span><strong>Strands</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P076">
+          <td><a href="../pages/p076.html"><span class="row-id">P076</span><strong>LangChain</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P077">
+          <td><a href="../pages/p077.html"><span class="row-id">P077</span><strong>MCP Servers</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P078">
+          <td><a href="../pages/p078.html"><span class="row-id">P078</span><strong>Use Dome as a Containerized Deployment</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>move+split<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P079">
+          <td><a href="../pages/p079.html"><span class="row-id">P079</span><strong>Use MCP Tools</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P080">
+          <td><a href="../pages/p080.html"><span class="row-id">P080</span><strong>Controls API Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>keep<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P081">
+          <td><a href="../pages/p081.html"><span class="row-id">P081</span><strong>Setup</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P082">
+          <td><a href="../pages/p082.html"><span class="row-id">P082</span><strong>Discover Resources</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P083">
+          <td><a href="../pages/p083.html"><span class="row-id">P083</span><strong>Manage Agents</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P084">
+          <td><a href="../pages/p084.html"><span class="row-id">P084</span><strong>Evaluate Agents</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P085">
+          <td><a href="../pages/p085.html"><span class="row-id">P085</span><strong>Protect Agents</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P086">
+          <td><a href="../pages/p086.html"><span class="row-id">P086</span><strong>Red Team</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P087">
+          <td><a href="../pages/p087.html"><span class="row-id">P087</span><strong>Telemetry</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P088">
+          <td><a href="../pages/p088.html"><span class="row-id">P088</span><strong>Manifest CLI</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>Retire via PR #251<span class="row-subtitle">Retiring</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P089">
+          <td><a href="../pages/p089.html"><span class="row-id">P089</span><strong>Setup</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>split<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P090">
+          <td><a href="../pages/p090.html"><span class="row-id">P090</span><strong>Lifecycle Methods</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P091">
+          <td><a href="../pages/p091.html"><span class="row-id">P091</span><strong>Resources</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="P092">
+          <td><a href="../pages/p092.html"><span class="row-id">P092</span><strong>Models and Errors</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>refactor<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N001">
+          <td><a href="../pages/n001.html"><span class="row-id">N001</span><strong>The Agent Trust Lifecycle</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>add<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N002">
+          <td><a href="../pages/n002.html"><span class="row-id">N002</span><strong>Personas, Policies, and Evaluation Context</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>add<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N003">
+          <td><a href="../pages/n003.html"><span class="row-id">N003</span><strong>Interpret Evaluation Evidence</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>add<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N004">
+          <td><a href="../pages/n004.html"><span class="row-id">N004</span><strong>How the Controls Engine Works</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>add<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N005">
+          <td><a href="../pages/n005.html"><span class="row-id">N005</span><strong>How Trust Runtime Works</strong></a><span class="row-subtitle">Concepts</span></td>
+          <td>add<span class="row-subtitle">Explanation</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N006">
+          <td><a href="../pages/n006.html"><span class="row-id">N006</span><strong>Evaluation Harness Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N007">
+          <td><a href="../pages/n007.html"><span class="row-id">N007</span><strong>Evaluation Scenario Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N008">
+          <td><a href="../pages/n008.html"><span class="row-id">N008</span><strong>Evaluation Probe Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N009">
+          <td><a href="../pages/n009.html"><span class="row-id">N009</span><strong>Evaluation Detector Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N010">
+          <td><a href="../pages/n010.html"><span class="row-id">N010</span><strong>Evaluation Coverage by Dimension</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N011">
+          <td><a href="../pages/n011.html"><span class="row-id">N011</span><strong>Agent Registration Contract</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N012">
+          <td><a href="../pages/n012.html"><span class="row-id">N012</span><strong>Evaluation Contracts and Results</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N013">
+          <td><a href="../pages/n013.html"><span class="row-id">N013</span><strong>Dome Configuration Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N014">
+          <td><a href="../pages/n014.html"><span class="row-id">N014</span><strong>Dome Results and Telemetry Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N015">
+          <td><a href="../pages/n015.html"><span class="row-id">N015</span><strong>Trust Runtime API Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N016">
+          <td><a href="../pages/n016.html"><span class="row-id">N016</span><strong>Framework Integration Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N017">
+          <td><a href="../pages/n017.html"><span class="row-id">N017</span><strong>Dome Service HTTP API Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N018">
+          <td><a href="../pages/n018.html"><span class="row-id">N018</span><strong>Platform Versions and Capability Availability</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P0</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N019">
+          <td><a href="../pages/n019.html"><span class="row-id">N019</span><strong>Authenticate to Vijil</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N020">
+          <td><a href="../pages/n020.html"><span class="row-id">N020</span><strong>Connect the Vijil MCP Server</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N021">
+          <td><a href="../pages/n021.html"><span class="row-id">N021</span><strong>Install and Configure the Python SDK</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N022">
+          <td><a href="../pages/n022.html"><span class="row-id">N022</span><strong>Gate a Release on Evaluation Evidence</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N023">
+          <td><a href="../pages/n023.html"><span class="row-id">N023</span><strong>Register an Agent Programmatically</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N024">
+          <td><a href="../pages/n024.html"><span class="row-id">N024</span><strong>Install an Endpoint Collector</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N025">
+          <td><a href="../pages/n025.html"><span class="row-id">N025</span><strong>Install a Network Collector</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N026">
+          <td><a href="../pages/n026.html"><span class="row-id">N026</span><strong>Install a Kubernetes Collector</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N027">
+          <td><a href="../pages/n027.html"><span class="row-id">N027</span><strong>Install an AWS Cloud API Collector</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N028">
+          <td><a href="../pages/n028.html"><span class="row-id">N028</span><strong>Connect Runtime Events to Defend</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide <span class="conditional-mark" title="Publication requires confirmation">Conditional</span></span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N029">
+          <td><a href="../pages/n029.html"><span class="row-id">N029</span><strong>Retrieve and Investigate Red Team Evidence</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N030">
+          <td><a href="../pages/n030.html"><span class="row-id">N030</span><strong>Prepare AWS Infrastructure for Vijil</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N031">
+          <td><a href="../pages/n031.html"><span class="row-id">N031</span><strong>Self-Hosted Configuration Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N032">
+          <td><a href="../pages/n032.html"><span class="row-id">N032</span><strong>Claude Code Plugin Command Reference</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide</span></td>
+          <td>add<span class="row-subtitle">Reference</span></td>
+          <td>P1</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N033">
+          <td><a href="../pages/n033.html"><span class="row-id">N033</span><strong>Review and Apply an Adaptation Proposal</strong></a><span class="row-subtitle">Agent Owner&#x27;s Guide <span class="conditional-mark" title="Publication requires confirmation">Conditional</span></span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr><tr data-task-row data-task-id="N034">
+          <td><a href="../pages/n034.html"><span class="row-id">N034</span><strong>Adapt an Agent and Validate the Proposal</strong></a><span class="row-subtitle">Agent Developer&#x27;s Guide <span class="conditional-mark" title="Publication requires confirmation">Conditional</span></span></td>
+          <td>add<span class="row-subtitle">How-to</span></td>
+          <td>P2</td><td data-status-cell><span class="badge status-not-started">Not started</span></td><td class="owner-cell" data-owner-cell>—</td>
+        </tr></tbody></table></div>
+      <p class="empty-state" data-empty-state hidden>No pages match these filters. Try a broader search or clear the filters.</p>
+      <div class="pagination" data-pagination hidden><button type="button" data-page-prev>Previous</button><span data-page-label></span><button type="button" data-page-next>Next</button></div>
+    </section><nav class="reading-nav" aria-label="Reading order"><a href="pages.html"><span>Previous</span><strong>Page-by-page plan</strong></a><a href="../standards/writing.html"><span>Next</span><strong>Page templates and links</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

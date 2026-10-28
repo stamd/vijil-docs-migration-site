@@ -1,0 +1,312 @@
+{
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Concepts",
+        "groups": [
+          {
+            "group": "Platform",
+            "pages": [
+              "concepts/welcome",
+              "concepts/platform/console",
+              "concepts/platform/discover",
+              "concepts/platform/diamond",
+              "concepts/platform/dome",
+              "concepts/platform/darwin",
+              "concepts/agents",
+              "concepts/agent-lifecycle"
+            ]
+          },
+          {
+            "group": "Trust and Evaluation",
+            "pages": [
+              "concepts/trust-score/introduction",
+              "concepts/trust-score/reliability",
+              "concepts/trust-score/safety",
+              "concepts/trust-score/security",
+              "concepts/evaluation-components/introduction",
+              "concepts/evaluation-components/harness",
+              "concepts/evaluation-components/scenario",
+              "concepts/evaluation-components/probe",
+              "concepts/evaluation-components/detector",
+              "concepts/evaluation-context",
+              "concepts/evaluation-evidence"
+            ]
+          },
+          {
+            "group": "Discovery",
+            "pages": [
+              "concepts/discovery/introduction",
+              "concepts/discovery/target",
+              "concepts/discovery/collector",
+              "concepts/discovery/resource",
+              "concepts/discovery/classification"
+            ]
+          },
+          {
+            "group": "Red Team",
+            "pages": [
+              "concepts/red-team/introduction",
+              "concepts/red-team/engagements"
+            ]
+          },
+          {
+            "group": "Runtime Defense",
+            "pages": [
+              "concepts/defense/introduction",
+              "concepts/defense/guardrail",
+              "concepts/defense/guard",
+              "concepts/defense/detector",
+              "concepts/defense/observe",
+              "concepts/defense/controls-engine",
+              "concepts/defense/trust-runtime"
+            ]
+          },
+          {
+            "group": "Glossary",
+            "pages": [
+              "concepts/glossary"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agent Owner's Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "owner-guide/getting-started/introduction"
+            ]
+          },
+          {
+            "group": "Teams and Agents",
+            "pages": [
+              "owner-guide/getting-started/teams",
+              "owner-guide/register-agents/registering-agents"
+            ]
+          },
+          {
+            "group": "Discover Agents",
+            "pages": [
+              "owner-guide/discover/introduction",
+              "owner-guide/discover/targets",
+              "owner-guide/discover/collectors",
+              "owner-guide/discover/reviewing-resources",
+              "owner-guide/discover/registering-agents",
+              "owner-guide/discover/code-scans"
+            ]
+          },
+          {
+            "group": "Prepare Evaluations",
+            "pages": [
+              "owner-guide/simulate-environment/personas",
+              "owner-guide/simulate-environment/policies",
+              "owner-guide/simulate-environment/harnesses/trust-score",
+              "owner-guide/simulate-environment/harnesses/compliance",
+              "owner-guide/simulate-environment/custom-harnesses"
+            ]
+          },
+          {
+            "group": "Evaluate Agents",
+            "pages": [
+              "owner-guide/run-evaluations/running-evaluations",
+              "owner-guide/run-evaluations/understanding-results"
+            ]
+          },
+          {
+            "group": "Red Team",
+            "pages": [
+              "owner-guide/red-team/running-campaigns",
+              "owner-guide/red-team/understanding-results"
+            ]
+          },
+          {
+            "group": "Protect and Monitor",
+            "pages": [
+              "owner-guide/protect-in-production/configuring-guardrails",
+              "owner-guide/protect-in-production/defend",
+              "owner-guide/protect-in-production/deploying-dome",
+              "owner-guide/protect-in-production/observability"
+            ]
+          },
+          {
+            "group": "Improve Agents",
+            "pages": [
+              "owner-guide/improve-agents/review-proposals"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agent Developer's Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "developer-guide/getting-started/introduction",
+              "developer-guide/agentic/quickstart",
+              "developer-guide/getting-started/claude-code-plugin",
+              "developer-guide/getting-started/authentication",
+              "developer-guide/getting-started/connect-mcp",
+              "developer-guide/getting-started/python-sdk"
+            ]
+          },
+          {
+            "group": "Teams and Agents",
+            "pages": [
+              "developer-guide/evaluate/cloud-providers",
+              "developer-guide/agents/register"
+            ]
+          },
+          {
+            "group": "Discover Agents",
+            "pages": [
+              "developer-guide/discover/endpoint-collectors",
+              "developer-guide/discover/network-collector",
+              "developer-guide/discover/cluster-collector",
+              "developer-guide/discover/aws-collector",
+              "developer-guide/discover/runtime-events"
+            ]
+          },
+          {
+            "group": "Prepare Evaluations",
+            "pages": [
+              "developer-guide/evaluate/custom-harnesses"
+            ]
+          },
+          {
+            "group": "Evaluate Agents",
+            "pages": [
+              "developer-guide/evaluate/overview",
+              "developer-guide/evaluate/running-evaluations",
+              "developer-guide/evaluate/local-agent",
+              "developer-guide/evaluate/understanding-results"
+            ]
+          },
+          {
+            "group": "Red Team",
+            "pages": [
+              "developer-guide/red-team/overview",
+              "developer-guide/red-team/understanding-results"
+            ]
+          },
+          {
+            "group": "Protect Agents",
+            "pages": [
+              "developer-guide/protect/overview",
+              "developer-guide/protect/installation",
+              "developer-guide/protect/control-engine",
+              "developer-guide/protect/trust-runtime",
+              "developer-guide/protect/configuring-guardrails",
+              "developer-guide/protect/using-guardrails",
+              "developer-guide/protect/custom-detectors",
+              "developer-guide/protect/observability",
+              {
+                "group": "Framework Integrations",
+                "pages": [
+                  "developer-guide/protect/integrations/adk",
+                  "developer-guide/protect/integrations/langgraph",
+                  "developer-guide/protect/integrations/strands",
+                  "developer-guide/protect/integrations/langchain",
+                  "developer-guide/protect/integrations/mcp"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Release and Improve",
+            "pages": [
+              "developer-guide/getting-started/agent-lifecycle-workflow",
+              "developer-guide/evaluate/ci-cd",
+              "developer-guide/improve-agents/adapt"
+            ]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": [
+              "developer-guide/deploy-vijil/deploy-vijil-console",
+              "developer-guide/deploy-vijil/dome-service",
+              "developer-guide/deploy-vijil/aws-infrastructure"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              {
+                "group": "Runtime Protection",
+                "pages": [
+                  "developer-guide/protect/detection-methods",
+                  "developer-guide/reference/controls-api",
+                  "developer-guide/reference/dome-configuration",
+                  "developer-guide/reference/dome-results",
+                  "developer-guide/reference/trust-runtime",
+                  "developer-guide/reference/framework-integrations",
+                  "developer-guide/reference/dome-service-api"
+                ]
+              },
+              {
+                "group": "MCP and Plugin",
+                "pages": [
+                  "developer-guide/agentic/tools",
+                  "developer-guide/reference/claude-code-commands"
+                ]
+              },
+              {
+                "group": "Python SDK",
+                "pages": [
+                  "developer-guide/sdk/setup",
+                  "developer-guide/sdk/lifecycle-methods",
+                  "developer-guide/sdk/resources",
+                  "developer-guide/sdk/models-errors"
+                ]
+              },
+              {
+                "group": "Evaluation Catalogs",
+                "pages": [
+                  "developer-guide/reference/evaluation/harnesses",
+                  "developer-guide/reference/evaluation/scenarios",
+                  "developer-guide/reference/evaluation/probes",
+                  "developer-guide/reference/evaluation/detectors",
+                  "developer-guide/reference/evaluation/coverage"
+                ]
+              },
+              {
+                "group": "Platform Contracts",
+                "pages": [
+                  "developer-guide/reference/agent-registration",
+                  "developer-guide/reference/evaluation-contracts",
+                  "developer-guide/reference/platform-capabilities"
+                ]
+              },
+              {
+                "group": "Self-Hosting",
+                "pages": [
+                  "developer-guide/reference/self-hosted-configuration"
+                ]
+              },
+              {
+                "group": "REST API Reference",
+                "openapi": "openapi/api.json"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Diamond",
+          "href": "/concepts/platform/diamond",
+          "icon": "diamond"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://www.vijil.ai/blog",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  }
+}

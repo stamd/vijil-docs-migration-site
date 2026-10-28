@@ -1,0 +1,148 @@
+{
+  "status": "proposed documentation evaluation; not executed",
+  "baseline": "record current results before migrating; repeat with the same model, tools and fixtures",
+  "tasks": [
+    {
+      "id": "D01",
+      "prompt": "I have Console access and want to run my first behavioral evaluation of a test Agent.",
+      "expected_pages": [
+        "P029",
+        "P044",
+        "P045"
+      ],
+      "pass": "Finds the Console tutorial and its result-verification steps.",
+      "fail": "Requires Python installation or self-hosting as a mandatory beginner prerequisite."
+    },
+    {
+      "id": "D02",
+      "prompt": "I want my first complete evaluation from Python. What prerequisites and outputs should I expect?",
+      "expected_pages": [
+        "P054",
+        "N021",
+        "N019",
+        "P089"
+      ],
+      "pass": "One verifiable SDK path with version, credentials/team, and retained Agent/evaluation IDs.",
+      "fail": "Mixes the MCP server package, CLI evaluation commands, and SDK configuration formats."
+    },
+    {
+      "id": "D03",
+      "prompt": "Does a score of 0.72 mean 72, or 0.72 out of 100, and where do I check the threshold?",
+      "expected_pages": [
+        "P007",
+        "N003",
+        "N012"
+      ],
+      "pass": "Identifies the exact field/interface/scale and separates product verdict from approved release criteria.",
+      "fail": "Applies 70 to an SDK field without conversion or promises universal deployment readiness."
+    },
+    {
+      "id": "D04",
+      "prompt": "Build a CI gate that waits for this particular evaluation and rejects release if the run fails or has no score.",
+      "expected_pages": [
+        "N022",
+        "N012",
+        "P090",
+        "P092"
+      ],
+      "pass": "Uses the SDK, bounded polling, the specific evaluation ID, failure/missing-result handling, and the approved threshold scale.",
+      "fail": "Passes because an older Agent score passed or treats every terminal status as success."
+    },
+    {
+      "id": "D05",
+      "prompt": "A Red Team run is degraded. How do I find the transcript and assess how much to trust its report?",
+      "expected_pages": [
+        "N029",
+        "N012",
+        "P022",
+        "P047"
+      ],
+      "pass": "Preserves the confirmed ID flow, retrieves relevant artifacts, and recognizes partial evidence.",
+      "fail": "Equates degraded with complete success or substitutes engagement_id for evaluation_id without a contract."
+    },
+    {
+      "id": "D06",
+      "prompt": "My local Agent is not publicly deployed. Can I run Red Team testing?",
+      "expected_pages": [
+        "P059",
+        "P057",
+        "N012"
+      ],
+      "pass": "Distinguishes an authenticated public tunnel from no-tunnel local mode and states their conditions.",
+      "fail": "Makes a blanket claim that every local mode does or does not support Red Team."
+    },
+    {
+      "id": "D07",
+      "prompt": "I need a list of Security Probes and their actual identifiers.",
+      "expected_pages": [
+        "N010",
+        "N008",
+        "P010"
+      ],
+      "pass": "Uses a visible versioned catalog and IDs; Concepts explains the dimension's meaning.",
+      "fail": "Must simulate hover or invent an ID from a display name."
+    },
+    {
+      "id": "D08",
+      "prompt": "I want to block an unauthorized tool call and prove workload identity. Is a Dome scan sufficient?",
+      "expected_pages": [
+        "N004",
+        "N005",
+        "P066",
+        "P067",
+        "N015"
+      ],
+      "pass": "Distinguishes content scans, declarative Controls, and identity-aware Trust Runtime; states framework boundaries.",
+      "fail": "Presents an Agent ID or telemetry label as cryptographic identity proof."
+    },
+    {
+      "id": "D09",
+      "prompt": "ScanResult is flagged but not enforced. How should I interpret the result, redaction, and exec_time?",
+      "expected_pages": [
+        "N014",
+        "P069",
+        "N013"
+      ],
+      "pass": "Uses the confirmed canonical unit and distinguishes detection, enforcement, sanitized content, and error policy.",
+      "fail": "Mixes milliseconds/seconds or claims flagged automatically means the actual request was blocked."
+    },
+    {
+      "id": "D10",
+      "prompt": "Defend is empty even though Discover scans completed. What should I check?",
+      "expected_pages": [
+        "P049",
+        "P027",
+        "N028",
+        "P051"
+      ],
+      "pass": "Distinguishes scan inventory from dlp runtime events and per-Agent metrics; uses confirmed setup or explicitly identifies missing support.",
+      "fail": "Invents an SDK/MCP replacement for CLI-only bootstrap or concludes there are no threats because there are no events."
+    },
+    {
+      "id": "D11",
+      "prompt": "I want MCP: should I connect Vijil tools to Claude Code, or protect my own MCP server?",
+      "expected_pages": [
+        "N020",
+        "P055",
+        "P079",
+        "P077"
+      ],
+      "pass": "Distinguishes the management server/plugin from the Dome protection proxy and reaches the correct task.",
+      "fail": "Confuses servers, credentials, packages, or input/output protection directions."
+    },
+    {
+      "id": "D12",
+      "prompt": "The SDK has adapt and deploy methods. Can I immediately use Darwin and automatically deploy my application?",
+      "expected_pages": [
+        "N018",
+        "P006",
+        "P090",
+        "P053",
+        "N033",
+        "N034"
+      ],
+      "pass": "Checks release/deployment availability, distinguishes existing methods from supported workflows, and does not treat conditional pages as availability evidence.",
+      "fail": "Infers GA status or supported deployment merely because a method/model exists in reference."
+    }
+  ]
+}

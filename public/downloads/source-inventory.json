@@ -1,0 +1,1146 @@
+[
+  {
+    "id": "P001",
+    "slug": "concepts/welcome",
+    "title": "Welcome to Vijil",
+    "navigation": [
+      "Concepts",
+      "Overview"
+    ],
+    "lines": 92,
+    "words_approx": 654,
+    "sha256": "1d5a1834e21a354f55139ca2d90e22552aeae66a885ca4f3a725fa63686da791"
+  },
+  {
+    "id": "P002",
+    "slug": "concepts/platform/console",
+    "title": "Console",
+    "navigation": [
+      "Concepts",
+      "Overview",
+      "Platform"
+    ],
+    "lines": 57,
+    "words_approx": 500,
+    "sha256": "f261bd7facc4262ece87244ae18cbab25b93e97481c86cb3c7b6558f4e393b0e"
+  },
+  {
+    "id": "P003",
+    "slug": "concepts/platform/discover",
+    "title": "Discover",
+    "navigation": [
+      "Concepts",
+      "Overview",
+      "Platform"
+    ],
+    "lines": 55,
+    "words_approx": 354,
+    "sha256": "8e1b0b07990468ae4426aad6545505e9677fe9c96db92dd072bd4908363f89e9"
+  },
+  {
+    "id": "P004",
+    "slug": "concepts/platform/diamond",
+    "title": "Diamond",
+    "navigation": [
+      "Concepts",
+      "Overview",
+      "Platform"
+    ],
+    "lines": 152,
+    "words_approx": 928,
+    "sha256": "ccbd53ca66ed050856df791a96d58c69c40c8d25b3df13cf24bc1e67be9a045e"
+  },
+  {
+    "id": "P005",
+    "slug": "concepts/platform/dome",
+    "title": "Dome",
+    "navigation": [
+      "Concepts",
+      "Overview",
+      "Platform"
+    ],
+    "lines": 34,
+    "words_approx": 282,
+    "sha256": "717ba5e6c92fbb5971498efa2aed442a5f08fabbbd1a72c2c1cd3eaae101054d"
+  },
+  {
+    "id": "P006",
+    "slug": "concepts/platform/darwin",
+    "title": "Darwin",
+    "navigation": [
+      "Concepts",
+      "Overview",
+      "Platform"
+    ],
+    "lines": 24,
+    "words_approx": 207,
+    "sha256": "85c7f704e162474fd1059fb9f1aac7c815162c34f240567431af04f0415e61b9"
+  },
+  {
+    "id": "P007",
+    "slug": "concepts/trust-score/introduction",
+    "title": "The Trust Score",
+    "navigation": [
+      "Concepts",
+      "Trust Score"
+    ],
+    "lines": 73,
+    "words_approx": 374,
+    "sha256": "5d945a52d3ff44c9866b945e6f702ac8381da42c939ead4b290b56811d87893a"
+  },
+  {
+    "id": "P008",
+    "slug": "concepts/trust-score/reliability",
+    "title": "Reliability",
+    "navigation": [
+      "Concepts",
+      "Trust Score",
+      "Dimensions of Trust"
+    ],
+    "lines": 42,
+    "words_approx": 613,
+    "sha256": "9dd4d82613fb48abee3b048660fef59930045377ead8cdf9f46976b521aaa198"
+  },
+  {
+    "id": "P009",
+    "slug": "concepts/trust-score/safety",
+    "title": "Safety",
+    "navigation": [
+      "Concepts",
+      "Trust Score",
+      "Dimensions of Trust"
+    ],
+    "lines": 74,
+    "words_approx": 1907,
+    "sha256": "c2769691c47e747583a787c28d90ded3c22bf64a1c3d0138dbe18ccea0a3e490"
+  },
+  {
+    "id": "P010",
+    "slug": "concepts/trust-score/security",
+    "title": "Security",
+    "navigation": [
+      "Concepts",
+      "Trust Score",
+      "Dimensions of Trust"
+    ],
+    "lines": 84,
+    "words_approx": 1227,
+    "sha256": "cc890e90ff1ea476641293138c42147761c7c4415d8563c16fb6d93070164d92"
+  },
+  {
+    "id": "P011",
+    "slug": "concepts/discovery/introduction",
+    "title": "Discovery Components",
+    "navigation": [
+      "Concepts",
+      "Discovery"
+    ],
+    "lines": 32,
+    "words_approx": 129,
+    "sha256": "69cf935cd0363bc0592b55bed097b3f3f1da97f2ab293a872b6945c2067647e3"
+  },
+  {
+    "id": "P012",
+    "slug": "concepts/discovery/target",
+    "title": "Target",
+    "navigation": [
+      "Concepts",
+      "Discovery",
+      "Discovery Components"
+    ],
+    "lines": 48,
+    "words_approx": 318,
+    "sha256": "38c555e0a096a3e4c29b31181ecd1c8716174b5f159bf078d7e6a2ad1e48cdf3"
+  },
+  {
+    "id": "P013",
+    "slug": "concepts/discovery/collector",
+    "title": "Collector",
+    "navigation": [
+      "Concepts",
+      "Discovery",
+      "Discovery Components"
+    ],
+    "lines": 58,
+    "words_approx": 551,
+    "sha256": "bdd78c8ceb6858cac5ded66f214d854ce3c268a1fe9aa93a0771a88ccf098958"
+  },
+  {
+    "id": "P014",
+    "slug": "concepts/discovery/resource",
+    "title": "Resource",
+    "navigation": [
+      "Concepts",
+      "Discovery",
+      "Discovery Components"
+    ],
+    "lines": 34,
+    "words_approx": 264,
+    "sha256": "6f8eb56c549a784f1605d4168fd57d0e58e69534cce82b3af8f6788b3da60307"
+  },
+  {
+    "id": "P015",
+    "slug": "concepts/discovery/classification",
+    "title": "Classification",
+    "navigation": [
+      "Concepts",
+      "Discovery",
+      "Discovery Components"
+    ],
+    "lines": 42,
+    "words_approx": 254,
+    "sha256": "6c79e2f438153528532e49c12c0b50c3f32e07b6780aac31c78327597c575388"
+  },
+  {
+    "id": "P016",
+    "slug": "concepts/evaluation-components/introduction",
+    "title": "How Evaluation Works",
+    "navigation": [
+      "Concepts",
+      "Evaluation"
+    ],
+    "lines": 153,
+    "words_approx": 627,
+    "sha256": "0a32c982135157092706a4288015d22b9ae6ff6ba3e2aa4a7a035ab7c9f6c44c"
+  },
+  {
+    "id": "P017",
+    "slug": "concepts/evaluation-components/harness",
+    "title": "Harnesses",
+    "navigation": [
+      "Concepts",
+      "Evaluation",
+      "Trust Score Components"
+    ],
+    "lines": 41,
+    "words_approx": 321,
+    "sha256": "a1a40f771f2418091ef17083bc9e975d57b28379d2c036c13f94830c94c79996"
+  },
+  {
+    "id": "P018",
+    "slug": "concepts/evaluation-components/scenario",
+    "title": "Scenarios",
+    "navigation": [
+      "Concepts",
+      "Evaluation",
+      "Trust Score Components"
+    ],
+    "lines": 121,
+    "words_approx": 772,
+    "sha256": "e6a4982a779281c0873e47f84fc244a1fe28357b2c2b5c1dd25521b5a59e7f96"
+  },
+  {
+    "id": "P019",
+    "slug": "concepts/evaluation-components/probe",
+    "title": "Probes",
+    "navigation": [
+      "Concepts",
+      "Evaluation",
+      "Trust Score Components"
+    ],
+    "lines": 129,
+    "words_approx": 3632,
+    "sha256": "6033cbfa0eed5f04ba15071dd6c5d9f348a697a57507de1102b8e1a38b35d049"
+  },
+  {
+    "id": "P020",
+    "slug": "concepts/evaluation-components/detector",
+    "title": "Detectors",
+    "navigation": [
+      "Concepts",
+      "Evaluation",
+      "Trust Score Components"
+    ],
+    "lines": 27,
+    "words_approx": 532,
+    "sha256": "41260d4ec2c567649605507b57b1ff60d941bab95b8f0601bcb96f1a6a13410e"
+  },
+  {
+    "id": "P021",
+    "slug": "concepts/red-team/introduction",
+    "title": "Red Team",
+    "navigation": [
+      "Concepts",
+      "Red Team"
+    ],
+    "lines": 44,
+    "words_approx": 372,
+    "sha256": "c86eeacdf080116fd14491e3fd77152072aa8aeacdcd09c4037ba120056ba2f1"
+  },
+  {
+    "id": "P022",
+    "slug": "concepts/red-team/engagements",
+    "title": "Engagements",
+    "navigation": [
+      "Concepts",
+      "Red Team"
+    ],
+    "lines": 83,
+    "words_approx": 508,
+    "sha256": "7421354a39d90413faf9ddd5930349a06f93e13d37e10ff22933e2118d1fb604"
+  },
+  {
+    "id": "P023",
+    "slug": "concepts/defense/introduction",
+    "title": "How Defense Works",
+    "navigation": [
+      "Concepts",
+      "Runtime Defense"
+    ],
+    "lines": 57,
+    "words_approx": 418,
+    "sha256": "090b407f6735ddcfcd121cb241242791821e8844c390f56f17b460481df27a2c"
+  },
+  {
+    "id": "P024",
+    "slug": "concepts/defense/guardrail",
+    "title": "Guardrail",
+    "navigation": [
+      "Concepts",
+      "Runtime Defense",
+      "Defense Components"
+    ],
+    "lines": 162,
+    "words_approx": 696,
+    "sha256": "c6732c9fe2e2cecb7a9ee9897e1e99ddcbce293e5551aecf5c96e011698c58e4"
+  },
+  {
+    "id": "P025",
+    "slug": "concepts/defense/guard",
+    "title": "Guard",
+    "navigation": [
+      "Concepts",
+      "Runtime Defense",
+      "Defense Components"
+    ],
+    "lines": 37,
+    "words_approx": 195,
+    "sha256": "f114f5e1875ac00d96537cb8df41e300ca4550b205ab1624aacf9dff42217986"
+  },
+  {
+    "id": "P026",
+    "slug": "concepts/defense/detector",
+    "title": "Detector",
+    "navigation": [
+      "Concepts",
+      "Runtime Defense",
+      "Defense Components"
+    ],
+    "lines": 491,
+    "words_approx": 3227,
+    "sha256": "150c417ea15fc7245305fe55941a51d8a31922c1171b3043da1b24fcea739d90"
+  },
+  {
+    "id": "P027",
+    "slug": "concepts/defense/observe",
+    "title": "Observe",
+    "navigation": [
+      "Concepts",
+      "Runtime Defense",
+      "Defense Components"
+    ],
+    "lines": 188,
+    "words_approx": 663,
+    "sha256": "ca820a7e8af9f296e28e69846de756594bca95d552ef1cdea0dd1e0ffdd92890"
+  },
+  {
+    "id": "P028",
+    "slug": "concepts/glossary",
+    "title": "Glossary",
+    "navigation": [
+      "Concepts",
+      "Reference"
+    ],
+    "lines": 317,
+    "words_approx": 1695,
+    "sha256": "af185b828d647672b88456074f2b341ac31dc8e64932d7d29094233acc4dad44"
+  },
+  {
+    "id": "P029",
+    "slug": "owner-guide/getting-started/introduction",
+    "title": "Get Started with Console",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Get Started"
+    ],
+    "lines": 169,
+    "words_approx": 1143,
+    "sha256": "5e3a9c9739b1699f1e88cf492090dc52e13c39250112a2bfef2ae0e0dddbf967"
+  },
+  {
+    "id": "P030",
+    "slug": "owner-guide/getting-started/teams",
+    "title": "Manage Teams",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Teams"
+    ],
+    "lines": 81,
+    "words_approx": 487,
+    "sha256": "bb02583a9ad12ebb8a816d4c27f1a698b750bce571cbb457c91fa68f7b7d76ca"
+  },
+  {
+    "id": "P031",
+    "slug": "owner-guide/discover/introduction",
+    "title": "Get Started with Discover",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 160,
+    "words_approx": 1148,
+    "sha256": "acfc133bb4161ec18078435620bc364eac38d6783f26d7d75ab59adadeab608f"
+  },
+  {
+    "id": "P032",
+    "slug": "owner-guide/discover/targets",
+    "title": "Create and Manage Targets",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 219,
+    "words_approx": 1241,
+    "sha256": "a42b662117de049d269d5c1e067e7cbbd1b598c51d6b2f4c2fb41ca3c83501e6"
+  },
+  {
+    "id": "P033",
+    "slug": "owner-guide/discover/collectors",
+    "title": "Install a Collector",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 417,
+    "words_approx": 2102,
+    "sha256": "4dbe9af87913625ffab1b1c269baf289d765d3ecadbe75be4393ada09427668d"
+  },
+  {
+    "id": "P034",
+    "slug": "owner-guide/discover/reviewing-resources",
+    "title": "Review Discovered Resources",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 80,
+    "words_approx": 452,
+    "sha256": "9fb8aa8f28192763efbec509ed6717866998b76038d7d5bcd28f23f871041983"
+  },
+  {
+    "id": "P035",
+    "slug": "owner-guide/discover/registering-agents",
+    "title": "Register a Discovered Agent",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 104,
+    "words_approx": 587,
+    "sha256": "05785d335494d36690d1e74d1f4b7c7dfa0620271c275edb964e77b2886c28c6"
+  },
+  {
+    "id": "P036",
+    "slug": "owner-guide/discover/code-scans",
+    "title": "Scan Code Repositories",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Discover Agents"
+    ],
+    "lines": 65,
+    "words_approx": 336,
+    "sha256": "b56f44b68b16f305f209d6a7509b168d5d964838b86ca2104cfa09ea049c91d7"
+  },
+  {
+    "id": "P037",
+    "slug": "owner-guide/register-agents/what-is-an-agent",
+    "title": "What is an Agent",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Agents"
+    ],
+    "lines": 64,
+    "words_approx": 560,
+    "sha256": "acf6833563e13736361bf21ebcac004451308aa4ee91fb1e7059140d9be3d92d"
+  },
+  {
+    "id": "P038",
+    "slug": "owner-guide/register-agents/registering-agents",
+    "title": "Manage Agents",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Agents"
+    ],
+    "lines": 209,
+    "words_approx": 1314,
+    "sha256": "d26939f8e517bd1f6b8aa0cd1e3e8f1fe497b5c2fe12d29b12a10f80f054ad44"
+  },
+  {
+    "id": "P039",
+    "slug": "owner-guide/simulate-environment/personas",
+    "title": "Define Personas",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Build an Evaluation Environment"
+    ],
+    "lines": 137,
+    "words_approx": 874,
+    "sha256": "ab75669fe262fcb01b38c185fa2e87cb72c72e3064bb5d549c9a853da3923f4d"
+  },
+  {
+    "id": "P040",
+    "slug": "owner-guide/simulate-environment/policies",
+    "title": "Define Policies",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Build an Evaluation Environment"
+    ],
+    "lines": 173,
+    "words_approx": 919,
+    "sha256": "9d9235ae7a0319456f257799943df1d7e3cb5c57005508fe89d39af039f2ceb5"
+  },
+  {
+    "id": "P041",
+    "slug": "owner-guide/simulate-environment/harnesses/trust-score",
+    "title": "Trust Score Harness",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Build an Evaluation Environment",
+      "Specify Harnesses"
+    ],
+    "lines": 200,
+    "words_approx": 978,
+    "sha256": "74687f7267df80d4473a2629987bcaac95c3d02a09ba3f5797100828fedfead4"
+  },
+  {
+    "id": "P042",
+    "slug": "owner-guide/simulate-environment/harnesses/compliance",
+    "title": "Compliance Harnesses",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Build an Evaluation Environment",
+      "Specify Harnesses"
+    ],
+    "lines": 134,
+    "words_approx": 930,
+    "sha256": "afd4a35c1890581119820dc95aeb5f63471ca3e9d5ffb5ee06cf22b6e2336a5f"
+  },
+  {
+    "id": "P043",
+    "slug": "owner-guide/simulate-environment/custom-harnesses",
+    "title": "Custom Harnesses",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Build an Evaluation Environment",
+      "Specify Harnesses"
+    ],
+    "lines": 103,
+    "words_approx": 466,
+    "sha256": "ea28973ae4f5fb04982b57e68da0890c22664a70bff36be746d2551faef9c415"
+  },
+  {
+    "id": "P044",
+    "slug": "owner-guide/run-evaluations/running-evaluations",
+    "title": "Run Evaluations",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 226,
+    "words_approx": 1669,
+    "sha256": "e0d5383b22c6b9827f845df3a0bafcbf2146f20203fc0772674e067aada5ba44"
+  },
+  {
+    "id": "P045",
+    "slug": "owner-guide/run-evaluations/understanding-results",
+    "title": "Understand Results",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 299,
+    "words_approx": 1935,
+    "sha256": "033f4b5d26009d078f6daeecf87c1215f35d4fe7bb5240efdacfe4ee0f2ab408"
+  },
+  {
+    "id": "P046",
+    "slug": "owner-guide/red-team/running-campaigns",
+    "title": "Run a Red Team Campaign",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Red Team"
+    ],
+    "lines": 122,
+    "words_approx": 1198,
+    "sha256": "047d1de74d40c673b19df68726bb3063c57d66fa45a2a17983a02e05848b600b"
+  },
+  {
+    "id": "P047",
+    "slug": "owner-guide/red-team/understanding-results",
+    "title": "Understand Red Team Results",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Red Team"
+    ],
+    "lines": 121,
+    "words_approx": 995,
+    "sha256": "7bfd2077ef3cdd650acc8c77ab84c5b56637858b66d10898fa87fa83d2764aae"
+  },
+  {
+    "id": "P048",
+    "slug": "owner-guide/protect-in-production/configuring-guardrails",
+    "title": "Configure Guardrails",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Protect Agents"
+    ],
+    "lines": 233,
+    "words_approx": 1469,
+    "sha256": "4c2f5dcb9faabaeb5f8fe844747fbf38e82460432b54bf6b434d137b2aa55741"
+  },
+  {
+    "id": "P049",
+    "slug": "owner-guide/protect-in-production/defend",
+    "title": "Monitor Protection with Defend",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Protect Agents"
+    ],
+    "lines": 112,
+    "words_approx": 602,
+    "sha256": "2f2401f960b976a6a312e4aa5b95d2445a9b0bc2a4d5788d3559c194b5731015"
+  },
+  {
+    "id": "P050",
+    "slug": "owner-guide/protect-in-production/deploying-dome",
+    "title": "Deploy Dome",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Protect Agents"
+    ],
+    "lines": 73,
+    "words_approx": 319,
+    "sha256": "e0d856c6daa32e16b5a4ac58bf0707324457cc9ea82b46b01dbecb309f20e865"
+  },
+  {
+    "id": "P051",
+    "slug": "owner-guide/protect-in-production/observability",
+    "title": "Monitor Dome Metrics",
+    "navigation": [
+      "Agent Owner's Guide",
+      "Protect Agents"
+    ],
+    "lines": 145,
+    "words_approx": 969,
+    "sha256": "5b72af250758e0c5073c33ada33752ef904b83e550e05a2a6084507b724e64ab"
+  },
+  {
+    "id": "P052",
+    "slug": "developer-guide/getting-started/introduction",
+    "title": "Building Trusted Agents",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Get Started"
+    ],
+    "lines": 120,
+    "words_approx": 941,
+    "sha256": "dc8433a34776bbc008e8674bedc077eacfd695fd0ac47e7298ce78334fec7130"
+  },
+  {
+    "id": "P053",
+    "slug": "developer-guide/getting-started/agent-lifecycle-workflow",
+    "title": "Agent Lifecycle Workflow",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Get Started"
+    ],
+    "lines": 505,
+    "words_approx": 3227,
+    "sha256": "841bc36f020ed5192fe9192419b13151fe7ef91aa0ca6f6f188fccf2f08b7742"
+  },
+  {
+    "id": "P054",
+    "slug": "developer-guide/agentic/quickstart",
+    "title": "Quickstart",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Get Started"
+    ],
+    "lines": 433,
+    "words_approx": 1551,
+    "sha256": "b209fc13a19256147ab5a745dda599de33861cab1806e085ff3d2edcc426b69b"
+  },
+  {
+    "id": "P055",
+    "slug": "developer-guide/getting-started/claude-code-plugin",
+    "title": "Claude Code",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Get Started"
+    ],
+    "lines": 126,
+    "words_approx": 890,
+    "sha256": "a404270ae6794f3af90b246dd6c0723c09b38a7e6702dec71930f7d1825128ad"
+  },
+  {
+    "id": "P056",
+    "slug": "developer-guide/deploy-vijil/deploy-vijil-console",
+    "title": "Deploy Vijil",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Get Started"
+    ],
+    "lines": 1084,
+    "words_approx": 4514,
+    "sha256": "94cf77a02c2e20a2ada26cd17bf480090dc0818c5d9a7778ce299a58022611f3"
+  },
+  {
+    "id": "P057",
+    "slug": "developer-guide/evaluate/overview",
+    "title": "Evaluation Overview",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 181,
+    "words_approx": 1043,
+    "sha256": "57c791b6a5687fbda5be8a8e1d24203cf7962a8cd52f2bf9815c4a1e237381dc"
+  },
+  {
+    "id": "P058",
+    "slug": "developer-guide/evaluate/running-evaluations",
+    "title": "Run Evaluations",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 409,
+    "words_approx": 1517,
+    "sha256": "81725907cb38ae94f8864d84a63b5d9ab2aea09731bd58113305d86322f4c264"
+  },
+  {
+    "id": "P059",
+    "slug": "developer-guide/evaluate/local-agent",
+    "title": "Local Agent Evaluation",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 664,
+    "words_approx": 2254,
+    "sha256": "a8481f6aa8366a2fe54657de2b0b96985f3ab5db458c433186305534f45e98c1"
+  },
+  {
+    "id": "P060",
+    "slug": "developer-guide/evaluate/understanding-results",
+    "title": "Understand Results",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 259,
+    "words_approx": 1533,
+    "sha256": "e7a4707c016fbb84bfa1c140acd4571e984ad45c117da3bc90d9b463c8c21a67"
+  },
+  {
+    "id": "P061",
+    "slug": "developer-guide/evaluate/custom-harnesses",
+    "title": "Custom Harnesses",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 355,
+    "words_approx": 1437,
+    "sha256": "df8724a0ac1fb288393a5061ab736452e723f62e4c41b500ee87ee3743e960c1"
+  },
+  {
+    "id": "P062",
+    "slug": "developer-guide/evaluate/cloud-providers",
+    "title": "Cloud Provider Integrations",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Evaluate Agents"
+    ],
+    "lines": 83,
+    "words_approx": 556,
+    "sha256": "e2f0e8cd9a195fdc85904f81591c2cbb13aad426a0aab030efda9071ffc1e23f"
+  },
+  {
+    "id": "P063",
+    "slug": "developer-guide/red-team/overview",
+    "title": "Red Team Overview",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Red Team"
+    ],
+    "lines": 144,
+    "words_approx": 728,
+    "sha256": "e3ab30ddcf4fa16a117c566ee7d187d82fbbd0a0bf05736534e19f5184da9a16"
+  },
+  {
+    "id": "P064",
+    "slug": "developer-guide/protect/overview",
+    "title": "Protection Overview",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 193,
+    "words_approx": 1300,
+    "sha256": "a0432b4394a28b2826855477ef43120e3cae184652fa31351179c2361e7a3f6a"
+  },
+  {
+    "id": "P065",
+    "slug": "developer-guide/protect/installation",
+    "title": "Install Dome",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 128,
+    "words_approx": 790,
+    "sha256": "8ce890e0e8c722f9da95d4bd1c6cc2978f2d0f4403fe41032d799438abe72db9"
+  },
+  {
+    "id": "P066",
+    "slug": "developer-guide/protect/control-engine",
+    "title": "Controls Engine",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 485,
+    "words_approx": 2033,
+    "sha256": "17812b5ba4129af2793571d182f9663fee3b727ae4550688d5328e40d544374f"
+  },
+  {
+    "id": "P067",
+    "slug": "developer-guide/protect/trust-runtime",
+    "title": "Trust Runtime",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 421,
+    "words_approx": 2051,
+    "sha256": "e3844b92bb40d141e63a1e6dee8c625c442dc93d005a34d7d137d697c8c675df"
+  },
+  {
+    "id": "P068",
+    "slug": "developer-guide/protect/configuring-guardrails",
+    "title": "Configure Guardrails",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 264,
+    "words_approx": 1185,
+    "sha256": "f0676252544762e60c54c34f0c1493e53638dcb2384d4f40df47fded3490606f"
+  },
+  {
+    "id": "P069",
+    "slug": "developer-guide/protect/using-guardrails",
+    "title": "Use Guardrails",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 243,
+    "words_approx": 1082,
+    "sha256": "81b0e2a683c380caf2d7ec3ef9d916c6d0534d2dd445246e5187f2715d42348b"
+  },
+  {
+    "id": "P070",
+    "slug": "developer-guide/protect/custom-detectors",
+    "title": "Custom Detectors",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 150,
+    "words_approx": 705,
+    "sha256": "b3c127e7c462984d19dfb8b315b8c4e59ce8f6a1d730a07c6b1b5a0140a1fe76"
+  },
+  {
+    "id": "P071",
+    "slug": "developer-guide/protect/detection-methods",
+    "title": "Detection Methods",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 933,
+    "words_approx": 6005,
+    "sha256": "84831199519584b6b29b693d7977494a9acc92f0b77a211c3743eb13007b46ec"
+  },
+  {
+    "id": "P072",
+    "slug": "developer-guide/protect/observability",
+    "title": "Observability",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 204,
+    "words_approx": 944,
+    "sha256": "eedf7efea61c0f89aea318d46d70ea339874281b2ee059a2c71fb869ee3680fe"
+  },
+  {
+    "id": "P073",
+    "slug": "developer-guide/protect/integrations/adk",
+    "title": "Google ADK",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents",
+      "Framework Integrations"
+    ],
+    "lines": 94,
+    "words_approx": 401,
+    "sha256": "b0fe5c49ef961eb812d11ab969b77c23fb17c7383729d8c4cc0d721daaddb684"
+  },
+  {
+    "id": "P074",
+    "slug": "developer-guide/protect/integrations/langgraph",
+    "title": "LangGraph",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents",
+      "Framework Integrations"
+    ],
+    "lines": 90,
+    "words_approx": 325,
+    "sha256": "ebd1aec1a36c1e22d3dd9ba759c5cd008faab7300600df1b55c800bd10ae327e"
+  },
+  {
+    "id": "P075",
+    "slug": "developer-guide/protect/integrations/strands",
+    "title": "Strands",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents",
+      "Framework Integrations"
+    ],
+    "lines": 70,
+    "words_approx": 264,
+    "sha256": "ca22ef696aefdf911a18414f4f0ab8be5e61702258de6c8f66ae3e93d0efd329"
+  },
+  {
+    "id": "P076",
+    "slug": "developer-guide/protect/integrations/langchain",
+    "title": "LangChain",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents",
+      "Framework Integrations"
+    ],
+    "lines": 117,
+    "words_approx": 466,
+    "sha256": "dce2bef2c5b12be4fd22161ba9e214418656cf80cccfcb99febdd541cd394d3a"
+  },
+  {
+    "id": "P077",
+    "slug": "developer-guide/protect/integrations/mcp",
+    "title": "MCP Servers",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents",
+      "Framework Integrations"
+    ],
+    "lines": 92,
+    "words_approx": 416,
+    "sha256": "dd716c0dffd6b39a38dc12217827ad746e627d4d615a92827779372b89eeea67"
+  },
+  {
+    "id": "P078",
+    "slug": "tutorials/protect-agents/dome-containerized-deployment",
+    "title": "Use Dome as a Containerized Deployment",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Protect Agents"
+    ],
+    "lines": 567,
+    "words_approx": 2057,
+    "sha256": "a3ae20b8e33a63281329f64c78f2030bcc56ffda21b3d02177c7146f54246fca"
+  },
+  {
+    "id": "P079",
+    "slug": "developer-guide/agentic/tools",
+    "title": "Use MCP Tools",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference"
+    ],
+    "lines": 864,
+    "words_approx": 4210,
+    "sha256": "c0e5e6ca6c236a8df1348961fd9e6b2144db8fcd30e928c6e26e6772d9702015"
+  },
+  {
+    "id": "P080",
+    "slug": "developer-guide/reference/controls-api",
+    "title": "Controls API Reference",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference"
+    ],
+    "lines": 764,
+    "words_approx": 4452,
+    "sha256": "6dd68510bef5147575612f00cf32b45fd2c804c65fbfa03dd3b3a80dd1364caa"
+  },
+  {
+    "id": "P081",
+    "slug": "developer-guide/cli/setup",
+    "title": "Setup",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 96,
+    "words_approx": 346,
+    "sha256": "d741743d1ca121cb98d7cbdc2cc51cc1d3061fe821d278770e1ac556c1eb49a0"
+  },
+  {
+    "id": "P082",
+    "slug": "developer-guide/cli/discover",
+    "title": "Discover Resources",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 154,
+    "words_approx": 904,
+    "sha256": "425f844fb41eaebc3c8eadfa5612f0e4c6bdb0f67c99e058c2dd49926bcd98cc"
+  },
+  {
+    "id": "P083",
+    "slug": "developer-guide/cli/agents",
+    "title": "Manage Agents",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 176,
+    "words_approx": 797,
+    "sha256": "16a1538af7d1c104ebc0256667ed9b0c9b89a5db1fcd2141b50f2e288459cd1d"
+  },
+  {
+    "id": "P084",
+    "slug": "developer-guide/cli/evaluate",
+    "title": "Evaluate Agents",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 81,
+    "words_approx": 513,
+    "sha256": "091b0eec5101456a22bb2444cfd820b0d4ea5984887562544017b1431156b0d0"
+  },
+  {
+    "id": "P085",
+    "slug": "developer-guide/cli/protect",
+    "title": "Protect Agents",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 156,
+    "words_approx": 635,
+    "sha256": "44b0516d4d8b291c517e1c2e24b74633d4f4d9d2cc944142f2d57efcad6a4aaf"
+  },
+  {
+    "id": "P086",
+    "slug": "developer-guide/cli/red-team",
+    "title": "Red Team",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 332,
+    "words_approx": 1409,
+    "sha256": "3579b20d36df1d83463578a42d6988e1b1cd948afb333da68a96db8c0c88891a"
+  },
+  {
+    "id": "P087",
+    "slug": "developer-guide/cli/telemetry",
+    "title": "Telemetry",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 138,
+    "words_approx": 656,
+    "sha256": "cdae6bb2f1d29831bc4e8f07bd7783c949a7d1513941ea26e55199a84b574eb0"
+  },
+  {
+    "id": "P088",
+    "slug": "developer-guide/cli/manifest",
+    "title": "Manifest CLI",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "CLI Reference"
+    ],
+    "lines": 58,
+    "words_approx": 320,
+    "sha256": "c3ef1db3317077d81cb2053d1e835df9e05ef12047d64532b3a1f652a4df6539"
+  },
+  {
+    "id": "P089",
+    "slug": "developer-guide/sdk/setup",
+    "title": "Setup",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "SDK Reference"
+    ],
+    "lines": 157,
+    "words_approx": 728,
+    "sha256": "3fcfe0fff4b23520fb250042f4751a41d0a4d322ddb8dad888fb2394e1e43e3a"
+  },
+  {
+    "id": "P090",
+    "slug": "developer-guide/sdk/lifecycle-methods",
+    "title": "Lifecycle Methods",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "SDK Reference"
+    ],
+    "lines": 205,
+    "words_approx": 1181,
+    "sha256": "0a5c43c5e8ca644283c59be34cf6692042d6bd7f5e420f58c88195c3d0653bc4"
+  },
+  {
+    "id": "P091",
+    "slug": "developer-guide/sdk/resources",
+    "title": "Resources",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "SDK Reference"
+    ],
+    "lines": 337,
+    "words_approx": 1459,
+    "sha256": "e24e2e97c79ebccc5c74f05b0cf9440109996713e38ec907a9543fbe90539443"
+  },
+  {
+    "id": "P092",
+    "slug": "developer-guide/sdk/models-errors",
+    "title": "Models and Errors",
+    "navigation": [
+      "Agent Developer's Guide",
+      "Reference",
+      "SDK Reference"
+    ],
+    "lines": 339,
+    "words_approx": 1618,
+    "sha256": "cf0c440878cdab51bf9afd571d579391312d4d32bc8bce01f41f1ab9a051ac56"
+  }
+]

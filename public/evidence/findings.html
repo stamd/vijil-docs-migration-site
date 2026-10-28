@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Findings and monitoring · Vijil migration</title><meta name="description" content="What the audit found and why it affects the migration."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="evidence/findings.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="findings.html" aria-current="page">Findings and monitoring</a></li><li><a href="api.html">API reference audit</a></li><li><a href="cli.html">CLI removal · PR #251</a></li><li><a href="dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Audit evidence</div><h1>Findings and monitoring</h1><p class="page-description">What the audit found and why it affects the migration.</p><h2 id="1-review-scope-and-confidence">1. Review Scope and Confidence</h2>
+<p>The primary source is the local <code>docs</code> working tree, with its TOC defined by <code>docs.json</code>. The review covers the purpose, structure, instructions, catalogs, examples, and links of all 92 included MDX pages. The inventory records each page’s title, navigation, line count, and hash. Non-TOC files, drafts, and other repositories are not silently added as documentation pages in scope.</p>
+<p>The generated OpenAPI group is an additional part of the TOC. All 149 operations were structurally inspected: method, route, operation ID, summary, tags, and potential alias relationships. <a href="../downloads/api-operation-inventory.csv">api-operation-inventory.csv</a> contains a separate record for each operation. Every request/response field has not been verified through backend contract execution.</p>
+<p>The public <a href="https://docs.vijil.ai/llms.txt" rel="noopener">Vijil index</a>, <a href="https://docs.vijil.ai/concepts/welcome" rel="noopener">Welcome</a>, <a href="https://docs.vijil.ai/developer-guide/agentic/quickstart" rel="noopener">Quickstart</a>, and <a href="https://docs.vijil.ai/developer-guide/protect/overview" rel="noopener">Protection Overview</a> were used to check public structure and representative rendering. Web results for some pages carry different crawl dates, and direct reads of some <code>.md</code> URLs failed. Therefore, <strong>this report does not claim that all 92 live URLs were checked at their latest published version</strong>. The local TOC remains the boundary of the content audit.</p>
+<p>The local head is <code>2e3245d865ce3ffeb87ee734e7ea82b11efc0f15</code> on <code>docs-cleanup-v3</code>. A change to <code>developer-guide/getting-started/introduction.mdx</code> existed before this work; it was reviewed as found and was not modified. PR #251 was inspected as a separate future change, not as already merged into that working tree. <a href="../downloads/source-snapshot.json">source-snapshot.json</a> and <a href="../downloads/source-inventory.json">source-inventory.json</a> record this baseline.</p>
+<p>Evidence is distinguished as follows:</p>
+<ul>
+<li><strong>Confirmed source finding:</strong> directly observed text, table, route, or count.</li>
+<li><strong>Inconsistency requiring resolution:</strong> sources describe different contracts; the audit does not arbitrarily choose which is correct in production.</li>
+<li><strong>Recommendation:</strong> proposed content design, new page, or validation step; not an existing product capability.</li>
+</ul>
+<h2 id="2-main-content-and-structural-findings">2. Main Content and Structural Findings</h2>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Concrete evidence</th>
+<th>Consequence and recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concepts contains multiple catalogs</td>
+<td><a class="task-link" href="../pages/p008.html" title="Reliability">P008</a>–<a class="task-link" href="../pages/p010.html" title="Security">P010</a> are largely Probe tables; <a class="task-link" href="../pages/p017.html" title="Harnesses">P017</a>–<a class="task-link" href="../pages/p020.html" title="Detectors">P020</a> already describe themselves as reference tables</td>
+<td>Turn existing URLs into genuine explanations and extract lookup data into <a class="task-link" href="../pages/n006.html" title="Evaluation Harness Reference">N006</a>–<a class="task-link" href="../pages/n010.html" title="Evaluation Coverage by Dimension">N010</a></td>
+</tr>
+<tr>
+<td>Evaluation Detector has the wrong introduction</td>
+<td><a class="task-link" href="../pages/p020.html" title="Detectors">P020</a> says components within Guards and links runtime Guard</td>
+<td>Separate the Diamond scoring contract from the Dome runtime contract before copying definitions further</td>
+</tr>
+<tr>
+<td>Two scales appear without consistent scope</td>
+<td><a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a>/<a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a>/<a class="task-link" href="../pages/p060.html" title="Understand Results">P060</a>: 0–100 and 70; <a class="task-link" href="../pages/p041.html" title="Trust Score Harness">P041</a>/<a class="task-link" href="../pages/p042.html" title="Compliance Harnesses">P042</a>: 0–1 and 0.70; newer <a class="task-link" href="../pages/p052.html" title="Building Trusted Agents">P052</a>/<a class="task-link" href="../pages/p053.html" title="Agent Lifecycle Workflow">P053</a> explain the UI/SDK difference</td>
+<td>Canonically document scale per field/interface; verify report display and actual threshold rather than globally renaming numbers</td>
+</tr>
+<tr>
+<td>Threshold is presented as a deployment decision</td>
+<td><a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a>/<a class="task-link" href="../pages/p060.html" title="Understand Results">P060</a> say meets deployment threshold; <a class="task-link" href="../pages/p053.html" title="Agent Lifecycle Workflow">P053</a> says 0.70 is an example and release criteria belong to the team</td>
+<td>Separate product score/verdict from organizational approval criteria; identify defaults versus recommendations</td>
+</tr>
+<tr>
+<td>Probe and sample_size have inconsistent meanings</td>
+<td><a class="task-link" href="../pages/p019.html" title="Probes">P019</a>: a Probe is a group of prompts; <a class="task-link" href="../pages/p016.html" title="How Evaluation Works">P016</a> describes one prompt, then a group; <a class="task-link" href="../pages/p090.html" title="Lifecycle Methods">P090</a> counts Probes per Harness; <a class="task-link" href="../pages/p059.html" title="Local Agent Evaluation">P059</a> counts prompts per Probe</td>
+<td>The domain owner must confirm units and API/SDK/engine mappings. Otherwise, agents cannot estimate work reliably</td>
+</tr>
+<tr>
+<td>Catalog completeness claims exceed the presented data</td>
+<td><a class="task-link" href="../pages/p017.html" title="Harnesses">P017</a> discusses all Harnesses, benchmarks, and Audits but lists three dimension Harnesses; <a class="task-link" href="../pages/p018.html" title="Scenarios">P018</a> uses different narrative/table taxonomies</td>
+<td>State source version and catalog coverage; moving an old list into Reference does not make it complete</td>
+</tr>
+<tr>
+<td>Behavioral and Red Team content is duplicated</td>
+<td><a class="task-link" href="../pages/p044.html" title="Run Evaluations">P044</a> repeats <a class="task-link" href="../pages/p046.html" title="Run a Red Team Campaign">P046</a> launch/settings; <a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a> repeats <a class="task-link" href="../pages/p047.html" title="Understand Red Team Results">P047</a> results; <a class="task-link" href="../pages/p058.html" title="Run Evaluations">P058</a>/<a class="task-link" href="../pages/p063.html" title="Red Team Overview">P063</a> describe multiple programmatic Red Team flows</td>
+<td>One launch and one results task per interface context; shared semantics in Concepts/<a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a></td>
+</tr>
+<tr>
+<td>Report anatomy is copied</td>
+<td>All six Trust Report sections are described in detail in <a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a>/<a class="task-link" href="../pages/p060.html" title="Understand Results">P060</a>, with summaries in <a class="task-link" href="../pages/p002.html" title="Console">P002</a>/<a class="task-link" href="../pages/p029.html" title="Get Started with Console">P029</a>/<a class="task-link" href="../pages/p041.html" title="Trust Score Harness">P041</a></td>
+<td>Shared explanation <a class="task-link" href="../pages/n003.html" title="Interpret Evaluation Evidence">N003</a>; AOG keeps UI drilldown, ADG keeps SDK retrieval/filter/report tasks</td>
+</tr>
+<tr>
+<td>Runtime examples use different API models</td>
+<td><a class="task-link" href="../pages/p026.html" title="Detector">P026</a> uses <code>from vijil.dome import Detector</code>, voting strategies, and a different result shape; <a class="task-link" href="../pages/p070.html" title="Custom Detectors">P070</a> uses <code>DetectionMethod</code>, async detect, and <code>(hit, metadata)</code></td>
+<td>Older examples are at least inconsistent with newer public reference. Check the release and remove pseudo APIs or label them clearly as illustrations</td>
+</tr>
+<tr>
+<td>The same measurement has two units</td>
+<td><a class="task-link" href="../pages/p024.html" title="Guardrail">P024</a> describes <code>exec_time</code> in milliseconds; <a class="task-link" href="../pages/p064.html" title="Protection Overview">P064</a>/<a class="task-link" href="../pages/p069.html" title="Use Guardrails">P069</a> use seconds</td>
+<td>P0 contract fix in <a class="task-link" href="../pages/n014.html" title="Dome Results and Telemetry Reference">N014</a> and all examples, including JSON/tables</td>
+</tr>
+<tr>
+<td>Detector categories differ across examples</td>
+<td><a class="task-link" href="../pages/p068.html" title="Configure Guardrails">P068</a> lists <code>policy-gpt-oss-safeguard</code> under Policy, while <a class="task-link" href="../pages/p071.html" title="Detection Methods">P071</a> places it under Generic; <a class="task-link" href="../pages/p070.html" title="Custom Detectors">P070</a> says a Guard accepts only its own category</td>
+<td>Confirm the release registry category and derive configuration examples from it</td>
+</tr>
+<tr>
+<td>Observability explanation uses another instrumentation API</td>
+<td><a class="task-link" href="../pages/p027.html" title="Observe">P027</a> uses <code>vijil.dome.DomeClient</code>, <code>scan_input</code>, and <code>trace</code>; <a class="task-link" href="../pages/p072.html" title="Observability">P072</a> uses <code>vijil_dome</code> and <code>instrument_dome</code></td>
+<td><a class="task-link" href="../pages/p027.html" title="Observe">P027</a> becomes the explanatory signal model; actual setup and verified metrics live in <a class="task-link" href="../pages/p072.html" title="Observability">P072</a>/<a class="task-link" href="../pages/n014.html" title="Dome Results and Telemetry Reference">N014</a></td>
+</tr>
+<tr>
+<td>The main architecture omits three distinct protection models</td>
+<td><a class="task-link" href="../pages/p066.html" title="Controls Engine">P066</a> distinguishes <code>VijilDome</code>/<code>Dome</code>/<code>TrustRuntime</code>; platform Dome and How Defense Works largely describe only content Guardrails</td>
+<td>Add Controls Engine and Trust Runtime Concepts pages and explain their contract boundaries</td>
+</tr>
+<tr>
+<td>Tutorials require too many early decisions</td>
+<td><a class="task-link" href="../pages/p029.html" title="Get Started with Console">P029</a> progresses from business context to Red Team, Dome, and monitoring; <a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a> has four interface tabs across six steps</td>
+<td>Two controlled first-evaluation tutorials; alternate interfaces lead to setup/how-to guides</td>
+</tr>
+<tr>
+<td>Local denotes two workflows</td>
+<td><a class="task-link" href="../pages/p057.html" title="Evaluation Overview">P057</a> says local does not support Red Team; <a class="task-link" href="../pages/p059.html" title="Local Agent Evaluation">P059</a> explains that a public tunnel supports it, while no-tunnel local mode does not</td>
+<td>Distinguish reachable tunneled endpoints from SDK local mode in the selector, without blanket statements</td>
+</tr>
+<tr>
+<td>SDK existence does not establish availability</td>
+<td><a class="task-link" href="../pages/p006.html" title="Darwin">P006</a>: Darwin in development/not GA; <a class="task-link" href="../pages/p090.html" title="Lifecycle Methods">P090</a> includes adapt/evolve/deploy; <a class="task-link" href="../pages/p053.html" title="Agent Lifecycle Workflow">P053</a> says the platform does not deploy applications; <a class="task-link" href="../pages/p091.html" title="Resources">P091</a> has unimplemented monitoring reads</td>
+<td><a class="task-link" href="../pages/n018.html" title="Platform Versions and Capability Availability">N018</a> release/deployment matrix; conditional Darwin guides. Distinguish corrective adaptation, generative evolution, and application deployment</td>
+</tr>
+<tr>
+<td>Python requirements differ</td>
+<td><a class="task-link" href="../pages/p089.html" title="Setup">P089</a>: 3.12+; <a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a>: 3.11–3.13; local <code>vijil-sdk/pyproject.toml</code>: &gt;=3.11,&lt;3.14</td>
+<td>The local manifest supports the inconsistency finding but does not establish the published package version. Confirm the public release and pin the example</td>
+</tr>
+<tr>
+<td>Base Dome verification omits required dependencies</td>
+<td><a class="task-link" href="../pages/p065.html" title="Install Dome">P065</a> distinguishes thin/base, local, and pii extras, but the opening scan uses default models</td>
+<td>Select a verified minimal scan or explicitly install all extras required by the defaults</td>
+</tr>
+<tr>
+<td>Owner deployment includes developer work</td>
+<td><a class="task-link" href="../pages/p050.html" title="Deploy Dome">P050</a> contains Python integration; <a class="task-link" href="../pages/p033.html" title="Install a Collector">P033</a> contains root/PowerShell/Helm/AWS IAM procedures</td>
+<td><a class="task-link" href="../pages/p050.html" title="Deploy Dome">P050</a> becomes a handoff; four Collector installation paths move into ADG</td>
+</tr>
+<tr>
+<td>A large self-hosting runbook sits in Get Started</td>
+<td><a class="task-link" href="../pages/p056.html" title="Deploy Vijil">P056</a> has 1,084 lines covering AWS/application infrastructure, internal staging examples, and optional Darwin</td>
+<td>ADG Self-Hosting group; separate infrastructure how-to, application runbook, and configuration reference</td>
+</tr>
+<tr>
+<td>Glossary entries conflict or repeat</td>
+<td>Two Judgment entries, two Policy meanings, and an overly broad Detector definition</td>
+<td>Domain-scoped terms and aliases, stable anchors, and a glossary derived from the confirmed registry</td>
+</tr>
+<tr>
+<td>SDK reference repeats a model</td>
+<td><a class="task-link" href="../pages/p092.html" title="Models and Errors">P092</a> contains two <code>### EvaluationResponse</code> sections</td>
+<td>One canonical definition with working anchors; align <a class="task-link" href="../pages/p091.html" title="Resources">P091</a>’s method index with its body</td>
+</tr>
+</tbody>
+</table></div>
+<p>These findings show that the problem extends beyond page length. Conflicting names, units, support status, and transitions between objects are particularly costly for automated readers. The plan therefore separates editorial extraction from product-contract decisions.</p>
+<h2 id="3-monitoring-why-the-four-terms-should-not-be-merged">3. Monitoring: Why the Four Terms Should Not Be Merged</h2>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Observed meaning</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Observe / Observability</td>
+<td><a class="task-link" href="../pages/p027.html" title="Observe">P027</a> explains the signal domain; <a class="task-link" href="../pages/p072.html" title="Observability">P072</a> covers instrumentation</td>
+<td>One Concepts model and one technical setup task</td>
+</tr>
+<tr>
+<td>Dome Metrics</td>
+<td><a class="task-link" href="../pages/p051.html" title="Monitor Dome Metrics">P051</a>: per-Agent data under Agents → Monitor, with metrics/traces/log links</td>
+<td>Keep a separate Console investigation how-to</td>
+</tr>
+<tr>
+<td>Defend</td>
+<td><a class="task-link" href="../pages/p049.html" title="Monitor Protection with Defend">P049</a>: events from <code>dlp</code> Targets, tenant/Target scope, attribution, and sampled counters</td>
+<td>Keep a separate Console investigation how-to</td>
+</tr>
+</tbody>
+</table></div>
+<p>An umbrella term such as runtime observability can be standardized without equating different sources or scopes. In both views, “no events” requires checking ingestion prerequisites rather than automatically concluding there are no threats. Product and engineering should confirm exact product/name relationships.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="../standards/ownership.html"><span>Previous</span><strong>Ownership and reviews</strong></a><a href="api.html"><span>Next</span><strong>API reference audit</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#1-review-scope-and-confidence">1. Review Scope and Confidence</a></li><li><a href="#2-main-content-and-structural-findings">2. Main Content and Structural Findings</a></li><li><a href="#3-monitoring-why-the-four-terms-should-not-be-merged">3. Monitoring: Why the Four Terms Should Not Be Merged</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

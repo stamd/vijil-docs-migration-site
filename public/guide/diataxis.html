@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Diátaxis explained · Vijil migration</title><meta name="description" content="Four reader needs. One primary purpose per page."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="guide/diataxis.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="diataxis.html" aria-current="page">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Understand the approach</div><h1>Diátaxis explained</h1><p class="page-description">Four reader needs. One primary purpose per page.</p><h2 id="1-what-hybrid-diataxis-means-here">1. What Hybrid Diátaxis Means Here</h2>
+<p>The hybrid model has three independent dimensions: <strong>working context</strong> (Console or programmatic), <strong>domain/task</strong> (discover, evaluate, protect…), and <strong>the reader’s immediate need</strong> (learn, accomplish a task, look up information, understand). The first two organize the existing tabs and their groups. The third determines each page’s content and form.</p>
+<p>Agent Owner and Agent Developer should therefore be understood as two paths through the product, rather than mutually exclusive identities. A developer using the Console should be able to move directly to the relevant AOG task. An agent writing Python uses ADG; when explaining findings to a risk owner, it uses the shared Concepts material.</p>
+<p>Diátaxis starts with two axes: practical action versus cognition/information, and acquiring a skill versus applying an existing skill. Their four intersections produce four documentation forms. This models user needs rather than ranking content by importance. <a href="https://diataxis.fr/foundations/" rel="noopener">Diátaxis: Foundations</a></p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Primary type</th>
+<th>What the reader should obtain</th>
+<th>Vijil example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Learning through guided practice</td>
+<td>Tutorial (T)</td>
+<td>A successful first experience and a repeatable skill</td>
+<td>Your First Evaluation with the Python SDK</td>
+</tr>
+<tr>
+<td>Completing a specific job</td>
+<td>How-to (H)</td>
+<td>A result on their own Agent in a real context</td>
+<td>Run and Monitor Evaluations</td>
+</tr>
+<tr>
+<td>Reliable lookup during work</td>
+<td>Reference (R)</td>
+<td>An exact name, type, default, condition, output, or limit</td>
+<td>Evaluation Contracts and Results</td>
+</tr>
+<tr>
+<td>Developing a mental model</td>
+<td>Explanation (E)</td>
+<td>Reasons, relationships, tradeoffs, and interpretation limits</td>
+<td>How the Trust Score Works</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="tutorial-a-controlled-first-experience">Tutorial: A Controlled First Experience</h3>
+<p>A tutorial selects the example, path, and scope for a beginner. The author takes responsibility for working prerequisites, sequencing, results, and the complete experience. A long workflow that immediately requires choosing among four interfaces and supplying an endpoint already consumes knowledge the beginner is meant to acquire. <a href="https://diataxis.fr/tutorials/" rel="noopener">Diátaxis: Tutorials</a></p>
+<p>For Vijil, I recommend two main tutorials: Console and Python SDK. Each uses an available test Agent or a precisely supplied fixture, one small behavioral run, and review of one finding. Self-hosting the platform is not a normal prerequisite. Neither promises a fixed LLM score or completion time; each verifies completion and the shape of available evidence.</p>
+<p>MCP/plugin remains an equally supported working interface, but does not require a copy of every tutorial. Its setup links to the same focused tasks and tool reference. A separate MCP learning tutorial can be added later if interviews or task evaluations demonstrate a need.</p>
+<h3 id="how-to-one-real-outcome">How-to: One Real Outcome</h3>
+<p>A how-to starts from the user’s goal and assumes appropriate foundational knowledge. It can branch when the real problem requires it. It need not reteach the entire domain or enumerate every capability of the tool. <a href="https://diataxis.fr/how-to-guides/" rel="noopener">Diátaxis: How-to guides</a></p>
+<p>“Create a custom Harness and verify that it is active” is one goal, even though it requires create, poll, and inspect operations. “Everything you can do with Harnesses” is an operation catalog. “Release an Evaluated Agent” can remain a complex orchestration how-to: its outcome is a release with evidence, but it links detailed registration, evaluation, and instrumentation steps instead of repeating them.</p>
+<p>A brief prerequisite explanation or small table of required fields does not require another page. A split is justified when it serves a separate reading intent or a reusable contract.</p>
+<h3 id="reference-a-contract-during-work">Reference: A Contract During Work</h3>
+<p>Reference should follow the product’s structure and be precise, neutral, and consistent. A small usage example is appropriate; a complete beginner walkthrough or lengthy rationale makes lookup harder. Generation can help accuracy, but does not replace a description of semantics. <a href="https://diataxis.fr/reference/" rel="noopener">Diátaxis: Reference</a></p>
+<p>Vijil lacks canonical contracts above isolated methods: which status actually completes a run, when results are persisted, the unit of <code>sample_size</code>, whether different IDs identify the same object, which scale applies to each field, and how <code>flagged</code> differs from <code>enforced</code>. These contracts are particularly important to agents composing multiple calls.</p>
+<h3 id="explanation-relationships-and-reasons">Explanation: Relationships and Reasons</h3>
+<p>Explanation develops context and connects concepts. It suits architecture, design rationale, and tradeoffs. The group can be called Concepts, Architecture, or Background; it need not be named Explanation. <a href="https://diataxis.fr/explanation/" rel="noopener">Diátaxis: Explanation</a></p>
+<p>Vijil’s Concepts area should explain the difference between behavioral measurement and adaptive exploration, the actual relationships between products and their interfaces, the separate protection models, and what evidence permits readers to conclude. A list of every Probe ID does not serve this purpose. Existing dimension and component URLs therefore remain as real explanations, while their catalogs receive reference destinations.</p>
+<h3 id="resolving-boundary-cases">Resolving Boundary Cases</h3>
+<p>For each section, ask whether it guides action or supplies information, and whether it serves learning or immediate work. This “compass” helps detect when a page has quietly changed into another type. <a href="https://diataxis.fr/compass/" rel="noopener">Diátaxis: The compass</a></p>
+<p>One type does not mean one sentence or no context. A tutorial can explain an immediate result; a how-to can list required fields; reference can provide an example; Concepts can show a small illustrative object. The problem arises when a reader seeking a method argument must read a tutorial, or a reader seeking to understand a dimension receives only a test table. <a href="https://diataxis.fr/reference-explanation/" rel="noopener">Diátaxis: Reference and explanation</a></p>
+<p>Do not create four empty sections for every product or require equal page counts across types. Diátaxis recommends improving content iteratively, allowing structure to develop. The requested architecture plan is a testable target hypothesis; migration remains small and iterative. <a href="https://diataxis.fr/how-to-use-diataxis/" rel="noopener">Diátaxis: Guide to work</a></p>
+<nav class="reading-nav" aria-label="Reading order"><a href="../using.html"><span>Previous</span><strong>Using this handbook</strong></a><a href="../architecture/index.html"><span>Next</span><strong>Architecture</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#1-what-hybrid-diataxis-means-here">1. What Hybrid Diátaxis Means Here</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

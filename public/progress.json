@@ -1,0 +1,1016 @@
+{
+  "schema_version": 1,
+  "project": "vijil-docs-diataxis",
+  "snapshot": "2026-10-28",
+  "revision": "initial",
+  "items": {
+    "P001": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P002": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P003": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P004": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P005": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P006": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P007": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P008": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P009": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P010": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P011": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P012": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P013": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P014": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P015": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P016": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P017": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P018": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P019": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P020": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P021": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P022": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P023": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P024": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P025": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P026": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P027": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P028": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P029": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P030": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P031": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P032": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P033": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P034": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P035": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P036": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P037": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P038": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P039": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P040": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P041": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P042": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P043": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P044": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P045": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P046": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P047": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P048": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P049": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P050": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P051": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P052": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P053": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P054": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P055": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P056": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P057": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P058": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P059": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P060": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P061": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P062": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P063": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P064": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P065": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P066": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P067": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P068": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P069": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P070": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P071": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P072": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P073": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P074": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P075": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P076": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P077": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P078": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P079": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P080": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P081": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P082": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P083": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P084": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P085": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P086": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P087": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P088": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P089": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P090": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P091": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "P092": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N001": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N002": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N003": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N004": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N005": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N006": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N007": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N008": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N009": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N010": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N011": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N012": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N013": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N014": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N015": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N016": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N017": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N018": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N019": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N020": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N021": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N022": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N023": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N024": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N025": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N026": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N027": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N028": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N029": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N030": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N031": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N032": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N033": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    },
+    "N034": {
+      "status": "not-started",
+      "owner": "",
+      "notes": "",
+      "link": "",
+      "gate_confirmed": false,
+      "updated_at": null
+    }
+  }
+}

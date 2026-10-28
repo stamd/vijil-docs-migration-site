@@ -1,0 +1,31 @@
+{
+  "snapshot": "2026-10-28",
+  "source_artifacts": {
+    "source-snapshot.json": "089593638702d73bbc835fd4059e2bc787a3aa867da3611db76205e566cf2f8c",
+    "validation-results.json": "2fe52e4d77329d3bddd0aaa8f4da6a97a705a4bf8d4b499184d17610dd70222c",
+    "meeting-brief.md": "5e7f05d4ec89cc1dc0535ad048c6b4a3bae85676dee1f3a57af070e3c856367d",
+    "evidence.json": "a96faaaff162513e5e87841a50963e007073b9bad1331b5ae977662f08049fb3",
+    "migration-and-standard.md": "b4ca4d7ffe2b947d29d5c0d6b4bd99b8bb75f386adc2d8bb7bafb08a69768d76",
+    "README.md": "5fce7d2c5c335df534aa31a351195f521db7a998948569ef1d465f5138fe11bb",
+    "meeting-brief.pdf": "a3205412894e0e62e9e02a7531135e13b4241a316f4b9b60aea1e0df42aa9732",
+    "proposed-navigation.json": "315ef471d568848efe4cc3063862cd0610a1c743583c1950669d4a2b9e70ac77",
+    "page-decisions.tsv": "a058b5c330b30ee2748a595d7206a31debd62d676574820e907d387d8fbd0ab4",
+    "source-inventory.json": "67851c684ffabfd0ba4b7c56c60b7602703cf9bdb25578eeec7f11fc1c84e19d",
+    "new-pages.csv": "092dfac4a78a396ac102ca6b11c0026d5ea4a4eabc935945140a5adf0db54ba6",
+    "migration-map.json": "91890b9a40b9428e01cc51e626c22c18c02919b9d26dc5cc76b3dbc629aaf168",
+    "migration-map.csv": "13a7481e5be774a7270cd2b5813c2655fc9f9a17b7d5b60bd8ae99a75b62faa8",
+    "api-operation-inventory.csv": "1b929dfd08b403896664e4cf937aa932e865b6eed12386351a9f7851a5a42712",
+    "target-pages.json": "4af608c85ef980645ba9475ec49b973128ec50f462f76443f43e8ecfa3a5a926",
+    "agent-evaluation-tasks.json": "863b4826c0886501fb7ab38adfb753a73fc022b71f90d449eadc13e19f7d10f6",
+    "build_audit.py": "53968f2e1e80ee0e89e76c02310cf606bb9db5d99dc03b83fae7d485c8a97b1c",
+    "pr251-cli-residuals.json": "5815a9b0636d0bcb155b8ab3d381188f6f3c9227caf722627ab64a3ea3ecc902",
+    "new-pages.tsv": "63eddb68ec2f5a3563ff833672fa5e230ae1838ff6691cd351148d43f2b32b16",
+    "architecture.md": "b2e43fe7f7e681738dff72493ead3eb42f881dcab691b34706ce2f1b1c602505",
+    "evidence-and-dejan.md": "7aa9de5187e9bca2ac6e9da5e54bb7a9ba049cf7ae42c4285ac4decf3b351f31",
+    "proposed-toc.md": "90704d8b19e9391c81f017f91832c77d20d70d0687624b2a3bd97ae01f229c12",
+    "page-by-page.md": "b9b1ad49552e181c852b31e39756e5c988ec72ab5bb8d26ebbedc2eece3b1d5e"
+  },
+  "handbook_pages": 21,
+  "decision_pages": 126,
+  "api_operations": 149
+}

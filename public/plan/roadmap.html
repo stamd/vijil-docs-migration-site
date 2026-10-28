@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Rollout and Diamond pilot · Vijil migration</title><meta name="description" content="Start with a small, complete journey and expand in batches."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="plan/roadmap.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="roadmap.html" aria-current="page">Rollout and Diamond pilot</a></li><li><a href="pages.html">Page-by-page plan</a></li><li><a href="progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Plan and delivery</div><h1>Rollout and Diamond pilot</h1><p class="page-description">Start with a small, complete journey and expand in batches.</p><h2 id="1-work-sequence">1. Work Sequence</h2>
+<p>This is an incremental migration plan. The number of new pages in the full target TOC is not a publication checklist for one PR. Each batch completes content and links before introducing navigation. Do not publish empty categories or stubs merely to resemble Diátaxis.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Batch</th>
+<th>Concrete deliverable</th>
+<th>Dependencies</th>
+<th>Exit criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0. Confirm the baseline</td>
+<td>Compare merged PR #251 with other active documentation changes; regenerate inventory; record retired URLs and residual CLI steps</td>
+<td>Documentation PR merge order</td>
+<td>TOC count and content hashes match the actual migration baseline; CLI reference is not reintroduced</td>
+</tr>
+<tr>
+<td>1. Agree contracts and standards</td>
+<td>Confirm relevant names, score/sampling/status/ID contracts, and interface scope; assign docs/engineering owners; approve templates</td>
+<td>Product/engineering for disputed topics</td>
+<td><a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>/<a class="task-link" href="../pages/n018.html" title="Platform Versions and Capability Availability">N018</a> foundations and terminology registry have owners and verified claims; unrelated editorial fixes can proceed</td>
+</tr>
+<tr>
+<td>2. Diamond pilot</td>
+<td>Two first-evaluation tutorials; focused execution/results guides; shared evidence explanation and supporting references</td>
+<td>Confirmed test Agent, credentials/setup, evaluation contracts</td>
+<td>Humans and agents can complete both introductory paths; the pilot has no conflicting scales or duplicate Red Team procedure</td>
+</tr>
+<tr>
+<td>3. Concepts and catalogs</td>
+<td>Split <a class="task-link" href="../pages/p008.html" title="Reliability">P008</a>–<a class="task-link" href="../pages/p020.html" title="Detectors">P020</a>; Agent/lifecycle/context explanations; cleaned Glossary</td>
+<td>Confirmed taxonomy and versioned catalog source</td>
+<td>Concepts pages explain; every transferred lookup row has a canonical destination and visible IDs</td>
+</tr>
+<tr>
+<td>4. AOG and programmatic tasks</td>
+<td>Console-only procedures; separate SDK/MCP setup; registration; Red Team execution/investigation; Python CI gate</td>
+<td>Contracts for the relevant interfaces</td>
+<td>No copied full explanation or catalog table; every procedure has verification and a supported failure path</td>
+</tr>
+<tr>
+<td>5. Runtime protection</td>
+<td>Concepts for Controls/Trust Runtime; canonical configuration/results reference; current how-to guides and five integrations</td>
+<td>Confirmed <code>vijil-dome</code> release and framework compatibility</td>
+<td>ScanResult, Controls results, and trust decisions are not conflated; safe/blocked/error cases are verified</td>
+</tr>
+<tr>
+<td>6. Discover and self-hosting</td>
+<td>Collector installation in ADG; owner handoff; DLP path where supported; AWS/application/reference split</td>
+<td>Artifact/chart access and supported bootstrap replacement</td>
+<td>Each supported installation has enrollment/health evidence; missing alternatives are not concealed with invented SDK/MCP calls</td>
+</tr>
+<tr>
+<td>7. Conditional content and final consolidation</td>
+<td>Darwin guides only for confirmed workflows; remove remaining duplicates, obsolete destination links, and stale generated entries</td>
+<td>Availability and a complete navigation graph</td>
+<td>Every public destination has a purpose; conditional backlog items have not become unverified guides</td>
+</tr>
+</tbody>
+</table></div>
+<p>OpenAPI synchronization and coverage work starts in batch 1 and can run alongside writing. Do not wait until the end to discover that a guide uses a public route missing from reference. The same applies to CI: enable basic checks early for new/changed pages and expand strict enforcement across migrated content batch by batch.</p>
+<p>This is not a calendar commitment. The main schedule risks are contract confirmation, test-environment access, and product review rather than writing 34 files. After the pilot, measure the actual cost of one E/H/R/T migration before estimating the remainder. Split batches into small PRs by connected task graph rather than arbitrary file counts.</p>
+<h2 id="2-exact-diamond-pilot-scope">2. Exact Diamond Pilot Scope</h2>
+<p>The proposed pilot has 12 connected pages: nine existing and three new.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Role in the experience</th>
+<th>Pages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controlled learning</td>
+<td><a class="task-link" href="../pages/p029.html" title="Get Started with Console">P029</a> First Evaluation in the Console; <a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a> First Evaluation with the Python SDK</td>
+</tr>
+<tr>
+<td>Explanation</td>
+<td><a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a> How the Trust Score Works; <a class="task-link" href="../pages/p017.html" title="Harnesses">P017</a> Evaluation Harnesses; <a class="task-link" href="../pages/n003.html" title="Interpret Evaluation Evidence">N003</a> Interpret Evaluation Evidence</td>
+</tr>
+<tr>
+<td>Real Console work</td>
+<td><a class="task-link" href="../pages/p041.html" title="Trust Score Harness">P041</a> Configure a Baseline Evaluation; <a class="task-link" href="../pages/p044.html" title="Run Evaluations">P044</a> Run and Monitor; <a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a> Review Results</td>
+</tr>
+<tr>
+<td>Programmatic work</td>
+<td><a class="task-link" href="../pages/p058.html" title="Run Evaluations">P058</a> Run and Monitor; <a class="task-link" href="../pages/p060.html" title="Understand Results">P060</a> Retrieve and Investigate Results</td>
+</tr>
+<tr>
+<td>Contract lookup</td>
+<td><a class="task-link" href="../pages/n006.html" title="Evaluation Harness Reference">N006</a> Harness Reference; <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a> Evaluation Contracts and Results</td>
+</tr>
+</tbody>
+</table></div>
+<p>The pilot need not migrate all Red Team content, every Probe catalog, or all deployment guidance. Remove their duplicates from pilot pages and link existing canonical guides. Apply minimal corrections to <a class="task-link" href="../pages/p089.html" title="Setup">P089</a> where setup versions or credentials would block the tutorial; <a class="task-link" href="../pages/n019.html" title="Authenticate to Vijil">N019</a>/<a class="task-link" href="../pages/n021.html" title="Install and Configure the Python SDK">N021</a> can follow in another small PR.</p>
+<p>A practical sequence is three content PRs and one validation PR: contracts/explanations/reference; Console path; SDK path; then task demonstrations and corrections. Each PR introduces reciprocal links alongside the split.</p>
+<h2 id="3-how-to-migrate-one-page">3. How to Migrate One Page</h2>
+<ol>
+<li>Record one target task or need, its type, audience/interface, and supported version.</li>
+<li>Mark existing sections as staying here, moving to an existing P-ID, being extracted into a new N-ID, or requiring factual verification.</li>
+<li>Complete the destination, authoritative source, and verification criteria before extraction. Leave no dangling links.</li>
+<li>Shorten the source page while retaining sufficient local context; add named links to the extracted content.</li>
+<li>Change the TOC group once both ends work. Sidebar reorganization does not require changing the URL.</li>
+<li>Check HTML and Markdown, internal links/anchors, any redirect, and the actual task path.</li>
+</ol>
+<p>For example, <a class="task-link" href="../pages/p068.html" title="Configure Guardrails">P068</a> keeps the dict/TOML task and test in Configure Guardrails in Code; complete option/default tables move into <a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a>. <a class="task-link" href="../pages/p068.html" title="Configure Guardrails">P068</a> links relevant <a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a> sections. <a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a> links back to <a class="task-link" href="../pages/p068.html" title="Configure Guardrails">P068</a> and <a class="task-link" href="../pages/p048.html" title="Configure Guardrails">P048</a>, with the model explained in <a class="task-link" href="../pages/p024.html" title="Guardrail">P024</a>. <a class="task-link" href="../pages/p024.html" title="Guardrail">P024</a> no longer maintains a competing configuration reference.</p>
+<h2 id="4-url-link-and-redirect-policy">4. URL, Link, and Redirect Policy</h2>
+<p><strong>Preserve URLs when only the type or sidebar group changes.</strong> <a class="task-link" href="../pages/p071.html" title="Detection Methods">P071</a> remains <code>/developer-guide/protect/detection-methods</code> even when placed in Reference. <a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a> remains <code>/developer-guide/agentic/quickstart</code> while its title becomes a concrete SDK tutorial. Folder tidiness alone does not justify changing a public URL.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Source URL</th>
+<th>Proposal</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/owner-guide/register-agents/what-is-an-agent</code></td>
+<td><code>/concepts/agents</code></td>
+<td>The explanation serves all interfaces; an actual move</td>
+</tr>
+<tr>
+<td><code>/tutorials/protect-agents/dome-containerized-deployment</code></td>
+<td><code>/developer-guide/deploy-vijil/dome-service</code></td>
+<td>The deployment how-to moves into ADG</td>
+</tr>
+<tr>
+<td><code>/get-started/quickstart</code></td>
+<td><code>/developer-guide/agentic/quickstart</code></td>
+<td>Its current destination, <code>/developer-guide/getting-started/quickstart</code>, does not exist in the checkout</td>
+</tr>
+<tr>
+<td><code>/get-started/welcome</code></td>
+<td><code>/concepts/welcome</code></td>
+<td>Currently leads to a different non-TOC overview; align with the canonical public entry point</td>
+</tr>
+<tr>
+<td>Eight retired <code>/developer-guide/cli/*</code> pages</td>
+<td>Map individually by intent: authentication, registration, evaluation, monitoring… or provide a clear retirement notice</td>
+<td>Do not redirect everything to Welcome or imply new SDK content still describes retired command syntax</td>
+</tr>
+</tbody>
+</table></div>
+<p>Review/fix two relative links: Welcome → <code>concepts/trust-score/introduction</code> and How Evaluation Works → <code>concepts/evaluation-components/scenario</code>. Prefer root-relative MDX source paths. Normalize <a class="task-link" href="../pages/p091.html" title="Resources">P091</a>’s <code>models-errors/#paget</code> link and verify its anchor; the static check does not classify it as definitively broken.</p>
+<p>Five non-redirected links from TOC content lead to four non-TOC pages: old custom Harness/OWASP/custom Detector/risk pages. This does not automatically mean HTTP 404. The first three topics have newer TOC destinations or a new catalog; the risk guide cannot be declared replaced without review. If necessary, explicitly add and review that content in scope or transfer its required material into a canonical TOC destination. Do not silently expand the audit to the whole legacy folder.</p>
+<p>A redirect does not automatically solve legacy fragments (<code>#anchor</code>) when one document is split into multiple destinations. Servers generally do not receive fragments. For important old anchors, retain a compatibility anchor and a short pointer section at the retained URL; update internal links to the actual new destination. Verify chains/cycles, final status, semantic destination, and the <code>.md</code> path.</p>
+<p>Capture generated API routes from the published index before changing summary/tag taxonomy. Do not assume slugs remain stable when <code>List Presets</code> becomes <code>List Persona Presets</code> or an alias is removed. Build canonical documentation URLs and redirects only with that map available.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="../architecture/toc.html"><span>Previous</span><strong>Proposed documentation tree</strong></a><a href="pages.html"><span>Next</span><strong>Page-by-page plan</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#1-work-sequence">1. Work Sequence</a></li><li><a href="#2-exact-diamond-pilot-scope">2. Exact Diamond Pilot Scope</a></li><li><a href="#3-how-to-migrate-one-page">3. How to Migrate One Page</a></li><li><a href="#4-url-link-and-redirect-policy">4. URL, Link, and Redirect Policy</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

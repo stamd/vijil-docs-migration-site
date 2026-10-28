@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "source_mdx_entries": 92,
+  "separately_accounted_retired_cli_pages": 8,
+  "post_pr251_existing_pages": 84,
+  "new_page_entries": 34,
+  "conditional_new_pages": 3,
+  "target_mdx_entries": 118,
+  "api_operations_accounted_for": 149,
+  "documentation_evaluation_scenarios": 12,
+  "local_artifact_links": "all resolved",
+  "source_content_hashes": "all 92 match audited snapshot",
+  "limitations": [
+    "No backend/UI executable verification",
+    "Not a production Mintlify build; proposed new page bodies have not been authored",
+    "Live pages were sampled; exhaustive content audit uses local TOC sources",
+    "PR251 head inspected separately; not merged into user working tree"
+  ],
+  "proposal_language": "English",
+  "translation_validation": {
+    "status": "passed",
+    "existing_page_records_translated": 92,
+    "new_page_records_translated": 34,
+    "evaluation_scenarios_translated": 12,
+    "page_ids_urls_types_priorities_and_mappings": "unchanged",
+    "navigation_source_snapshot_and_evidence": "unchanged",
+    "local_report_links": "all resolved",
+    "source_content_hashes": "all 92 unchanged",
+    "generator_output_language": "English"
+  }
+}

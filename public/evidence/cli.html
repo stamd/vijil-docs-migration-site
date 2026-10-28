@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CLI removal · PR #251 · Vijil migration</title><meta name="description" content="The inspected change and the dependencies that remain."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="evidence/cli.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="findings.html">Findings and monitoring</a></li><li><a href="api.html">API reference audit</a></li><li><a href="cli.html" aria-current="page">CLI removal · PR #251</a></li><li><a href="dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Audit evidence</div><h1>CLI removal · PR #251</h1><p class="page-description">The inspected change and the dependencies that remain.</p><h2 id="5-impact-of-pr-251">5. Impact of PR #251</h2>
+<p>Metadata was read through the GitHub connector; local <code>remove-cli-references</code> matches its exact head <code>c75df95b9291806368625203414abc77ba66ab69</code>. When checked, <a href="https://github.com/vijilAI/docs/pull/251" rel="noopener">PR #251 — docs: Remove CLI references</a> was open, non-draft, and unmerged. Its description says it follows Dejan’s PR #250, moves toward UI/SDK/MCP, retains selected supporting SDK CLI steps, and leaves some Console CLI dependencies for later review.</p>
+<p>Compared with the local 92-page TOC, the PR-head TOC contains 84 MDX pages: eight CLI Reference pages <a class="task-link" href="../pages/p081.html" title="Setup">P081</a>–<a class="task-link" href="../pages/p088.html" title="Manifest CLI">P088</a> are absent. Its diff also deletes an old non-TOC CLI quickstart file, which is not an additional audited page.</p>
+<p>A simple search of the confirmed PR head finds CLI candidates on seven retained TOC pages; exact lines are in <a href="../downloads/pr251-cli-residuals.json">pr251-cli-residuals.json</a>. The search excludes <code>/vijil</code> plugin commands, which are not shell CLI commands:</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Remaining content</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="task-link" href="../pages/p032.html" title="Create and Manage Targets">P032</a> Targets</td>
+<td>CLI tabs and deployment creation, scan, configuration, and deletion commands</td>
+<td>Keep the Console task; confirm replacements for uncovered operations</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p033.html" title="Install a Collector">P033</a> Collectors</td>
+<td>Setup address and credential mint/list/revoke commands</td>
+<td>Owner credential UI where available; operator setup only through a confirmed path</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p038.html" title="Manage Agents">P038</a> Register Agents</td>
+<td>Authentication/team commands for standalone MCP setup</td>
+<td>Extract into MCP setup; supporting commands do not create a new primary CLI workflow</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p049.html" title="Monitor Protection with Defend">P049</a> Defend</td>
+<td>A <code>dlp</code> Target creation command</td>
+<td>Do not remove the only prerequisite without a confirmed replacement; <a class="task-link" href="../pages/n028.html" title="Connect Runtime Events to Defend">N028</a> remains conditional</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a> Quickstart</td>
+<td>CLI tabs and evaluation path</td>
+<td>Replace with one SDK tutorial; PR251 does not already do this</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p063.html" title="Red Team Overview">P063</a> Red Team Overview</td>
+<td>Persona/Policy preset shell examples</td>
+<td>Replace with confirmed SDK/MCP examples</td>
+</tr>
+<tr>
+<td><a class="task-link" href="../pages/p089.html" title="Setup">P089</a> SDK Setup</td>
+<td>Supporting <code>auth login</code> and <code>config set</code> commands</td>
+<td>May remain as documented setup necessities after release verification</td>
+</tr>
+</tbody>
+</table></div>
+<p>Local package manifests also define executable <code>vijil</code> for <code>vijil-sdk</code> and executable <code>vijil-console</code> for <code>vijil-console</code>, while older instructions use <code>vijil</code> for both command families. This is a version/contract inconsistency to verify, not a reason to restore public CLI reference.</p>
+<p>Apply the migration plan after comparing the merged PR #251 state with other active documentation changes. This audit does not require checking out the branch or overwriting the user’s local changes.</p>
+<h2 id="remaining-cli-evidence">Remaining CLI evidence at the inspected PR head</h2><p>Verbatim source lines are retained below for review. The migration does not reintroduce CLI reference.</p><h3 id="remaining-p032"><a href="../pages/p032.html">P032 · Create and Manage Targets</a></h3><pre><code>L57: &lt;Tab title=&quot;CLI&quot;&gt;
+L59: vijil discover deployment-create --name &quot;laptops&quot; --type scanner --json
+L145: vijil discover scan-now &lt;target-id&gt;
+L165: vijil discover config-get &lt;target-id&gt;
+L166: vijil discover config-set &lt;target-id&gt; --body @schedule.json
+L193: &lt;Tab title=&quot;CLI&quot;&gt;
+L195: vijil discover deployment-delete &lt;target-id&gt;</code></pre><h3 id="remaining-p033"><a href="../pages/p033.html">P033 · Install a Collector</a></h3><pre><code>L39: vijil discover setup-info
+L50: | **Scanner token** | You install by hand: a virtual machine, a Helm release, a cloud connector. One token per Collector, revocable on its own. | `vijil discover scanner-mint &lt;target-id&gt; --scanner-kind &lt;kind&gt;` |
+L51: | **Enrollment code** | The install is unattended and repeated: a laptop fleet through device management. One code serves the whole wave, and each machine registers as its own Collector. | `vijil discover enrollment-code-create &lt;target-id&gt;` |
+L362: vijil discover scanner-list &lt;target-id&gt;
+L380: 4. Confirm the control plane address matches the one `vijil discover setup-info` returns.
+L398: vijil discover scanner-revoke &lt;scanner-id&gt;
+L399: vijil discover enrollment-code-revoke &lt;code-id&gt;</code></pre><h3 id="remaining-p038"><a href="../pages/p038.html">P038 · Manage Agents</a></h3><pre><code>L115: vijil auth init --url https://console-api.your-company.com
+L116: vijil auth login
+L122: vijil team list
+L123: vijil team use &lt;team_id&gt;</code></pre><h3 id="remaining-p049"><a href="../pages/p049.html">P049 · Monitor Protection with Defend</a></h3><pre><code>L16: Create one with `vijil discover deployment-create --name &quot;&lt;name&gt;&quot; --type dlp`. See</code></pre><h3 id="remaining-p054"><a href="../pages/p054.html">P054 · Quickstart</a></h3><pre><code>L35: &lt;Tab title=&quot;CLI&quot;&gt;
+L93: &lt;Tab title=&quot;CLI&quot;&gt;
+L97: vijil config set gateway.url https://console-api.example.com
+L100: vijil auth status
+L103: The CLI exchanges the pair for a bearer token when it creates the client. If you already have a bearer token, set `VIJIL_API_KEY` or run `vijil auth login` and paste the token. Interactive login saves it to `~/.vijil/credentials.json`.
+L108: vijil config set defaults.team_id &lt;team-id&gt;
+L151: vijil auth init --url https://console-api.example.com
+L152: vijil auth login
+L153: vijil team use &lt;team-id&gt;
+L178: &lt;Tab title=&quot;CLI&quot;&gt;
+L248: &lt;Tab title=&quot;CLI&quot;&gt;
+L250: vijil evaluate &quot;$AGENT_ID&quot; --baseline --sample-size 50
+L306: &lt;Tab title=&quot;CLI&quot;&gt;
+L310: vijil evaluations show &quot;$EVAL_ID&quot;
+L311: vijil scores show &quot;$AGENT_ID&quot;
+L317: vijil evaluations responses &quot;$EVAL_ID&quot; --status failed
+L363: &lt;Tab title=&quot;CLI&quot;&gt;
+L367: vijil reports download &quot;$EVAL_ID&quot; --path .
+L426: | Requests reach the wrong deployment | Run `vijil config set gateway.url &lt;gateway-url&gt;` or pass `gateway=` to `Vijil()` |
+L427: | A team-scoped operation fails | Run `vijil auth status`; if authentication resolves no team, set `defaults.team_id` in `~/.vijil/config.toml` |</code></pre><h3 id="remaining-p063"><a href="../pages/p063.html">P063 · Red Team Overview</a></h3><pre><code>L93: vijil persona preset-list --preset-category adversarial
+L94: vijil persona from-preset &lt;preset_id&gt;
+L96: vijil policy preset-list
+L97: vijil policy from-preset &lt;preset_id&gt;</code></pre><h3 id="remaining-p089"><a href="../pages/p089.html">P089 · Setup</a></h3><pre><code>L91: vijil auth login   # paste the token; saved to ~/.vijil/credentials.json
+L123: vijil config set gateway.url https://console-api.example.com</code></pre><nav class="reading-nav" aria-label="Reading order"><a href="api.html"><span>Previous</span><strong>API reference audit</strong></a><a href="dejan.html"><span>Next</span><strong>Dejan’s proposal and decisions</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#5-impact-of-pr-251">5. Impact of PR #251</a></li><li><a href="#remaining-cli-evidence">Remaining CLI evidence at the inspected PR head</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

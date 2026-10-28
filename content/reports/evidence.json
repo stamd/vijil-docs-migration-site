@@ -1,0 +1,231 @@
+{
+  "counts": {
+    "toc_mdx": 92,
+    "source_lines": 18668,
+    "source_words_approx": 104356,
+    "tabs": {
+      "Concepts": 28,
+      "Agent Owner's Guide": 23,
+      "Agent Developer's Guide": 41
+    },
+    "openapi_paths": 112,
+    "openapi_operations": 149,
+    "proposed_existing": 84,
+    "proposed_new": 34,
+    "proposed_total": 118,
+    "conditional_new": 3
+  },
+  "mermaid_pages": [
+    "concepts/platform/diamond",
+    "concepts/evaluation-components/introduction",
+    "concepts/red-team/engagements",
+    "concepts/defense/guardrail",
+    "owner-guide/protect-in-production/configuring-guardrails",
+    "developer-guide/getting-started/agent-lifecycle-workflow",
+    "developer-guide/evaluate/overview",
+    "developer-guide/evaluate/local-agent",
+    "developer-guide/protect/overview",
+    "developer-guide/protect/configuring-guardrails"
+  ],
+  "images": [
+    {
+      "page": "concepts/welcome",
+      "line": 34,
+      "src": [
+        "/images/concepts/what-is-vijil/vijil_lifecycle.webp"
+      ]
+    },
+    {
+      "page": "concepts/welcome",
+      "line": 46,
+      "src": [
+        "/images/concepts/what-is-vijil/vijil_lifecycle.webp"
+      ]
+    },
+    {
+      "page": "developer-guide/deploy-vijil/deploy-vijil-console",
+      "line": 50,
+      "src": [
+        "/images/developer-guide/deploy-vijil/vijil-console-architecture-showing-vpc-subnets-nlb-eks-and-rd.webp"
+      ]
+    }
+  ],
+  "hover_pages": [
+    "concepts/trust-score/reliability",
+    "concepts/trust-score/safety",
+    "concepts/trust-score/security"
+  ],
+  "link_candidates": [
+    {
+      "page": "concepts/welcome",
+      "line": 69,
+      "target": "concepts/trust-score/introduction",
+      "status": "relative path needs renderer check"
+    },
+    {
+      "page": "concepts/evaluation-components/introduction",
+      "line": 10,
+      "target": "concepts/evaluation-components/scenario",
+      "status": "relative path needs renderer check"
+    }
+  ],
+  "links_to_non_toc_content": [
+    {
+      "page": "concepts/evaluation-components/harness",
+      "line": 31,
+      "target": "/tutorials/evaluate-agents/owasp"
+    },
+    {
+      "page": "concepts/evaluation-components/harness",
+      "line": 35,
+      "target": "/tutorials/evaluate-agents/custom-harnesses"
+    },
+    {
+      "page": "concepts/defense/detector",
+      "line": 485,
+      "target": "/tutorials/protect-agents/custom-detectors"
+    },
+    {
+      "page": "owner-guide/run-evaluations/understanding-results",
+      "line": 287,
+      "target": "/owner-guide/audit-agent-behavior/quantifying-risk"
+    },
+    {
+      "page": "developer-guide/evaluate/understanding-results",
+      "line": 250,
+      "target": "/owner-guide/audit-agent-behavior/quantifying-risk"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/get-started/welcome",
+      "destination": "/concepts/what-is-vijil",
+      "destination_exists": true,
+      "destination_in_toc": false
+    },
+    {
+      "source": "/get-started/quickstart",
+      "destination": "/developer-guide/getting-started/quickstart",
+      "destination_exists": false,
+      "destination_in_toc": false
+    },
+    {
+      "source": "/get-started/overview",
+      "destination": "/owner-guide/getting-started/introduction",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/developer-guide/getting-started/api",
+      "destination": "/developer-guide/agentic/quickstart",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/developer-guide/cli/quickstart",
+      "destination": "/developer-guide/agentic/quickstart",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/developer-guide/agentic/mcp",
+      "destination": "/developer-guide/agentic/quickstart",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/owner-guide/register-agents/mcp",
+      "destination": "/owner-guide/register-agents/registering-agents",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/owner-guide/discover-resources/scanning-resources",
+      "destination": "/owner-guide/discover/introduction",
+      "destination_exists": true,
+      "destination_in_toc": true
+    },
+    {
+      "source": "/legacy/:slug*",
+      "destination": "/concepts/welcome",
+      "destination_exists": true,
+      "destination_in_toc": true
+    }
+  ],
+  "openapi_duplicate_operation_ids": {},
+  "openapi_alias_pairs": [
+    {
+      "method": "GET",
+      "path_a": "/v1/demographics/",
+      "path_b": "/v1/dimensions/",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "POST",
+      "path_a": "/v1/demographics/",
+      "path_b": "/v1/dimensions/",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "GET",
+      "path_a": "/v1/demographics/{dimension_id}",
+      "path_b": "/v1/dimensions/{dimension_id}",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "PUT",
+      "path_a": "/v1/demographics/{dimension_id}",
+      "path_b": "/v1/dimensions/{dimension_id}",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "DELETE",
+      "path_a": "/v1/demographics/{dimension_id}",
+      "path_b": "/v1/dimensions/{dimension_id}",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "GET",
+      "path_a": "/v1/demographics/by-name/{name}",
+      "path_b": "/v1/dimensions/by-name/{name}",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "GET",
+      "path_a": "/v1/demographics/{dimension_id}/values",
+      "path_b": "/v1/dimensions/{dimension_id}/values",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "POST",
+      "path_a": "/v1/demographics/{dimension_id}/values",
+      "path_b": "/v1/dimensions/{dimension_id}/values",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "POST",
+      "path_a": "/v1/demographics/{dimension_id}/values/bulk",
+      "path_b": "/v1/dimensions/{dimension_id}/values/bulk",
+      "equal_except_operation_id": false
+    },
+    {
+      "method": "PUT",
+      "path_a": "/v1/demographics/values/{value_id}",
+      "path_b": "/v1/dimensions/values/{value_id}",
+      "equal_except_operation_id": true
+    },
+    {
+      "method": "DELETE",
+      "path_a": "/v1/demographics/values/{value_id}",
+      "path_b": "/v1/dimensions/values/{value_id}",
+      "equal_except_operation_id": true
+    }
+  ],
+  "openapi_missing_prefixes": [
+    "/v1/discover",
+    "/v1/redteam",
+    "/manifests",
+    "/v1/manifests"
+  ],
+  "openapi_operations_with_multiple_tags": 149
+}

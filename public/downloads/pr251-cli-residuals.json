@@ -1,0 +1,217 @@
+[
+  {
+    "page": "owner-guide/discover/targets",
+    "candidates": [
+      {
+        "line": 57,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 59,
+        "text": "vijil discover deployment-create --name \"laptops\" --type scanner --json"
+      },
+      {
+        "line": 145,
+        "text": "vijil discover scan-now <target-id>"
+      },
+      {
+        "line": 165,
+        "text": "vijil discover config-get <target-id>"
+      },
+      {
+        "line": 166,
+        "text": "vijil discover config-set <target-id> --body @schedule.json"
+      },
+      {
+        "line": 193,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 195,
+        "text": "vijil discover deployment-delete <target-id>"
+      }
+    ]
+  },
+  {
+    "page": "owner-guide/discover/collectors",
+    "candidates": [
+      {
+        "line": 39,
+        "text": "vijil discover setup-info"
+      },
+      {
+        "line": 50,
+        "text": "| **Scanner token** | You install by hand: a virtual machine, a Helm release, a cloud connector. One token per Collector, revocable on its own. | `vijil discover scanner-mint <target-id> --scanner-kind <kind>` |"
+      },
+      {
+        "line": 51,
+        "text": "| **Enrollment code** | The install is unattended and repeated: a laptop fleet through device management. One code serves the whole wave, and each machine registers as its own Collector. | `vijil discover enrollment-code-create <target-id>` |"
+      },
+      {
+        "line": 362,
+        "text": "vijil discover scanner-list <target-id>"
+      },
+      {
+        "line": 380,
+        "text": "4. Confirm the control plane address matches the one `vijil discover setup-info` returns."
+      },
+      {
+        "line": 398,
+        "text": "vijil discover scanner-revoke <scanner-id>"
+      },
+      {
+        "line": 399,
+        "text": "vijil discover enrollment-code-revoke <code-id>"
+      }
+    ]
+  },
+  {
+    "page": "owner-guide/register-agents/registering-agents",
+    "candidates": [
+      {
+        "line": 115,
+        "text": "vijil auth init --url https://console-api.your-company.com"
+      },
+      {
+        "line": 116,
+        "text": "vijil auth login"
+      },
+      {
+        "line": 122,
+        "text": "vijil team list"
+      },
+      {
+        "line": 123,
+        "text": "vijil team use <team_id>"
+      }
+    ]
+  },
+  {
+    "page": "owner-guide/protect-in-production/defend",
+    "candidates": [
+      {
+        "line": 16,
+        "text": "Create one with `vijil discover deployment-create --name \"<name>\" --type dlp`. See"
+      }
+    ]
+  },
+  {
+    "page": "developer-guide/agentic/quickstart",
+    "candidates": [
+      {
+        "line": 35,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 93,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 97,
+        "text": "vijil config set gateway.url https://console-api.example.com"
+      },
+      {
+        "line": 100,
+        "text": "vijil auth status"
+      },
+      {
+        "line": 103,
+        "text": "The CLI exchanges the pair for a bearer token when it creates the client. If you already have a bearer token, set `VIJIL_API_KEY` or run `vijil auth login` and paste the token. Interactive login saves it to `~/.vijil/credentials.json`."
+      },
+      {
+        "line": 108,
+        "text": "vijil config set defaults.team_id <team-id>"
+      },
+      {
+        "line": 151,
+        "text": "vijil auth init --url https://console-api.example.com"
+      },
+      {
+        "line": 152,
+        "text": "vijil auth login"
+      },
+      {
+        "line": 153,
+        "text": "vijil team use <team-id>"
+      },
+      {
+        "line": 178,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 248,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 250,
+        "text": "vijil evaluate \"$AGENT_ID\" --baseline --sample-size 50"
+      },
+      {
+        "line": 306,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 310,
+        "text": "vijil evaluations show \"$EVAL_ID\""
+      },
+      {
+        "line": 311,
+        "text": "vijil scores show \"$AGENT_ID\""
+      },
+      {
+        "line": 317,
+        "text": "vijil evaluations responses \"$EVAL_ID\" --status failed"
+      },
+      {
+        "line": 363,
+        "text": "<Tab title=\"CLI\">"
+      },
+      {
+        "line": 367,
+        "text": "vijil reports download \"$EVAL_ID\" --path ."
+      },
+      {
+        "line": 426,
+        "text": "| Requests reach the wrong deployment | Run `vijil config set gateway.url <gateway-url>` or pass `gateway=` to `Vijil()` |"
+      },
+      {
+        "line": 427,
+        "text": "| A team-scoped operation fails | Run `vijil auth status`; if authentication resolves no team, set `defaults.team_id` in `~/.vijil/config.toml` |"
+      }
+    ]
+  },
+  {
+    "page": "developer-guide/red-team/overview",
+    "candidates": [
+      {
+        "line": 93,
+        "text": "vijil persona preset-list --preset-category adversarial"
+      },
+      {
+        "line": 94,
+        "text": "vijil persona from-preset <preset_id>"
+      },
+      {
+        "line": 96,
+        "text": "vijil policy preset-list"
+      },
+      {
+        "line": 97,
+        "text": "vijil policy from-preset <preset_id>"
+      }
+    ]
+  },
+  {
+    "page": "developer-guide/sdk/setup",
+    "candidates": [
+      {
+        "line": 91,
+        "text": "vijil auth login   # paste the token; saved to ~/.vijil/credentials.json"
+      },
+      {
+        "line": 123,
+        "text": "vijil config set gateway.url https://console-api.example.com"
+      }
+    ]
+  }
+]

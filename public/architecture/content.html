@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Content relationships · Vijil migration</title><meta name="description" content="Canonical sources, interface-specific tasks, and useful links."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="architecture/content.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="index.html">Architecture</a></li><li><a href="content.html" aria-current="page">Content relationships</a></li><li><a href="agents.html">Writing for agents</a></li><li><a href="toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Understand the approach</div><h1>Content relationships</h1><p class="page-description">Canonical sources, interface-specific tasks, and useful links.</p><h2 id="4-canonical-content-locations">4. Canonical Content Locations</h2>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Explanation</th>
+<th>How-to</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent and lifecycle</td>
+<td><a class="task-link" href="../pages/p037.html" title="What is an Agent">P037</a>→Concepts, <a class="task-link" href="../pages/n001.html" title="The Agent Trust Lifecycle">N001</a></td>
+<td>AOG <a class="task-link" href="../pages/p038.html" title="Manage Agents">P038</a>; ADG <a class="task-link" href="../pages/n023.html" title="Register an Agent Programmatically">N023</a> and <a class="task-link" href="../pages/p053.html" title="Agent Lifecycle Workflow">P053</a></td>
+<td><a class="task-link" href="../pages/n011.html" title="Agent Registration Contract">N011</a>; SDK/MCP/REST contracts</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td><a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a>–<a class="task-link" href="../pages/p020.html" title="Detectors">P020</a>, <a class="task-link" href="../pages/n002.html" title="Personas, Policies, and Evaluation Context">N002</a>, <a class="task-link" href="../pages/n003.html" title="Interpret Evaluation Evidence">N003</a></td>
+<td>AOG <a class="task-link" href="../pages/p041.html" title="Trust Score Harness">P041</a>–<a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a>; ADG <a class="task-link" href="../pages/p058.html" title="Run Evaluations">P058</a>–<a class="task-link" href="../pages/p061.html" title="Custom Harnesses">P061</a></td>
+<td><a class="task-link" href="../pages/n006.html" title="Evaluation Harness Reference">N006</a>–<a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a> and existing SDK/API reference</td>
+</tr>
+<tr>
+<td>Red Team</td>
+<td><a class="task-link" href="../pages/p021.html" title="Red Team">P021</a>, <a class="task-link" href="../pages/p022.html" title="Engagements">P022</a></td>
+<td>AOG <a class="task-link" href="../pages/p046.html" title="Run a Red Team Campaign">P046</a>/<a class="task-link" href="../pages/p047.html" title="Understand Red Team Results">P047</a>; ADG <a class="task-link" href="../pages/p063.html" title="Red Team Overview">P063</a>/<a class="task-link" href="../pages/n029.html" title="Retrieve and Investigate Red Team Evidence">N029</a></td>
+<td><a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>; public MCP/SDK and updated REST specification</td>
+</tr>
+<tr>
+<td>Content Guardrails</td>
+<td><a class="task-link" href="../pages/p023.html" title="How Defense Works">P023</a>–<a class="task-link" href="../pages/p026.html" title="Detector">P026</a></td>
+<td>AOG <a class="task-link" href="../pages/p048.html" title="Configure Guardrails">P048</a>/<a class="task-link" href="../pages/p050.html" title="Deploy Dome">P050</a>; ADG <a class="task-link" href="../pages/p068.html" title="Configure Guardrails">P068</a>–<a class="task-link" href="../pages/p070.html" title="Custom Detectors">P070</a></td>
+<td><a class="task-link" href="../pages/p071.html" title="Detection Methods">P071</a>, <a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a>, <a class="task-link" href="../pages/n014.html" title="Dome Results and Telemetry Reference">N014</a></td>
+</tr>
+<tr>
+<td>Controls</td>
+<td><a class="task-link" href="../pages/n004.html" title="How the Controls Engine Works">N004</a></td>
+<td><a class="task-link" href="../pages/p066.html" title="Controls Engine">P066</a></td>
+<td><a class="task-link" href="../pages/p080.html" title="Controls API Reference">P080</a></td>
+</tr>
+<tr>
+<td>Trust Runtime</td>
+<td><a class="task-link" href="../pages/n005.html" title="How Trust Runtime Works">N005</a></td>
+<td><a class="task-link" href="../pages/p067.html" title="Trust Runtime">P067</a> and framework guides</td>
+<td><a class="task-link" href="../pages/n015.html" title="Trust Runtime API Reference">N015</a>, <a class="task-link" href="../pages/n016.html" title="Framework Integration Reference">N016</a></td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td><a class="task-link" href="../pages/p027.html" title="Observe">P027</a></td>
+<td>AOG <a class="task-link" href="../pages/p049.html" title="Monitor Protection with Defend">P049</a>/<a class="task-link" href="../pages/p051.html" title="Monitor Dome Metrics">P051</a>; ADG <a class="task-link" href="../pages/p072.html" title="Observability">P072</a></td>
+<td><a class="task-link" href="../pages/n014.html" title="Dome Results and Telemetry Reference">N014</a>/<a class="task-link" href="../pages/n015.html" title="Trust Runtime API Reference">N015</a> and confirmed data-source contracts</td>
+</tr>
+<tr>
+<td>Darwin</td>
+<td><a class="task-link" href="../pages/p006.html" title="Darwin">P006</a> and relevant lifecycle context</td>
+<td><a class="task-link" href="../pages/n033.html" title="Review and Apply an Adaptation Proposal">N033</a>/<a class="task-link" href="../pages/n034.html" title="Adapt an Agent and Validate the Proposal">N034</a> only when supported</td>
+<td>Existing SDK models/methods with <a class="task-link" href="../pages/n018.html" title="Platform Versions and Capability Availability">N018</a> availability</td>
+</tr>
+</tbody>
+</table></div>
+<p>Separate Console and SDK procedures for the same business task are justified. Two independently maintained Trust Score definitions or repeated descriptions of all six PDF report sections are not. Canonical explanations are shared; steps and result verification are interface-specific.</p>
+<h2 id="5-a-navigation-graph-not-only-a-tree">5. A Navigation Graph, Not Only a Tree</h2>
+<p>Documentation must work when readers arrive directly at a deep URL. Diátaxis does not require traversing all four types in a fixed order; entry can occur anywhere. <a href="https://diataxis.fr/map/" rel="noopener">Diátaxis: The map</a></p>
+<details class="diagram-source"><summary>Read the navigation graph · Mermaid source</summary><pre><code class="language-mermaid">flowchart LR
+    U[Task or direct query] --&gt; H[How-to for the exact interface]
+    U --&gt; R[Reference with the exact contract]
+    T[First evaluation tutorial] --&gt; H
+    H --&gt; V[Result verification and failure handling]
+    H --&gt; E[Concepts: meaning and limits]
+    H --&gt; R
+    R --&gt; H
+    R --&gt; E
+    E --&gt; C[Console how-to]
+    E --&gt; D[SDK or MCP how-to]
+</code></pre></details>
+<p>Related links should represent different needs: understand the model, perform a related task, look up options, and switch interfaces for the same task. Three generic links to Welcome/Overview/Glossary do not meet that need. In large reference catalogs, link the relevant resource or anchor rather than always the top of a large page.</p>
+<p>Example of a complete Diamond path: Welcome → First Evaluation → Review Evaluation Results → Interpret Evaluation Evidence → Evaluation Contracts and Results. A direct query such as “retrieve failed prompts” should instead reach the programmatic results how-to, which names the SDK method and its reference anchor.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="index.html"><span>Previous</span><strong>Architecture</strong></a><a href="agents.html"><span>Next</span><strong>Writing for agents</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#4-canonical-content-locations">4. Canonical Content Locations</a></li><li><a href="#5-a-navigation-graph-not-only-a-tree">5. A Navigation Graph, Not Only a Tree</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

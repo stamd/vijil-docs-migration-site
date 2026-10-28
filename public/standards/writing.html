@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page templates and links · Vijil migration</title><meta name="description" content="The authoring standard for new and migrated pages."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="standards/writing.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="writing.html" aria-current="page">Page templates and links</a></li><li><a href="validation.html">Checks and evaluation</a></li><li><a href="ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="../evidence/findings.html">Findings and monitoring</a></li><li><a href="../evidence/api.html">API reference audit</a></li><li><a href="../evidence/cli.html">CLI removal · PR #251</a></li><li><a href="../evidence/dejan.html">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Working standards</div><h1>Page templates and links</h1><p class="page-description">The authoring standard for new and migrated pages.</p><h2 id="5-standard-for-new-or-migrated-pages">5. Standard for New or Migrated Pages</h2>
+<p>Every page has one primary E/H/R/T purpose, clear title/description, scope, and content owner. Types can be tracked in <code>content-registry.json</code> or another tooling sidecar; <strong>do not assume Mintlify displays arbitrary <code>doc_type</code> frontmatter or includes it in its AI index</strong>. Public rendering must itself communicate the goal and interface. Use confirmed native fields such as <code>title</code> and <code>description</code> in frontmatter.</p>
+<p>Proposed editorial registry:</p>
+<pre><code class="language-json">{
+  "developer-guide/evaluate/running-evaluations": {
+    "type": "how-to",
+    "audience": ["developer", "automation-agent"],
+    "surface": ["python-sdk", "mcp"],
+    "product": "diamond",
+    "content_owner": "to-be-assigned",
+    "contract_owner": "to-be-assigned",
+    "verified_release": "to-be-confirmed",
+    "last_verified": null,
+    "concept": "concepts/evaluation-components/introduction",
+    "reference": "developer-guide/reference/evaluation-contracts"
+  }
+}
+</code></pre>
+<p>This is a <strong>proposed tooling structure</strong>, not an existing registry. <code>last_verified</code> does not mean the latest grammar-edit timestamp. Update it when relevant behavior is checked against a particular release.</p>
+<h3 id="tutorial-template">Tutorial Template</h3>
+<pre><code class="language-markdown">---
+title: "Your First Evaluation with the Python SDK"
+description: "Run one behavioral evaluation with the Python SDK and inspect its evidence."
+---
+
+One sentence stating what you will learn and what you will produce.
+
+## Before You Begin
+Exact supported environment, credentials, test Agent and access.
+
+## Run Your First Evaluation
+One chosen path; bounded steps and checkpoints; complete example.
+
+## Check Your Results
+Expected shape and how to distinguish success from failure.
+
+## Clean Up
+Only actions and retained state relevant to this exercise.
+
+## Related
+The next real task, the concept, and the exact reference.
+</code></pre>
+<p>A tutorial does not silently default to a production Agent, require beginners to write an adapter, or demand design decisions before their first success. State cost and variable completion time where they materially affect the user’s choices.</p>
+<h3 id="how-to-template">How-to Template</h3>
+<pre><code class="language-markdown">---
+title: "Run and Monitor Evaluations"
+description: "Start a behavioral evaluation with the Python SDK or MCP and retrieve its result."
+---
+
+Goal, supported interface and final artifact in one short paragraph.
+
+## Before You Begin
+Required state, IDs, permissions, versions, credentials and limits.
+
+## Start the Evaluation
+Only the steps needed for this task; name the returned identifier.
+
+## Wait and Check the Result
+Bounded polling, terminal statuses, saved/readiness conditions.
+
+## Troubleshooting
+Likely actionable failures; task-specific recovery.
+
+## Related
+Concept, full options reference, and the Console counterpart.
+</code></pre>
+<p>When one how-to has SDK and MCP variants, each block has an explicit heading and independently defined variables. Do not combine them in an unlabeled command or hide a necessary prerequisite in only one tab. REST examples are a secondary route to the contract; every task need not have a third complete copy.</p>
+<h3 id="reference-template">Reference Template</h3>
+<pre><code class="language-markdown">---
+title: "Dome Results and Telemetry Reference"
+description: "Look up Dome payloads, results, telemetry fields and units for the supported release."
+---
+
+Scope, package/service and version.
+
+## Result Types
+Fields, types, defaults, units and conditional availability.
+
+## Behavior
+Guaranteed semantics, limits, errors and retries where applicable.
+
+## Examples
+Small examples of the described contract.
+
+## Related
+The concept and at least one task using this contract.
+</code></pre>
+<p>“Everything supported” can mean only what the authoritative versioned source actually covers. Runtime Detectors and evaluation Detectors have separate namespaces; API, SDK, and UI names are shown as a mapping rather than silently treated as synonyms.</p>
+<h3 id="explanation-template">Explanation Template</h3>
+<pre><code class="language-markdown">---
+title: "How Trust Runtime Works"
+description: "Understand identity, constraints and the enforcement boundaries of Trust Runtime."
+---
+
+The conceptual question and a concise answer.
+
+## Mental Model
+Definitions and a small example.
+
+## How the Parts Relate
+Mermaid plus a textual description of the same relationships.
+
+## Tradeoffs and Boundaries
+Important design choices and scope limits.
+
+## Related
+The Console task where it exists, the developer task, and reference.
+</code></pre>
+<p>Every topic need not use identical headings. Templates are content checklists. Public English pages should follow existing repository styles: Title Case, H2/H3, component names, inline code, and Vale rules. Do not rename a real API literal merely to satisfy prose linting or undermine stable IDs.</p>
+<h2 id="6-linking-rules-and-controlled-exceptions">6. Linking Rules and Controlled Exceptions</h2>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Required links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>Next H task; E explanation; R for what was used</td>
+</tr>
+<tr>
+<td>H</td>
+<td>Relevant E; full R contract; counterpart interface where one exists</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Relevant AOG and ADG tasks when both are supported; concrete reference</td>
+</tr>
+<tr>
+<td>R</td>
+<td>The model explaining the concept; at least one how-to using the contract</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every authored page ends with <code>Related</code>. Checks must not reward arbitrary links merely because the section exists. Products without a supported guide yet, such as Darwin, have a documented exception: link availability and the existing model instead of an empty how-to stub. The Glossary links relevant domains and guides rather than repeating every term as a separate footer link.</p>
+<p>Generated API pages need a functional equivalent through the generator, API descriptions, or a linked resource landing and registry. Do not manually add the same footer to 149 artifacts that the next synchronization overwrites. CI must know which pages are generated and how to verify their links.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="../plan/progress.html"><span>Previous</span><strong>Progress tracker</strong></a><a href="validation.html"><span>Next</span><strong>Checks and evaluation</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#5-standard-for-new-or-migrated-pages">5. Standard for New or Migrated Pages</a></li><li><a href="#6-linking-rules-and-controlled-exceptions">6. Linking Rules and Controlled Exceptions</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

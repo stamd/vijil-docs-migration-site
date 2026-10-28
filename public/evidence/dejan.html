@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dejan’s proposal and decisions · Vijil migration</title><meta name="description" content="Where the recommendations align and what still needs confirmation."><meta name="theme-color" content="#ffffff"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css"><script src="../assets/data.js" defer></script><script src="../assets/progress-core.js" defer></script><script src="../assets/app.js" defer></script></head>
+<body data-root="../" data-page="evidence/dejan.html"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-sidebar" aria-expanded="false">☰</button><a class="brand" href="../index.html"><strong>Vijil</strong><span>Documentation migration</span></a><div class="header-actions"><button class="search-trigger" data-search-open type="button"><span>Search the handbook</span><kbd>/</kbd></button><a class="progress-shortcut" href="../plan/progress.html">Progress <span data-draft-count class="draft-count" hidden>0</span></a></div></header>
+<div class="site-layout"><nav class="sidebar" id="site-sidebar" aria-label="Handbook"><div class="nav-group"><p>Start here</p><ul><li><a href="../index.html">Overview</a></li><li><a href="../meeting.html">Meeting brief</a></li><li><a href="../using.html">Using this handbook</a></li></ul></div><div class="nav-group"><p>Understand the approach</p><ul><li><a href="../guide/diataxis.html">Diátaxis explained</a></li><li><a href="../architecture/index.html">Architecture</a></li><li><a href="../architecture/content.html">Content relationships</a></li><li><a href="../architecture/agents.html">Writing for agents</a></li><li><a href="../architecture/toc.html">Proposed documentation tree</a></li></ul></div><div class="nav-group"><p>Plan and delivery</p><ul><li><a href="../plan/roadmap.html">Rollout and Diamond pilot</a></li><li><a href="../plan/pages.html">Page-by-page plan</a></li><li><a href="../plan/progress.html">Progress tracker</a></li></ul></div><div class="nav-group"><p>Working standards</p><ul><li><a href="../standards/writing.html">Page templates and links</a></li><li><a href="../standards/validation.html">Checks and evaluation</a></li><li><a href="../standards/ownership.html">Ownership and reviews</a></li></ul></div><div class="nav-group"><p>Audit evidence</p><ul><li><a href="findings.html">Findings and monitoring</a></li><li><a href="api.html">API reference audit</a></li><li><a href="cli.html">CLI removal · PR #251</a></li><li><a href="dejan.html" aria-current="page">Dejan’s proposal and decisions</a></li></ul></div><div class="nav-group"><p>Reference library</p><ul><li><a href="../resources/baseline.html">Audit baseline</a></li><li><a href="../resources/index.html">All references and downloads</a></li><li><a href="../resources/tracking.html">Sharing progress</a></li></ul></div><div class="sidebar-foot">Audit snapshot<br><time datetime="2026-10-28">28 October 2026</time></div></nav><div class="sidebar-overlay" data-close-menu hidden></div><main id="main" class="main " tabindex="-1"><div class="article-layout"><article><div class="breadcrumb">Audit evidence</div><h1>Dejan’s proposal and decisions</h1><p class="page-description">Where the recommendations align and what still needs confirmation.</p><h2 id="6-comparison-with-dejans-document">6. Comparison with Dejan’s Document</h2>
+<p>Direct Google Drive access returned 404/403. This analysis uses the complete document text supplied by the user in the conversation. It does not claim to have checked comments, revision history, or the separate cheat sheet/checklist mentioned in that document.</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Dejan’s recommendation or claim</th>
+<th>Assessment after the audit</th>
+<th>Concrete decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retain AOG/ADG/Concepts</td>
+<td>Supported and consistent with the user’s constraint</td>
+<td>Keep the three tabs; change groups and page purposes</td>
+</tr>
+<tr>
+<td>Confirm naming before documenting a feature</td>
+<td>Necessary where contracts already differ</td>
+<td>Terminology registry and product owner per topic; gate dependent content without stopping unrelated fixes</td>
+</tr>
+<tr>
+<td>One goal per page</td>
+<td>The most important principle for current mixed content</td>
+<td>One primary intent; brief context and required fields are allowed to prevent excessive fragmentation</td>
+</tr>
+<tr>
+<td>AOG Console, ADG code?</td>
+<td>Resolve by working context</td>
+<td>AOG Console; ADG SDK/MCP/plugin and operators. The same person crosses via named counterpart links</td>
+</tr>
+<tr>
+<td>Explanations only in Concepts</td>
+<td>Useful for a canonical model</td>
+<td>Centralize general explanations; retain sentences required to perform a step. Lookup/routing pages are Reference, not duplicate explanations</td>
+</tr>
+<tr>
+<td>Reference in one place</td>
+<td>Necessary, but a fourth tab is outside the agreed scope</td>
+<td>Central ADG Reference group; Glossary remains a shared entry point in Concepts</td>
+</tr>
+<tr>
+<td>Three competing developer entry points</td>
+<td>Partly addressed by prior consolidation</td>
+<td>There is one TOC quickstart and redirects from old entry points. The remaining issue is distinguishing introduction, first exercise, and lifecycle orchestration, plus four tabs inside quickstart</td>
+</tr>
+<tr>
+<td>No true tutorials</td>
+<td>Tutorial-like steps exist, but the experience is insufficiently controlled</td>
+<td>Rewrite <a class="task-link" href="../pages/p029.html" title="Get Started with Console">P029</a>/<a class="task-link" href="../pages/p054.html" title="Quickstart">P054</a> as complete first-evaluation tutorials; not every step list is a tutorial</td>
+</tr>
+<tr>
+<td>Remove the Tutorials section</td>
+<td>The current TOC has no separate Tutorials tab</td>
+<td>The remaining container tutorial URL is a deployment how-to and moves into ADG with a redirect. Folder names do not determine type</td>
+</tr>
+<tr>
+<td>Duplicate REST endpoints probably result from synchronization</td>
+<td>Alias pairs, similar summaries, and coverage gaps are confirmed; cause remains unverified</td>
+<td>Engineering investigation of the generator/public API contract; no arbitrary route deletion</td>
+</tr>
+<tr>
+<td>Darwin has no guides</td>
+<td>A gap exists, but product availability is unclear</td>
+<td><a class="task-link" href="../pages/n033.html" title="Review and Apply an Adaptation Proposal">N033</a>/<a class="task-link" href="../pages/n034.html" title="Adapt an Agent and Validate the Proposal">N034</a> are planned with explicit publication conditions</td>
+</tr>
+<tr>
+<td>Trust Runtime has no concept page</td>
+<td>Confirmed</td>
+<td><a class="task-link" href="../pages/n005.html" title="How Trust Runtime Works">N005</a> and related <a class="task-link" href="../pages/n004.html" title="How the Controls Engine Works">N004</a> for the Controls Engine</td>
+</tr>
+<tr>
+<td>Observe/Observability/Dome Metrics/Defend name one capability</td>
+<td>Too broad as a merge rule</td>
+<td>One umbrella concept, but separate guides for different data sources and scopes</td>
+</tr>
+<tr>
+<td>Every page has Related</td>
+<td>A useful editorial minimum, insufficient as the only check</td>
+<td>Verify link types and destinations, not just a heading; generated API pages receive a systematic equivalent</td>
+</tr>
+<tr>
+<td>Focused pages rank better and are cited by AI</td>
+<td>A reasonable project hypothesis, not established by these sources</td>
+<td>Do not promise ranking/citation gains; measure retrieval and task success</td>
+</tr>
+<tr>
+<td>Vale, frontmatter, and broken-link checks</td>
+<td>A practical foundation</td>
+<td>Add TOC coverage, redirects/API checks, rendered Markdown, and executable verification of selected examples</td>
+</tr>
+<tr>
+<td>Section ownership</td>
+<td>Essential for maintenance</td>
+<td>Separate docs ownership from engineering domain ownership; individuals have not yet been assigned</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dejan’s direction is retained. This audit turns it into a complete inventory, distinguishes previously addressed issues from remaining ones, and adds precise content destinations and verification conditions.</p>
+<h2 id="7-contracts-product-engineering-still-need-to-confirm">7. Contracts Product/Engineering Still Need to Confirm</h2>
+<p>These do not prevent producing the proposal. They are explicit implementation dependencies:</p>
+<div aria-label="Scrollable reference table" class="table-scroll" tabindex="0"><table>
+<thead>
+<tr>
+<th>Contract</th>
+<th>Confirmation required</th>
+<th>Dependent content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Team objects</td>
+<td>Whether Evaluation, Engagement, and Campaign are distinct systems, wrappers, or compatibility aliases; public IDs/routes per deployment</td>
+<td><a class="task-link" href="../pages/p022.html" title="Engagements">P022</a>/<a class="task-link" href="../pages/p063.html" title="Red Team Overview">P063</a>, <a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>/<a class="task-link" href="../pages/n029.html" title="Retrieve and Investigate Red Team Evidence">N029</a>, SDK/MCP/OpenAPI</td>
+</tr>
+<tr>
+<td>Trust Score</td>
+<td>Scale per field, default threshold, aggregation, missing values, and result readiness</td>
+<td><a class="task-link" href="../pages/p007.html" title="The Trust Score">P007</a>/<a class="task-link" href="../pages/p041.html" title="Trust Score Harness">P041</a>/<a class="task-link" href="../pages/p045.html" title="Understand Results">P045</a>/<a class="task-link" href="../pages/p060.html" title="Understand Results">P060</a>, <a class="task-link" href="../pages/n003.html" title="Interpret Evaluation Evidence">N003</a>/<a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>/<a class="task-link" href="../pages/n022.html" title="Gate a Release on Evaluation Evidence">N022</a></td>
+</tr>
+<tr>
+<td>Sampling and taxonomy</td>
+<td>Probe/group/prompt definitions, sample_size units, Harness aliases, and catalog release snapshot</td>
+<td><a class="task-link" href="../pages/p008.html" title="Reliability">P008</a>–<a class="task-link" href="../pages/p020.html" title="Detectors">P020</a>/<a class="task-link" href="../pages/p059.html" title="Local Agent Evaluation">P059</a>/<a class="task-link" href="../pages/p090.html" title="Lifecycle Methods">P090</a>, <a class="task-link" href="../pages/n006.html" title="Evaluation Harness Reference">N006</a>–<a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a></td>
+</tr>
+<tr>
+<td>Runtime enforcement</td>
+<td>Current <code>Dome</code>/<code>VijilDome</code>/<code>TrustRuntime</code> contracts, units/statuses, framework limits</td>
+<td><a class="task-link" href="../pages/p023.html" title="How Defense Works">P023</a>–<a class="task-link" href="../pages/p027.html" title="Observe">P027</a>/<a class="task-link" href="../pages/p064.html" title="Protection Overview">P064</a>–<a class="task-link" href="../pages/p080.html" title="Controls API Reference">P080</a>, <a class="task-link" href="../pages/n004.html" title="How the Controls Engine Works">N004</a>/<a class="task-link" href="../pages/n005.html" title="How Trust Runtime Works">N005</a>/<a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a>–<a class="task-link" href="../pages/n017.html" title="Dome Service HTTP API Reference">N017</a></td>
+</tr>
+<tr>
+<td>Discovery and DLP</td>
+<td>Supported bootstrap without a public CLI workflow; Target/deployment/scan surface mapping</td>
+<td><a class="task-link" href="../pages/p012.html" title="Target">P012</a>/<a class="task-link" href="../pages/p032.html" title="Create and Manage Targets">P032</a>/<a class="task-link" href="../pages/p033.html" title="Install a Collector">P033</a>/<a class="task-link" href="../pages/p049.html" title="Monitor Protection with Defend">P049</a>, <a class="task-link" href="../pages/n024.html" title="Install an Endpoint Collector">N024</a>–<a class="task-link" href="../pages/n028.html" title="Connect Runtime Events to Defend">N028</a></td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Releases/tenants supporting Darwin, deploy/evolve, API/SDK preview, White Box, and monitoring reads</td>
+<td><a class="task-link" href="../pages/n018.html" title="Platform Versions and Capability Availability">N018</a>/<a class="task-link" href="../pages/n033.html" title="Review and Apply an Adaptation Proposal">N033</a>/<a class="task-link" href="../pages/n034.html" title="Adapt an Agent and Validate the Proposal">N034</a> and reference</td>
+</tr>
+<tr>
+<td>UI names and permissions</td>
+<td>Tests/Verify, Adaptive visibility, global SUPER ADMIN versus team roles, activate/register, Save/Apply effects</td>
+<td>AOG procedures and <a class="task-link" href="../pages/n011.html" title="Agent Registration Contract">N011</a>/<a class="task-link" href="../pages/n012.html" title="Evaluation Contracts and Results">N012</a>/<a class="task-link" href="../pages/n013.html" title="Dome Configuration Reference">N013</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>The Glossary records these decisions. It does not become the source of truth for code behavior: code/specification/release contracts and responsible teams confirm facts, while the terminology registry represents them consistently.</p>
+<nav class="reading-nav" aria-label="Reading order"><a href="cli.html"><span>Previous</span><strong>CLI removal · PR #251</strong></a><a href="../resources/baseline.html"><span>Next</span><strong>Audit baseline</strong></a></nav><footer class="article-footer">Migration proposal · Audit snapshot: 28 October 2026. Implementation status is maintained separately in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#6-comparison-with-dejans-document">6. Comparison with Dejan’s Document</a></li><li><a href="#7-contracts-product-engineering-still-need-to-confirm">7. Contracts Product/Engineering Still Need to Confirm</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
+<dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="dialog-heading"><h2 id="search-title">Search the handbook</h2><button type="button" data-search-close aria-label="Close search">✕</button></div><label class="sr-only" for="global-search">Search pages, decisions, and API operations</label><input id="global-search" type="search" placeholder="Try Trust Score, P024, or deployment…" autocomplete="off"><p class="search-meta" id="search-meta" aria-live="polite">Search full text, page IDs, and reference material.</p><div id="search-results" class="search-results"></div></dialog>
+<dialog id="import-dialog" class="import-dialog" aria-labelledby="import-title"><h2 id="import-title">Review imported progress</h2><p data-import-summary></p><p>Import creates local drafts. Export and commit the file to publish updates for the team.</p><div class="button-row"><button type="button" data-import-confirm>Import as drafts</button><button type="button" data-import-cancel>Cancel</button></div></dialog><input type="file" id="progress-file" accept="application/json,.json" hidden><div class="toast" id="toast" role="status" aria-live="polite" hidden></div><noscript><p class="noscript-note">Reading works without JavaScript. Enable JavaScript for search, filters, and progress tracking.</p></noscript></body></html>

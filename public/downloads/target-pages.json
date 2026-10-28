@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "P001",
+    "slug": "concepts/welcome",
+    "title": "Welcome to Vijil",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P002",
+    "slug": "concepts/platform/console",
+    "title": "Vijil Console",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P003",
+    "slug": "concepts/platform/discover",
+    "title": "Vijil Discover",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P004",
+    "slug": "concepts/platform/diamond",
+    "title": "Vijil Diamond",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P005",
+    "slug": "concepts/platform/dome",
+    "title": "Vijil Dome",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P006",
+    "slug": "concepts/platform/darwin",
+    "title": "Vijil Darwin",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P007",
+    "slug": "concepts/trust-score/introduction",
+    "title": "How the Trust Score Works",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P008",
+    "slug": "concepts/trust-score/reliability",
+    "title": "Reliability",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P009",
+    "slug": "concepts/trust-score/safety",
+    "title": "Safety",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P010",
+    "slug": "concepts/trust-score/security",
+    "title": "Security",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P011",
+    "slug": "concepts/discovery/introduction",
+    "title": "How Discovery Works",
+    "type": "E",
+    "group": "Discovery",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P012",
+    "slug": "concepts/discovery/target",
+    "title": "Discovery Targets",
+    "type": "E",
+    "group": "Discovery",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P013",
+    "slug": "concepts/discovery/collector",
+    "title": "Discovery Collectors",
+    "type": "E",
+    "group": "Discovery",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P014",
+    "slug": "concepts/discovery/resource",
+    "title": "Discovered Resources",
+    "type": "E",
+    "group": "Discovery",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P015",
+    "slug": "concepts/discovery/classification",
+    "title": "Resource Classification",
+    "type": "E",
+    "group": "Discovery",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P016",
+    "slug": "concepts/evaluation-components/introduction",
+    "title": "How Evaluation Works",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P017",
+    "slug": "concepts/evaluation-components/harness",
+    "title": "Evaluation Harnesses",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P018",
+    "slug": "concepts/evaluation-components/scenario",
+    "title": "Evaluation Scenarios",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P019",
+    "slug": "concepts/evaluation-components/probe",
+    "title": "Evaluation Probes",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P020",
+    "slug": "concepts/evaluation-components/detector",
+    "title": "Evaluation Detectors",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P021",
+    "slug": "concepts/red-team/introduction",
+    "title": "Why Use Adaptive Red Teaming",
+    "type": "E",
+    "group": "Red Team",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P022",
+    "slug": "concepts/red-team/engagements",
+    "title": "How Red Team Engagements Work",
+    "type": "E",
+    "group": "Red Team",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P023",
+    "slug": "concepts/defense/introduction",
+    "title": "How Runtime Defense Works",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P024",
+    "slug": "concepts/defense/guardrail",
+    "title": "Guardrails",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P025",
+    "slug": "concepts/defense/guard",
+    "title": "Guards",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P026",
+    "slug": "concepts/defense/detector",
+    "title": "Runtime Detectors",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P027",
+    "slug": "concepts/defense/observe",
+    "title": "Runtime Observability",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P028",
+    "slug": "concepts/glossary",
+    "title": "Glossary",
+    "type": "R",
+    "group": "Glossary",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P029",
+    "slug": "owner-guide/getting-started/introduction",
+    "title": "Your First Evaluation in the Console",
+    "type": "T",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P030",
+    "slug": "owner-guide/getting-started/teams",
+    "title": "Manage Teams",
+    "type": "H",
+    "group": "Teams and Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P031",
+    "slug": "owner-guide/discover/introduction",
+    "title": "Discover Agents in an Environment",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P032",
+    "slug": "owner-guide/discover/targets",
+    "title": "Create and Manage Targets",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P033",
+    "slug": "owner-guide/discover/collectors",
+    "title": "Prepare Collector Installation",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P034",
+    "slug": "owner-guide/discover/reviewing-resources",
+    "title": "Review Discovered Resources",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P035",
+    "slug": "owner-guide/discover/registering-agents",
+    "title": "Register a Discovered Agent",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P036",
+    "slug": "owner-guide/discover/code-scans",
+    "title": "Scan Code Repositories",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P037",
+    "slug": "concepts/agents",
+    "title": "What Is an Agent in Vijil",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P038",
+    "slug": "owner-guide/register-agents/registering-agents",
+    "title": "Register and Manage Agents in the Console",
+    "type": "H",
+    "group": "Teams and Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P039",
+    "slug": "owner-guide/simulate-environment/personas",
+    "title": "Create Personas in the Console",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P040",
+    "slug": "owner-guide/simulate-environment/policies",
+    "title": "Create Policies in the Console",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P041",
+    "slug": "owner-guide/simulate-environment/harnesses/trust-score",
+    "title": "Configure a Baseline Evaluation",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P042",
+    "slug": "owner-guide/simulate-environment/harnesses/compliance",
+    "title": "Run a Compliance Evaluation",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P043",
+    "slug": "owner-guide/simulate-environment/custom-harnesses",
+    "title": "Create a Custom Harness in the Console",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P044",
+    "slug": "owner-guide/run-evaluations/running-evaluations",
+    "title": "Run and Monitor an Evaluation in the Console",
+    "type": "H",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P045",
+    "slug": "owner-guide/run-evaluations/understanding-results",
+    "title": "Review Evaluation Results in the Console",
+    "type": "H",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P046",
+    "slug": "owner-guide/red-team/running-campaigns",
+    "title": "Run a Red Team Evaluation in the Console",
+    "type": "H",
+    "group": "Red Team",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P047",
+    "slug": "owner-guide/red-team/understanding-results",
+    "title": "Review Red Team Results in the Console",
+    "type": "H",
+    "group": "Red Team",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P048",
+    "slug": "owner-guide/protect-in-production/configuring-guardrails",
+    "title": "Configure Guardrails in the Console",
+    "type": "H",
+    "group": "Protect and Monitor",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P049",
+    "slug": "owner-guide/protect-in-production/defend",
+    "title": "Review Runtime Events in Defend",
+    "type": "H",
+    "group": "Protect and Monitor",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P050",
+    "slug": "owner-guide/protect-in-production/deploying-dome",
+    "title": "Hand Off Dome Deployment",
+    "type": "H",
+    "group": "Protect and Monitor",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P051",
+    "slug": "owner-guide/protect-in-production/observability",
+    "title": "Investigate an Agent with Dome Metrics",
+    "type": "H",
+    "group": "Protect and Monitor",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P052",
+    "slug": "developer-guide/getting-started/introduction",
+    "title": "Choose a Developer Workflow",
+    "type": "R",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P053",
+    "slug": "developer-guide/getting-started/agent-lifecycle-workflow",
+    "title": "Release an Evaluated Agent",
+    "type": "H",
+    "group": "Release and Improve",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P054",
+    "slug": "developer-guide/agentic/quickstart",
+    "title": "Your First Evaluation with the Python SDK",
+    "type": "T",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P055",
+    "slug": "developer-guide/getting-started/claude-code-plugin",
+    "title": "Set Up the Claude Code Plugin",
+    "type": "H",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P056",
+    "slug": "developer-guide/deploy-vijil/deploy-vijil-console",
+    "title": "Deploy Vijil Console on AWS EKS",
+    "type": "H",
+    "group": "Self-Hosting",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P057",
+    "slug": "developer-guide/evaluate/overview",
+    "title": "Choose an Evaluation Workflow",
+    "type": "R",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P058",
+    "slug": "developer-guide/evaluate/running-evaluations",
+    "title": "Run and Monitor Evaluations",
+    "type": "H",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P059",
+    "slug": "developer-guide/evaluate/local-agent",
+    "title": "Evaluate an Agent Through a Local Tunnel",
+    "type": "H",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P060",
+    "slug": "developer-guide/evaluate/understanding-results",
+    "title": "Retrieve and Investigate Evaluation Results",
+    "type": "H",
+    "group": "Evaluate Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P061",
+    "slug": "developer-guide/evaluate/custom-harnesses",
+    "title": "Create a Custom Harness Programmatically",
+    "type": "H",
+    "group": "Prepare Evaluations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P062",
+    "slug": "developer-guide/evaluate/cloud-providers",
+    "title": "Connect an Agent Endpoint",
+    "type": "H",
+    "group": "Teams and Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P063",
+    "slug": "developer-guide/red-team/overview",
+    "title": "Run a Red Team Evaluation Programmatically",
+    "type": "H",
+    "group": "Red Team",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P064",
+    "slug": "developer-guide/protect/overview",
+    "title": "Choose a Protection Interface",
+    "type": "R",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P065",
+    "slug": "developer-guide/protect/installation",
+    "title": "Install Dome",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P066",
+    "slug": "developer-guide/protect/control-engine",
+    "title": "Enforce a Policy with the Controls Engine",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P067",
+    "slug": "developer-guide/protect/trust-runtime",
+    "title": "Secure an Agent with Trust Runtime",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P068",
+    "slug": "developer-guide/protect/configuring-guardrails",
+    "title": "Configure Guardrails in Code",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P069",
+    "slug": "developer-guide/protect/using-guardrails",
+    "title": "Apply Guardrails in an Agent",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P070",
+    "slug": "developer-guide/protect/custom-detectors",
+    "title": "Build a Custom Runtime Detector",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P071",
+    "slug": "developer-guide/protect/detection-methods",
+    "title": "Runtime Detector Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P072",
+    "slug": "developer-guide/protect/observability",
+    "title": "Instrument Runtime Protection",
+    "type": "H",
+    "group": "Protect Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P073",
+    "slug": "developer-guide/protect/integrations/adk",
+    "title": "Protect a Google ADK Agent",
+    "type": "H",
+    "group": "Protect Agents/Framework Integrations",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P074",
+    "slug": "developer-guide/protect/integrations/langgraph",
+    "title": "Protect a LangGraph Agent",
+    "type": "H",
+    "group": "Protect Agents/Framework Integrations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P075",
+    "slug": "developer-guide/protect/integrations/strands",
+    "title": "Protect a Strands Agent",
+    "type": "H",
+    "group": "Protect Agents/Framework Integrations",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P076",
+    "slug": "developer-guide/protect/integrations/langchain",
+    "title": "Protect a LangChain Workflow",
+    "type": "H",
+    "group": "Protect Agents/Framework Integrations",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "P077",
+    "slug": "developer-guide/protect/integrations/mcp",
+    "title": "Protect an MCP Server",
+    "type": "H",
+    "group": "Protect Agents/Framework Integrations",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P078",
+    "slug": "developer-guide/deploy-vijil/dome-service",
+    "title": "Deploy Dome as a Service",
+    "type": "H",
+    "group": "Self-Hosting",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P079",
+    "slug": "developer-guide/agentic/tools",
+    "title": "MCP Tool Reference",
+    "type": "R",
+    "group": "Reference/MCP and Plugin",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P080",
+    "slug": "developer-guide/reference/controls-api",
+    "title": "Controls API Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P089",
+    "slug": "developer-guide/sdk/setup",
+    "title": "Python SDK Configuration Reference",
+    "type": "R",
+    "group": "Reference/Python SDK",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P090",
+    "slug": "developer-guide/sdk/lifecycle-methods",
+    "title": "Python SDK Lifecycle Methods",
+    "type": "R",
+    "group": "Reference/Python SDK",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "P091",
+    "slug": "developer-guide/sdk/resources",
+    "title": "Python SDK Resources",
+    "type": "R",
+    "group": "Reference/Python SDK",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "P092",
+    "slug": "developer-guide/sdk/models-errors",
+    "title": "Python SDK Models and Errors",
+    "type": "R",
+    "group": "Reference/Python SDK",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N001",
+    "slug": "concepts/agent-lifecycle",
+    "title": "The Agent Trust Lifecycle",
+    "type": "E",
+    "group": "Platform",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N002",
+    "slug": "concepts/evaluation-context",
+    "title": "Personas, Policies, and Evaluation Context",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N003",
+    "slug": "concepts/evaluation-evidence",
+    "title": "Interpret Evaluation Evidence",
+    "type": "E",
+    "group": "Trust and Evaluation",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N004",
+    "slug": "concepts/defense/controls-engine",
+    "title": "How the Controls Engine Works",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N005",
+    "slug": "concepts/defense/trust-runtime",
+    "title": "How Trust Runtime Works",
+    "type": "E",
+    "group": "Runtime Defense",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N006",
+    "slug": "developer-guide/reference/evaluation/harnesses",
+    "title": "Evaluation Harness Reference",
+    "type": "R",
+    "group": "Reference/Evaluation Catalogs",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N007",
+    "slug": "developer-guide/reference/evaluation/scenarios",
+    "title": "Evaluation Scenario Reference",
+    "type": "R",
+    "group": "Reference/Evaluation Catalogs",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N008",
+    "slug": "developer-guide/reference/evaluation/probes",
+    "title": "Evaluation Probe Reference",
+    "type": "R",
+    "group": "Reference/Evaluation Catalogs",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N009",
+    "slug": "developer-guide/reference/evaluation/detectors",
+    "title": "Evaluation Detector Reference",
+    "type": "R",
+    "group": "Reference/Evaluation Catalogs",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N010",
+    "slug": "developer-guide/reference/evaluation/coverage",
+    "title": "Evaluation Coverage by Dimension",
+    "type": "R",
+    "group": "Reference/Evaluation Catalogs",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N011",
+    "slug": "developer-guide/reference/agent-registration",
+    "title": "Agent Registration Contract",
+    "type": "R",
+    "group": "Reference/Platform Contracts",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N012",
+    "slug": "developer-guide/reference/evaluation-contracts",
+    "title": "Evaluation Contracts and Results",
+    "type": "R",
+    "group": "Reference/Platform Contracts",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "N013",
+    "slug": "developer-guide/reference/dome-configuration",
+    "title": "Dome Configuration Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N014",
+    "slug": "developer-guide/reference/dome-results",
+    "title": "Dome Results and Telemetry Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "N015",
+    "slug": "developer-guide/reference/trust-runtime",
+    "title": "Trust Runtime API Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N016",
+    "slug": "developer-guide/reference/framework-integrations",
+    "title": "Framework Integration Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "N017",
+    "slug": "developer-guide/reference/dome-service-api",
+    "title": "Dome Service HTTP API Reference",
+    "type": "R",
+    "group": "Reference/Runtime Protection",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N018",
+    "slug": "developer-guide/reference/platform-capabilities",
+    "title": "Platform Versions and Capability Availability",
+    "type": "R",
+    "group": "Reference/Platform Contracts",
+    "priority": "P0",
+    "gate": ""
+  },
+  {
+    "id": "N019",
+    "slug": "developer-guide/getting-started/authentication",
+    "title": "Authenticate to Vijil",
+    "type": "H",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N020",
+    "slug": "developer-guide/getting-started/connect-mcp",
+    "title": "Connect the Vijil MCP Server",
+    "type": "H",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N021",
+    "slug": "developer-guide/getting-started/python-sdk",
+    "title": "Install and Configure the Python SDK",
+    "type": "H",
+    "group": "Get Started",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N022",
+    "slug": "developer-guide/evaluate/ci-cd",
+    "title": "Gate a Release on Evaluation Evidence",
+    "type": "H",
+    "group": "Release and Improve",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N023",
+    "slug": "developer-guide/agents/register",
+    "title": "Register an Agent Programmatically",
+    "type": "H",
+    "group": "Teams and Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N024",
+    "slug": "developer-guide/discover/endpoint-collectors",
+    "title": "Install an Endpoint Collector",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N025",
+    "slug": "developer-guide/discover/network-collector",
+    "title": "Install a Network Collector",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N026",
+    "slug": "developer-guide/discover/cluster-collector",
+    "title": "Install a Kubernetes Collector",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N027",
+    "slug": "developer-guide/discover/aws-collector",
+    "title": "Install an AWS Cloud API Collector",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N028",
+    "slug": "developer-guide/discover/runtime-events",
+    "title": "Connect Runtime Events to Defend",
+    "type": "H",
+    "group": "Discover Agents",
+    "priority": "P1",
+    "gate": "Confirm a replacement for the remaining CLI-only dlp setup; not immediately ready for publication."
+  },
+  {
+    "id": "N029",
+    "slug": "developer-guide/red-team/understanding-results",
+    "title": "Retrieve and Investigate Red Team Evidence",
+    "type": "H",
+    "group": "Red Team",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N030",
+    "slug": "developer-guide/deploy-vijil/aws-infrastructure",
+    "title": "Prepare AWS Infrastructure for Vijil",
+    "type": "H",
+    "group": "Self-Hosting",
+    "priority": "P2",
+    "gate": ""
+  },
+  {
+    "id": "N031",
+    "slug": "developer-guide/reference/self-hosted-configuration",
+    "title": "Self-Hosted Configuration Reference",
+    "type": "R",
+    "group": "Reference/Self-Hosting",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N032",
+    "slug": "developer-guide/reference/claude-code-commands",
+    "title": "Claude Code Plugin Command Reference",
+    "type": "R",
+    "group": "Reference/MCP and Plugin",
+    "priority": "P1",
+    "gate": ""
+  },
+  {
+    "id": "N033",
+    "slug": "owner-guide/improve-agents/review-proposals",
+    "title": "Review and Apply an Adaptation Proposal",
+    "type": "H",
+    "group": "Improve Agents",
+    "priority": "P2",
+    "gate": "Confirm an enabled/released Darwin workflow; until then, keep this in the backlog with status described in Concepts."
+  },
+  {
+    "id": "N034",
+    "slug": "developer-guide/improve-agents/adapt",
+    "title": "Adapt an Agent and Validate the Proposal",
+    "type": "H",
+    "group": "Release and Improve",
+    "priority": "P2",
+    "gate": "Confirm an enabled/released Darwin workflow; until then, retain only the backlog item and capability reference."
+  }
+]
