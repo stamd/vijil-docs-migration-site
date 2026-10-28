@@ -129,20 +129,6 @@ Separate Console and SDK procedures for the same business task are justified. Tw
 
 Documentation must work when readers arrive directly at a deep URL. Diátaxis does not require traversing all four types in a fixed order; entry can occur anywhere. [Diátaxis: The map](https://diataxis.fr/map/)
 
-```mermaid
-flowchart LR
-    U[Task or direct query] --> H[How-to for the exact interface]
-    U --> R[Reference with the exact contract]
-    T[First evaluation tutorial] --> H
-    H --> V[Result verification and failure handling]
-    H --> E[Concepts: meaning and limits]
-    H --> R
-    R --> H
-    R --> E
-    E --> C[Console how-to]
-    E --> D[SDK or MCP how-to]
-```
-
 Related links should represent different needs: understand the model, perform a related task, look up options, and switch interfaces for the same task. Three generic links to Welcome/Overview/Glossary do not meet that need. In large reference catalogs, link the relevant resource or anchor rather than always the top of a large page.
 
 Example of a complete Diamond path: Welcome → First Evaluation → Review Evaluation Results → Interpret Evaluation Evidence → Evaluation Contracts and Results. A direct query such as “retrieve failed prompts” should instead reach the programmatic results how-to, which names the SDK method and its reference anchor.

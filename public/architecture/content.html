@@ -65,18 +65,6 @@
 <p>Separate Console and SDK procedures for the same business task are justified. Two independently maintained Trust Score definitions or repeated descriptions of all six PDF report sections are not. Canonical explanations are shared; steps and result verification are interface-specific.</p>
 <h2 id="5-a-navigation-graph-not-only-a-tree">5. A Navigation Graph, Not Only a Tree</h2>
 <p>Documentation must work when readers arrive directly at a deep URL. Diátaxis does not require traversing all four types in a fixed order; entry can occur anywhere. <a href="https://diataxis.fr/map/" rel="noopener">Diátaxis: The map</a></p>
-<details class="diagram-source"><summary>Read the navigation graph · Mermaid source</summary><pre><code class="language-mermaid">flowchart LR
-    U[Task or direct query] --&gt; H[How-to for the exact interface]
-    U --&gt; R[Reference with the exact contract]
-    T[First evaluation tutorial] --&gt; H
-    H --&gt; V[Result verification and failure handling]
-    H --&gt; E[Concepts: meaning and limits]
-    H --&gt; R
-    R --&gt; H
-    R --&gt; E
-    E --&gt; C[Console how-to]
-    E --&gt; D[SDK or MCP how-to]
-</code></pre></details>
 <p>Related links should represent different needs: understand the model, perform a related task, look up options, and switch interfaces for the same task. Three generic links to Welcome/Overview/Glossary do not meet that need. In large reference catalogs, link the relevant resource or anchor rather than always the top of a large page.</p>
 <p>Example of a complete Diamond path: Welcome → First Evaluation → Review Evaluation Results → Interpret Evaluation Evidence → Evaluation Contracts and Results. A direct query such as “retrieve failed prompts” should instead reach the programmatic results how-to, which names the SDK method and its reference anchor.</p>
 <nav class="reading-nav" aria-label="Reading order"><a href="index.html"><span>Previous</span><strong>Architecture</strong></a><a href="agents.html"><span>Next</span><strong>Writing for agents</strong></a></nav><footer class="article-footer">Migration proposal · Implementation status is maintained in the <a href="../plan/progress.html">progress tracker</a>.</footer></article><aside class="page-toc" aria-label="On this page"><p>On this page</p><ul><li><a href="#4-canonical-content-locations">4. Canonical Content Locations</a></li><li><a href="#5-a-navigation-graph-not-only-a-tree">5. A Navigation Graph, Not Only a Tree</a></li></ul><a class="back-top" href="#main">Back to top ↑</a></aside></div></main></div>
